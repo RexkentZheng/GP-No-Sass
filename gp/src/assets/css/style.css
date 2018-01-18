@@ -1,0 +1,3071 @@
+/*header部分*/
+
+.header .bar-wraper {
+	height: 30px;
+	background-color: #333333;
+	line-height: 30px;
+}
+
+.header .bar-wraper .bar {
+	width: 1250px;
+	margin: 0 auto;
+}
+
+.header .bar-wraper .bar .enterpriseVison {
+	float: left;
+}
+
+.header .bar-wraper .bar .login {
+	float: right;
+}
+
+.header .bar-wraper .bar .login li {
+	float: left;
+}
+
+.header .bar-wraper .bar .login li a {
+	padding: 0 9px;
+}
+
+.header .bar-wraper .bar .login li:nth-child(2) a {
+	border-left: 1px solid #c4c3c3;
+}
+
+.header .nav-wraper {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.header .nav-wraper .nav {
+	width: 1200px;
+	overflow: hidden;
+	line-height: 35px;
+}
+
+.header .nav-wraper .nav .logo-part {
+	float: left;
+	cursor: pointer;
+	
+}
+.header .nav-wraper .nav .logo-part >a >img{
+	vertical-align: initial;
+}
+.header .nav-wraper .nav .tab {
+	float: right;
+}
+
+.header .nav-wraper .nav .tab li {
+	float: left;
+	margin: 0 16px;
+}
+
+.header .nav-wraper .nav .tab li a {
+	display: block;
+	line-height: 50px;
+	font-size: 18px;
+	color: #999999;
+	cursor: pointer;
+	border-bottom: 2px solid #68B3C8;
+}
+
+.header .person-nav-wraper {
+	border-bottom: 1px solid #e5e5e5;
+	background-color: #fafafa;
+}
+
+.header .person-nav-wraper .person-nav {
+	width: 620px;
+	margin: 0 auto;
+	line-height: 53px;
+}
+
+.header .person-nav-wraper .person-nav .logo-part {
+	float: left;
+}
+
+.header .person-nav-wraper .person-nav ul {
+	float: left;
+	margin: 0;
+}
+
+.header .person-nav-wraper .person-nav ul li {
+	margin: 0 25px;
+	float: left;
+}
+
+.header .person-nav-wraper .person-nav ul li a {
+	line-height: 53px;
+	padding: 0 5px;
+	color: #999;
+	display: block;
+	font-size: 18px;
+	cursor: pointer;
+	border-bottom: 2px solid #FFFFFF;
+}
+
+.header .person-nav-wraper .person-nav ul li a:hover {
+	text-decoration: none;
+	border-bottom: 2px solid #68B3C8;
+	color: #000000;
+}
+.header .person-nav-wraper .person-nav ul li .router-link-active{
+	text-decoration: none;
+	border-bottom: 2px solid #68B3C8;
+	color: #000000;
+}
+.header .person-nav-wraper .admin-nav {
+	width: 500px;
+}
+
+
+/*公用部分*/
+
+.icon {
+	padding: 0 5px;
+}
+
+.add-btn,
+.change-btn {
+	color: #68B3C8;
+	cursor: pointer;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	cursor: pointer;
+	color: #555;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+
+body {
+	font-family: "微软雅黑";
+	position: relative;
+}
+
+.pipe:after {
+	content: "|";
+	margin: 0 6px 0 9px;
+	color: #d5dadf;
+	font-size: 12px;
+	vertical-align: auto;
+}
+
+.one-piece-change .jedate-part>dd {
+	margin-top: 35px;
+}
+
+.one-piece-change .jedate-part>dd>dl>dt {
+	line-height: 34px;
+}
+
+.one-piece-change .jedate-part>dd>dl>dd {
+	width: 259px;
+}
+
+.one-piece-change .jedate-part .end-date {
+	margin: 0;
+}
+
+.one-piece-add .jedate-part>dd {
+	margin-top: 35px;
+}
+
+.one-piece-add .jedate-part>dd>dl>dt {
+	line-height: 34px;
+}
+
+.one-piece-add .jedate-part>dd>dl>dd {
+	width: 259px;
+}
+
+.one-piece-add .jedate-part .end-date {
+	margin: 0;
+}
+
+.login-wraper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(104, 179, 200, 0.65);
+	z-index: 1;
+}
+
+.login-part {
+	width: 500px;
+	height: 300px;
+	background-color: white;
+	margin: 270px auto 0;
+	border-radius: 10px;
+	position: relative;
+}
+
+.login-main .userName {
+	padding: 50px 0 0 80px;
+	display: block;
+}
+
+.login-main .userPwd {
+	padding: 30px 0 0 80px;
+	display: block;
+}
+
+.login-main .errorTip {
+	position: absolute;
+	top: 177px;
+	left: 183px;
+	color: red;
+}
+
+.login-part dl dt {
+	width: 100px;
+	float: left;
+	line-height: 34px;
+	font-size: 18px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.login-part dl dd {
+	float: left;
+	width: 220px;
+}
+
+.login-part .btn-line {
+	text-align: center;
+	margin: 55px 0 0 0;
+}
+
+.login-part .btn-line a:nth-child(1) {
+	margin-right: 60px;
+}
+.login-part .interview-dist{
+	display: block;
+	padding: 50px 0 0 80px;
+}
+.login-part .interview-dist dd{
+	width: 259px;
+}
+.login-part .choose-time{
+	margin-left: 82px;
+}
+.login-part .choose-time dd{
+	width: 257px;
+}
+.login-part .choose-time select:nth-child(1){
+	float: left;
+	width: 100px;
+}
+.login-part .choose-time select:nth-child(2){
+	width: 100px;
+	float: right;
+}
+.g-core-image-upload-form{
+	width: 100%!important;
+	height: 100%!important;
+}
+.g-core-image-upload-form input{
+	cursor: pointer;
+}
+input[type=file] {
+	}
+
+
+/*container部分*/
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+
+/*search部分*/
+
+.index .contain-header {
+	background-color: #F2F5F4;
+}
+
+.index .contain-header .search-wraper {
+	padding: 30px 0;
+}
+
+.index .contain-header .search-wraper .input-group {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.index .contain-header .search-wraper .input-group input {
+	height: 50px;
+	font-size: 17px;
+	z-index: 0;
+}
+
+.index .contain-header .search-wraper .input-group a {
+	padding: 0 30px;
+	font-size: 17px;
+	background-color: #68B3C8;
+	color: #FFFFFF;
+}
+
+.index .contain-header .search-wraper .popular-search {
+	width: 900px;
+	margin: 8px auto 0;
+}
+
+.index .contain-header .search-wraper .popular-search p .title {
+	float: left;
+}
+
+.index .contain-header .search-wraper .popular-search p .details a {
+	color: #68B3C8;
+	margin-right: 20px;
+}
+
+
+/*index主体部分*/
+
+.index .contain-body {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.index .contain-body .sidebar {
+	margin: 20px 0 10px;
+	float: left;
+}
+
+.index .contain-body .sidebar .menu-box {
+	width: 321px;
+	border-right: 0px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.index .contain-body .sidebar .menu-box:hover > .menu-sub{
+	display: block;
+	position: absolute;
+    left: 321px;
+    top: 0;
+    width: 600px;
+    padding: 20px 10px 0 12px;
+    z-index: 10;
+    background: #fff;
+    -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+    -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+    box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+    border-radius: 2px;
+    border-top-left-radius: 0;
+}
+.index .contain-body .sidebar .menu-box:hover > .menu-main{
+	-webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+    -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+    box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background: #fff;
+}
+.index .contain-body .sidebar .menu-box:hover .current:after{
+	content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -1px;
+    width: 7px;
+    background: #fff;
+    z-index: 102;
+}
+.index .contain-body .sidebar .menu-box .current:after{
+	
+}
+.index .contain-body .sidebar .menu-box .menu-main {
+	position: relative;
+	padding: 15px 0;
+	outline: 0;
+}
+
+.index .contain-body .sidebar .menu-box .menu-main .categpry-list {
+	position: relative;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+.index .contain-body .sidebar .menu-box .menu-main .categpry-list h3 {
+	display: inline-block;
+	padding-left: 15px;
+	margin: 0;
+	font-size: 18px;
+}
+
+.index .contain-body .sidebar .menu-box .menu-main .categpry-list a {
+	margin: 0 5px 5px 0;
+	padding: 0 8px;
+	color: #555;
+	white-space: nowrap;
+	background-color: transparent;
+	text-decoration: none;
+	float: left;
+}
+.index .contain-body .sidebar .menu-box .menu-main .categpry-list .hotWraper{
+	position: absolute;
+    top: 0;
+    right: 29px;
+    width: 230px;
+    overflow: hidden;
+}
+.index .contain-body .sidebar .menu-box .menu-main .categpry-list span{
+	position: absolute;
+    right: 5px;
+    top: 4px;
+    margin-left: 8px;
+}
+.index .contain-body .sidebar .menu-box .menu-sub {
+	position: absolute;
+	left: 321px;
+	top: 6px;
+	width: 580px;
+	padding: 10px 10px 0 12px;
+	z-index: 10;
+	background: #fff;
+	box-sizing: border-box;
+	display: none;
+}
+
+.index .contain-body .sidebar .menu-box .menu-sub dl {
+	margin: 0 0 17px;
+}
+
+.index .contain-body .sidebar .menu-box .menu-sub dl dt {
+	position: relative;
+	width: 100px;
+	margin: 0;
+	padding-left: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 6px;
+}
+
+.index .contain-body .sidebar .menu-box .menu-sub dl dt span {
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	color: #333;
+}
+.index .contain-body .sidebar .menu-box .menu-sub dl dd{
+	overflow: hidden;
+}
+.index .contain-body .sidebar .menu-box .menu-sub dl dd a {
+	display: inline-block;
+    position: relative;
+    margin-left: -1px;
+    padding: 0 11px;
+    font-size: 14px;
+    line-height: 28px;
+    color: #777;
+    white-space: nowrap;
+}
+.index .contain-body .sidebar .menu-box .menu-sub dl dd a:before{
+	content: "";
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background: #D8D8D8;
+    top: 8px;
+    left: 0;
+}
+.index .contain-body .banner img {
+	width: 840px;
+	height: 346px;
+}
+
+.index .contain-body .banner {
+	margin: 50px 0 0px 30px;
+	float: left;
+	width: 840px;
+}
+
+.index .job-tab ul {
+	margin: 0 0 0 15px;
+	padding: 0;
+}
+
+.index .job-tab ul li {
+	float: left;
+	font-size: 18px;
+	padding: 15px 0;
+	border-bottom: 2px solid #68B3C8;
+	margin-right: 15px;
+}
+
+.index .job-list-wraper {
+	margin: 20px 0 0 0;
+}
+
+.index .job-list-wraper .job-list {
+	margin: 0 0 0 15px;
+}
+
+.index .job-list-wraper .job-list ul {
+	margin: 0;
+	padding: 0;
+}
+
+.index .job-list-wraper .job-list ul li {
+	width: 376px;
+	height: 200px;
+	display: inline-block;
+	border: 1px solid #EAEEED;
+	margin: 16px 16px 0 0;
+	padding: 20px 18px 0;
+}
+
+.index .job-list-wraper .job-list ul li .main-info {
+	margin: 0;
+	padding: 0;
+}
+
+.index .job-list-wraper .job-list ul li .main-info .job-name {
+	font-size: 16px;
+	display: inline-block;
+	margin: 0;
+	float: left;
+	color: #337ab7;
+	cursor: pointer;
+}
+
+.index .job-list-wraper .job-list ul li .main-info .release-time {
+	padding: 0 0 0 10px;
+	margin: 0;
+	float: left;
+}
+
+.index .job-list-wraper .job-list ul li .main-info .salary {
+	float: right;
+}
+
+.index .job-list-wraper .job-list ul li .company {
+	padding: 18px 0 0 0;
+	margin: 18px 0 0 0;
+	border-top: 1px dashed #E0E0E0;
+}
+
+.index .job-list-wraper .job-list ul li .company .company-logo {
+	height: 40px;
+	width: 40px;
+	float: left;
+}
+
+.index .job-list-wraper .job-list ul li .condition {
+	height: 30px;
+	line-height: 30px;
+	color: #777;
+}
+
+.index .job-list-wraper .job-list ul li .condition p {
+	margin: 0;
+	padding: 0;
+}
+
+.index .job-list-wraper .job-list ul li .welfare {
+	margin: 5px 0 0 0;
+	overflow: hidden;
+}
+
+.index .job-list-wraper .job-list ul li .welfare span {
+	height: 26px;
+	display: inline-block;
+	padding: 0 8px;
+	line-height: 26px;
+	color: #999;
+	font-size: 12px;
+	border: 1px solid #F0F0F0;
+	border-radius: 3px;
+	margin: 5px 3px 0 0;
+}
+
+.index .job-list-wraper .job-list ul li .company .company-introduce {
+	padding: 0 0 0 15px;
+	float: left;
+}
+
+.index .job-list-wraper .job-list ul li .company .company-introduce .company-info {
+	color: #999;
+}
+
+.index .job-list-wraper .job-list .show-more {
+	display: block;
+	width: 387px;
+	height: 42px;
+	line-height: 42px;
+	margin: 16px auto 0;
+	background: #FFF;
+	border: 1px solid #68B3C8;
+	font-size: 16px;
+	color: #68B3C8;
+	text-align: center;
+	-webkit-transition: background .3s, color .1s;
+	cursor: pointer;
+}
+
+.index .job-list-wraper .job-list .show-more:hover {
+	text-decoration: none;
+	color: #fff;
+	background: #68B3C8;
+}
+
+.index .link-box {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.index .link-box dl dt {
+	border-bottom: 1px solid #E8E8E8;
+	font-size: 16px;
+	color: #333;
+	margin-bottom: 21px;
+}
+
+.index .link-box dl dt span {
+	display: inline-block;
+	padding: 14px 0;
+	border-bottom: 2px solid #333;
+	font-weight: normal;
+}
+
+.index .link-box dl dd a {
+	white-space: nowrap;
+	float: left;
+	height: 15px;
+	padding: 8px 18px 8px 0;
+	line-height: 15px;
+	color: #555;
+	text-decoration: none;
+}
+
+.index .company-introduce>a {
+	color: #337ab7;
+}
+
+.footer .wraper .inner-wraper {
+	padding-top: 12px;
+	float: right;
+	height: 14px;
+	line-height: 14px;
+	white-space: nowrap;
+}
+
+.footer .wraper a {
+	height: 200px;
+}
+
+.footer .wraper .copyright {
+	clear: both;
+	height: 12px;
+	margin: 0 auto;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	color: #d5d5d5;
+	font-size: 12px;
+	line-height: 12px;
+	text-align: center;
+}
+
+.footer .wraper .copyright a {
+	padding-right: 0;
+	font-size: 12px;
+	color: #d5d5d5;
+}
+
+
+/*学生主页*/
+
+.student-personal-info .contain-body {
+	width: 1000px;
+	margin: 10px auto 0;
+}
+
+.student-personal-info .contain-body dl {
+	text-align: center;
+	position: relative;
+	margin: 0;
+}
+
+.student-personal-info .contain-body dl dt {
+	width: 200px;
+	font-size: 17px;
+	padding: 6px 24px;
+	text-align: center;
+	background-color: #eee;
+	border-radius: 26px;
+	margin: 0 auto;
+	font-weight: normal;
+	display: block;
+	z-index: 1;
+}
+
+.student-personal-info .contain-body dl span {
+	width: 100%;
+	display: inline-block;
+	border-top: 1px solid #ededed;
+	position: absolute;
+	left: 0;
+	top: 16px;
+	z-index: -1;
+}
+
+.student-personal-info .contain-body dl dd {
+	margin: 25px 0;
+}
+
+.student-personal-info .contain-body .student-img img {
+	width: 120px;
+	border-radius: 5px;
+}
+
+
+/*学生简历信息页*/
+
+.student-resume .contain-body {
+	width: 1000px;
+	margin: 10px auto 0;
+}
+
+.student-resume .contain-body>dl {
+	text-align: center;
+	position: relative;
+	margin: 0;
+}
+
+.student-resume .contain-body>dl>dt {
+	width: 200px;
+	font-size: 17px;
+	padding: 6px 24px;
+	text-align: center;
+	background-color: #eee;
+	border-radius: 26px;
+	margin: 0 auto;
+	font-weight: normal;
+	display: block;
+	z-index: 1;
+}
+
+.student-resume .contain-body>dl>span {
+	width: 93%;
+	display: inline-block;
+	border-top: 1px solid #ededed;
+	position: absolute;
+	left: 0;
+	top: 16px;
+	z-index: -1;
+}
+
+.student-resume .contain-body>dl>dd {
+	margin: 25px 0;
+}
+
+.student-resume .contain-body .student-tel>dd .phone-changing {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.student-resume .contain-body .student-tel>dd .phone-changing input {
+	width: 330px;
+}
+
+.student-resume .contain-body .student-tel>dd .phone-changing a {
+	margin: 0 10px;
+}
+
+.student-resume .contain-body .student-tel>dd .phone-changing dt {
+	float: left;
+	font-weight: normal;
+	line-height: 34px;
+	letter-spacing: 9px;
+}
+
+.student-resume .contain-body .student-tel>dd .phone-changing dd {
+	float: left;
+}
+.student-resume .contain-body .student-tel>dd .phone-changing .tips{
+	margin-left: 56px;
+}
+.student-resume .contain-body .student-tel>dd .phone-changing .tips .error-tip{
+	display: block;
+    padding-left: 20px;
+    color: #fd5f39;
+    background: url(../../../static/img/error-tip-icon.png) 0 center no-repeat;
+}
+.student-resume .contain-body .student-img img {
+	width: 120px;
+	height: 120px;
+	border-radius: 5px;
+}
+
+.student-resume .contain-body>dl .add-btn {
+	position: absolute;
+	top: 7px;
+	left: 940px;
+	cursor: pointer;
+}
+
+.student-resume .contain-body>dl .change-btn {
+	position: absolute;
+	top: 7px;
+	left: 940px;
+	cursor: pointer;
+}
+
+.student-resume .contain-body .student-wrok .work-introduce {
+	margin: 0 auto;
+	width: 400px;
+}
+
+.student-resume .contain-body .student-wrok .work-introduce dl dt {
+	float: left;
+	font-weight: normal;
+}
+
+.student-resume .contain-body .student-wrok .work-introduce dl dd {
+	float: left;
+}
+
+.student-resume .contain-body .one-piece {
+	position: relative;
+	padding: 5px 0;
+}
+
+.student-resume .contain-body .one-piece .change-btn {
+	position: absolute;
+	top: 0;
+	left: 490px;
+	width: 55px;
+}
+
+.student-resume .contain-body .one-piece-change>dl>dt {
+	line-height: 34px;
+}
+
+.student-resume .contain-body .one-piece-change>dl>dd {
+	width: 330px;
+}
+
+.student-resume .contain-body .one-piece-add>dl>dt {
+	line-height: 34px;
+}
+
+.student-resume .contain-body .one-piece-add>dl>dd {
+	width: 330px;
+}
+.student-resume .contain-body .one-piece-add{
+	margin: 10px auto;
+    width: 400px;
+}
+.student-resume .contain-body  .one-piece-add > dl > dt{
+	line-height: 34px;
+	float: left;
+    font-weight: normal;
+} 
+.student-resume .contain-body  .one-piece-add > dl > dd > dl > dt{
+	line-height: 34px;
+	float: left;
+    font-weight: normal;
+}
+.student-resume .contain-body  .one-piece-add > dl > dd > dl > dd{
+	float: left;
+}
+.student-resume .contain-body .one-piece-add > dl > dd{
+	width: 330px;
+	float: left;
+}
+.student-resume .contain-body .student-experience .experience-introduce {
+	margin: 0 auto;
+	width: 400px;
+}
+
+.student-resume .contain-body .student-experience .experience-introduce dl dt {
+	float: left;
+	font-weight: normal;
+}
+
+.student-resume .contain-body .student-experience .experience-introduce dl dd {
+	float: left;
+}
+
+.student-resume .contain-body .student-introduce>dd .introduce-changing {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.student-resume .contain-body .student-introduce>dd .introduce-changing dl dt {
+	float: left;
+	font-weight: normal;
+	line-height: 34px;
+}
+
+.student-resume .contain-body .student-introduce>dd .introduce-changing dl dd {
+	width: 330px;
+	float: left;
+}
+
+.student-resume .contain-body .student-img>dd {}
+
+.student-resume .contain-body .student-img>dd .photo-changing {
+	text-align: center;
+}
+
+.student-resume .contain-body .student-img>dd .photo-changing .upload-img {
+	width: 120px;
+	height: 180px;
+	border-radius: 5px;
+	background-color: #EDEDED;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.student-resume .contain-body .student-img>dd .photo-changing .upload-img span {
+	line-height: 180px;
+}
+
+.student-resume .contain-body .student-img>dd .photo-changing input {
+	display: none;
+}
+
+.student-resume .contain-body .student-img>dd {}
+
+
+/*学生投递页面*/
+
+.student-send .contain-body .send-title {
+	width: 610px;
+	margin: 15px auto 0;
+	background-color: #f2f2f2;
+	padding: 0;
+}
+
+.student-send .contain-body .send-title ul {
+	margin: 0 0 0 15px;
+}
+
+.student-send .contain-body .send-title ul li {
+	float: left;
+	padding: 13px 20px;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+	border-bottom: 2px solid #FFFFFF;
+	font-size: 16px;
+	color: #777;
+}
+
+.student-send .contain-body .send-title ul li:hover {
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
+.student-send .contain-body .send-title ul .active{
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
+.student-send .contain-body .send-list ul {
+	width: 580px;
+	margin: 15px auto 0;
+}
+
+.student-send .contain-body .send-list ul li {
+	border-left: 3px solid #91cebe;
+	padding: 3px 12px;
+	margin-bottom: 30px;
+}
+
+.student-send .contain-body .send-list ul li .job-main .jobName {
+	font-size: 18px;
+	color: #68B3C8;
+	display: inline-block;
+	float: left;
+	margin: 0;
+	font-weight: normal;
+}
+
+.student-send .contain-body .send-list ul li .job-main > span {
+	float: left;
+	font-size: 16px;
+	color: #e6775c;
+	margin: 1px 0 0 0;
+	display: inline-block;
+	padding: 0 0 0 10px;
+}
+
+.student-send .contain-body .send-list ul li .job-company-name {
+	color: #555;
+}
+
+.student-send .contain-body .send-list ul li .job-location>span {
+	float: left;
+	color: #999;
+}
+
+.student-send .contain-body .send-list ul li .job-location>p {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+.student-send .contain-body .send-list ul li .job-location>p .lastest-time {
+	color: #999;
+}
+
+.student-send .contain-body .send-list ul li .job-location>p .send-status {
+	padding: 0 0 0 10px;
+}
+
+
+.student-send .contain-body .interview-list {}
+
+.student-send .contain-body .interview-list ul {
+	width: 580px;
+	margin: 15px auto 0;
+}
+
+.student-send .contain-body .interview-list ul li {
+	border-left: 3px solid #91cebe;
+	padding: 3px 12px;
+	margin-bottom: 30px;
+}
+
+.student-send .contain-body .interview-list ul li .job-main .jobName {
+	font-size: 18px;
+	color: #68B3C8;
+	display: inline-block;
+	float: left;
+	margin: 0;
+	font-weight: normal;
+}
+
+.student-send .contain-body .interview-list ul li .job-main > span {
+	float: left;
+	font-size: 16px;
+	color: #e6775c;
+	margin: 1px 0 0 0;
+	display: inline-block;
+	padding: 0 0 0 10px;
+}
+.student-send .contain-body .interview-list ul li .job-main > p{
+	float: right;
+}
+.student-send .contain-body .interview-list ul li .job-main > p >span:nth-child(1){
+	display: block;
+	width: 80px;
+	float: left;
+}
+.student-send .contain-body .interview-list ul li .job-main > p >span:nth-child(2){
+	width: 249px;
+	display: block;
+	float: left;
+}
+.student-send .contain-body .interview-list ul li .job-company-name {
+	color: #555;
+}
+.student-send .contain-body .interview-list ul li .job-company-name > span{
+	float: left;
+}
+.student-send .contain-body .interview-list ul li .job-company-name > p{
+	float: right;
+	margin: 0;
+}
+.student-send .contain-body .interview-list ul li .job-company-name > p > span:nth-child(1){
+	display: block;
+	width: 80px;
+	float: left;
+}
+.student-send .contain-body .interview-list ul li .job-company-name > p > span:nth-child(2){
+	width: 249px;
+	display: block;
+	float: left;
+}
+.student-send .contain-body .interview-list ul li .job-location > span {
+	float: left;
+	color: #999;
+}
+
+.student-send .contain-body .interview-list ul li .job-location > p {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+.student-send .contain-body .interview-list ul li .job-location > p > span:nth-child(1){
+	display: block;
+	width: 80px;
+	float: left;
+}
+.student-send .contain-body .interview-list ul li .job-location > p > span:nth-child(2){
+	width: 249px;
+	display: block;
+	float: left;
+}
+.student-send .contain-body .interview-list ul li .job-location>p .lastest-time {
+	color: #555;
+}
+
+.student-send .contain-body .interview-list ul li .job-location>p .send-status {
+	color: #555;
+}
+
+
+/*商家等待页面*/
+
+.company-waiting .contain-body {}
+
+.company-waiting .contain-body .blue-bg {
+	height: 360px;
+	background-color: #68B3C8;
+}
+
+.company-waiting .contain-body .main-info {
+	width: 552px;
+	margin: -150px auto 233px;
+	padding: 62px 70px 68px 78px;
+	background-color: #fff;
+	border-radius: 2px;
+	border: 1px solid #dce1e6;
+	text-align: center;
+}
+
+.company-waiting .contain-body .main-info h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 22px;
+	font-weight: normal;
+	color: #080808;
+	text-align: center;
+}
+
+.company-waiting .contain-body .main-info p {
+	text-align: center;
+	padding: 60px 0 20px;
+	font-size: 18px;
+}
+
+.company-waiting .contain-body .spinner {
+	margin: 30px auto 20px;
+	width: 90px;
+	height: 90px;
+	position: relative;
+	text-align: center;
+	-webkit-animation: rotate 2.0s infinite linear;
+	animation: rotate 2.0s infinite linear;
+}
+
+.company-waiting .contain-body .dot1,
+.company-waiting .contain-body .dot2 {
+	width: 60%;
+	height: 60%;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	background-color: #68B3C8;
+	border-radius: 100%;
+	-webkit-animation: bounce 2.0s infinite ease-in-out;
+	animation: bounce 2.0s infinite ease-in-out;
+}
+
+.company-waiting .contain-body .dot2 {
+	top: auto;
+	bottom: 0px;
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
+}
+
+@-webkit-keyframes rotate {
+	100% {
+		-webkit-transform: rotate(360deg)
+	}
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg)
+	}
+}
+
+@-webkit-keyframes bounce {
+	0%,
+	100% {
+		-webkit-transform: scale(0.0)
+	}
+	50% {
+		-webkit-transform: scale(1.0)
+	}
+}
+
+@keyframes bounce {
+	0%,
+	100% {
+		transform: scale(0.0);
+		-webkit-transform: scale(0.0);
+	}
+	50% {
+		transform: scale(1.0);
+		-webkit-transform: scale(1.0);
+	}
+}
+
+
+/*公司主页页面*/
+
+.company-index .contain-body {
+	width: 1000px;
+	margin: 15px auto 0;
+}
+
+.company-index .contain-body .company-info > dl {
+	position: relative;
+	margin: 0 0 10px;
+}
+.company-index .contain-body .company-info .company-base-info .address{
+}
+.company-index .contain-body .company-info .company-base-info .address select{
+	display: block;
+	width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 5px 0 0 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+} 
+.company-index .contain-body .company-info dl .company-title {
+	position: relative;
+	font-size: 18px;
+	float: left;
+	color: #000000;
+}
+
+.company-index .contain-body .company-info dl .line {
+	width: 800px;
+	float: right;
+	display: inline-block;
+	border-top: 1px solid #e8e8e8;
+	margin: 15px 55px 0 20px;
+}
+
+.company-index .contain-body .company-info dl>.change-btn {
+	position: absolute;
+	top: 5px;
+	right: 0;
+}
+
+.company-index .contain-body .company-info dl>.add-btn {
+	position: absolute;
+	top: 5px;
+	right: 0;
+}
+
+.company-index .contain-body .company-info dl dt {}
+
+.company-index .contain-body .company-info>dl>dd {
+	padding: 15px;
+}
+.company-index .contain-body .company-info > dl > dd pre{
+	background-color: transparent;
+	border: 0 ; 
+	font-size: 14px; 
+	font-family: '微软雅黑'; 
+	line-height: 22px; 
+	padding: 0;	
+}
+.company-index .contain-body .company-info .company-logo img{
+	width: 120px;
+	border-radius: 7px;
+}
+.company-index .contain-body .company-info .company-base-info .dl-wraper {
+	padding: 10px 0 0 0;
+}
+
+.company-index .contain-body .company-info .company-base-info .dl-wraper dl {
+	margin: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	color: #555;
+}
+
+.company-index .contain-body .company-info .company-base-info .dl-wraper dl dt {
+	float: left;
+	font-weight: normal;
+	padding: 0 10px;
+}
+
+.company-index .contain-body .company-info .company-base-info .dl-wraper dl dd {
+	float: left;
+}
+
+.company-index .contain-body .company-info .company-label dd span {
+	height: 25px;
+	padding: 0 10px;
+	margin: 0 10px 10px 0;
+	border: 1px solid #ededed;
+	border-radius: 15px;
+	background-color: #fff;
+	line-height: 25px;
+	text-align: center;
+	color: #555;
+}
+
+.company-index .contain-body .company-info .company-production dd ul {
+	margin: 0;
+	padding: 0;
+}
+
+.company-index .contain-body .company-info .company-production dd ul li .img-part {
+	width: 300px;
+	float: left;
+}
+
+.company-index .contain-body .company-info .company-production dd ul li .img-part img {
+	width: 300px;
+	height: 180px;
+	float: left;
+	border-radius: 5px;
+}
+
+.company-index .contain-body .company-info .company-production dd ul li .production-introduce {
+	width: 470px;
+	float: right;
+	padding-left: 30px;
+	position: relative;
+	margin-right: 191px;
+}
+
+.company-index .contain-body .company-info .company-production dd ul li .production-introduce>span {
+	display: block;
+	padding: 0 0 10px;
+	font-size: 16px;
+	color: rgb(85, 85, 85);
+}
+
+.company-index .contain-body .company-info .company-production dd ul li .production-introduce p {
+	color: #555;
+	font-size: 14px;
+}
+
+.company-index .contain-body .company-info .company-production dd ul li .production-introduce .change-btn {
+	position: relative;
+	top: -57px;
+	left: 465px;
+}
+
+.company-index .contain-body .company-info .company-introduce dd p {
+	width: 800px;
+	text-indent: 2.4rem;
+	color: #555;
+}
+
+.company-index .contain-body .company-info .company-logo>dd .photo-changing .upload-company-logo {
+	width: 100px;
+	height: 100px;
+	background-color: #EDEDED;
+	text-align: center;
+	cursor: pointer;
+}
+
+.company-index .contain-body .company-info .company-logo>dd .photo-changing .upload-company-logo .upload-company-logo-tips {
+	line-height: 100px;
+}
+
+.company-index .contain-body .company-info .company-logo>dd .photo-changing input {
+	display: none;
+}
+
+.company-index .contain-body .company-base-info .normal-changing>dl {
+	padding: 0 10px;
+}
+
+.company-index .contain-body .company-base-info .normal-changing>dl>dt {
+	float: left;
+	font-weight: normal;
+	line-height: 34px;
+}
+
+.company-index .contain-body .company-base-info .normal-changing>dl>dd {
+	float: left;
+	width: 300px;
+}
+
+.company-index .contain-body .company-base-info .normal-changing .btn-line {
+	width: 350px;
+	text-align: center;
+}
+
+.company-index .contain-body .company-label .normal-changing h3 {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.company-index .contain-body .company-label .normal-changing>div {
+	width: 300px;
+	margin: 15px 0 0 70px;
+}
+
+.company-index .contain-body .company-label .normal-changing>div input {
+	margin: 20px 0;
+}
+
+.company-index .contain-body .company-label .normal-changing .btn-line {
+	text-align: center;
+}
+
+.company-index .contain-body .company-production>dd>ul>li .company-production-changing .company-production-img {
+	width: 300px;
+	height: 180px;
+	border-radius: 5px;
+	background-color: #EDEDED;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}
+
+.company-index .contain-body .company-production>dd>ul>li .company-production-changing .company-production-img span {
+	line-height: 180px;
+}
+
+.company-index .contain-body .company-production>dd>ul>li .company-production-changing .company-production-introduce {
+	width: 440px;
+	float: left;
+	margin: 0 0 0 40px;
+}
+
+.company-index .contain-body .company-production>dd>ul>li .company-production-changing .company-production-introduce span {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.company-index .contain-body .company-production>dd>ul>li .company-production-changing .company-production-introduce input {
+	margin-bottom: 10px;
+}
+
+.company-index .contain-body .company-production>dd>ul>li .company-production-changing .company-production-introduce textarea {
+	height: 75px;
+}
+
+.company-index .contain-body .company-production>dd>ul>li .company-production-changing>input {
+	display: none;
+}
+
+.company-index .contain-body .company-production>dd>ul>li .company-production-changing .btn-line {
+	margin: 200px 0 0 0;
+	text-align: center;
+}
+
+.company-index .contain-body .company-introduce>dd .company-introduce-changing textarea {
+	width: 730px;
+	margin: 10px 0 15px 60px;
+}
+
+.company-index .contain-body .company-introduce>dd .company-introduce-changing .btn-line {
+	width: 790px;
+	text-align: center;
+}
+
+.company-index .contain-body .company-production .company-production-unchange,
+.company-index .contain-body .company-production .company-production-changing {
+	margin: 15px 0 0 0;
+}
+
+.company-index .regedit-info dl dt {
+	width: 150px;
+	float: left;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+.company-index .regedit-info dl dd {
+	float: left;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.company-index .regedit-info dl dd>img {
+	width: 300px;
+}
+
+.company-index .btn-line {
+	text-align: center;
+}
+
+.company-index .btn-line>a:nth-child(2) ,
+.company-index .btn-line>a:nth-child(3){
+	margin-left: 50px;
+}
+
+
+/*企业职位页面*/
+
+.company-jobs-list .contain-body {}
+
+.company-jobs-list .contain-body .recruit-title {
+	width: 750px;
+	margin: 15px auto 0;
+	background-color: #f2f2f2;
+	padding: 0;
+}
+
+.company-jobs-list .contain-body .recruit-title ul {
+	margin: 0 0 0 15px;
+	float: left
+}
+
+.company-jobs-list .contain-body .recruit-title ul li {
+	float: left;
+    padding: 13px 20px;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 2px solid #FFFFFF;
+    color: #777;
+    font-size: 16px;
+}
+
+.company-jobs-list .contain-body .recruit-title ul li:hover {
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
+.company-jobs-list .contain-body .recruit-title ul .active{
+	border-bottom: 2px solid #68B3C8;
+    color: #68B3C8;
+}
+.company-jobs-list .contain-body .recruit-title .add-job {
+	float: right;
+	color: #68B3C8;
+	font-size: 17px;
+	padding-right: 15px;
+	line-height: 45px;
+}
+
+.company-jobs-list .contain-body .job-list {
+	width: 750px;
+	margin: 15px auto 0;
+}
+
+.company-jobs-list .contain-body .job-list ul {}
+
+.company-jobs-list .contain-body .job-list ul li {
+	border: 1px solid #d5dadf;
+	background-color: #fff;
+	width: 100%;
+	margin: 0 0 15px 0;
+	border-radius: 4px;
+}
+
+.company-jobs-list .contain-body .job-list ul li .top-part {
+	border-bottom: 1px dashed #e5e5e5;
+	padding: 17px 0 10px 15px;
+}
+
+.company-jobs-list .contain-body .job-list ul li .top-part .job-title {
+	float: left;
+	padding: 8px 0 0 0;
+}
+
+.company-jobs-list .contain-body .job-list ul li .top-part .job-title h3 {
+	font-size: 18px;
+	color: #555555;
+	font-weight: normal;
+	margin: 0;
+}
+
+.company-jobs-list .contain-body .job-list ul li .top-part .job-title .job-info {
+	margin: 8px 0;
+	color: #999999;
+}
+
+.company-jobs-list .contain-body .job-list ul li .top-part .job-title .job-info span:after {
+	content: "|";
+	margin: 0 6px 0 9px;
+	color: #d5dadf;
+	font-size: 9px;
+	vertical-align: top;
+}
+
+.company-jobs-list .contain-body .job-list ul li .top-part .num-box {
+	float: right;
+	margin-right: -1px;
+}
+
+.company-jobs-list .contain-body .job-list ul li .top-part .num-box a {
+	float: left;
+	margin: 10px 50px 10px 0;
+	border-right: 1px solid #d5dadf;
+	font-size: 18px;
+	text-align: center;
+}
+
+.company-jobs-list .contain-body .job-list ul li .top-part .num-box a .num {
+	font-size: 24px;
+	color: #555555;
+	line-height: 22px;
+	padding: 0 33px;
+	font-weight: bold;
+}
+
+.company-jobs-list .contain-body .job-list ul li .top-part .num-box a .text {
+	font-size: 14px;
+	color: #999;
+	line-height: 14px;
+	margin: 7px 0 0 0;
+}
+
+.company-jobs-list .contain-body .job-list ul li .bottom-part {
+	background-color: #f8f8f8;
+	width: 100%;
+	height: 38px;
+	color: #555;
+	position: relative;
+}
+
+.company-jobs-list .contain-body .job-list ul li .bottom-part .job-status {
+	float: left;
+	padding: 11px 15px;
+	font-size: 12px;
+	color: #555;
+}
+
+.company-jobs-list .contain-body .job-list ul li .bottom-part .options {
+	float: right;
+	height: 28px;
+	margin: 9px 15px 0 0;
+	right: 0;
+	top: 0;
+	position: absolute;
+}
+
+.company-jobs-list .contain-body .job-list ul li .bottom-part .options p {
+	cursor: pointer;
+}
+
+.company-jobs-list .contain-body .job-list ul li .bottom-part .options p:hover {
+	color: #68B3C8;
+}
+
+.company-jobs-list .contain-body .job-list ul li .bottom-part p {
+	margin: 0;
+}
+
+
+/*职位详情页面*/
+
+.common-job-details .contain-body .job-main-wraper {
+	background-color: #f2f5f4;
+	padding: 30px 0 10px;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main .left-part {
+	float: left;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main .left-part>span {
+	margin: -2px 0 8px 0;
+	font-size: 14px;
+	color: #555;
+	position: relative;
+	left: 2px;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main .left-part .position-title h3 {
+	margin: 10px 0;
+	font-size: 36px;
+	color: #333;
+	line-height: 36px;
+	float: left;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main .left-part .position-title>span {
+	float: left;
+	margin: 25px 0 0 5px;
+	color: #68B3C8;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main .left-part .position-info {
+	color: #555555;
+	margin: 0;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main .left-part .position-info .salary {
+	color: #fd5f39;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main .left-part .position-update-time {
+	padding-top: 10px;
+	font-size: 14px;
+	color: #999;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main .right-part {
+	float: right;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main .right-part>a {
+	padding: 0 30px;
+	border-radius: 3px;
+	font-size: 18px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	height: 44px;
+	line-height: 44px;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main .right-part>div {
+	width: 200px;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main .right-part>div>a {
+	margin: 0 0 7px 0;
+}
+
+.common-job-details .contain-body .job-main-wraper .job-main .right-part>span {
+	display: block;
+	margin: 55px 0 0 25px;
+}
+
+.common-job-details .contain-body .job-content {
+	width: 900px;
+	margin: 20px auto 0;
+}
+
+.common-job-details .contain-body .job-content .left-part {
+	width: 550px;
+	float: left;
+}
+
+.common-job-details .contain-body .job-content .left-part>dl>dt {
+	padding: 0 0 10px;
+}
+
+.common-job-details .contain-body .job-content .left-part dl dd {
+	font-size: 14px;
+	color: #333;
+}
+.common-job-details .contain-body .job-content .left-part dl dd .attempt-label{
+	float: left;
+	margin: 0 10px 0 0 ;
+}
+.common-job-details .contain-body .job-content .left-part dl dd pre{
+	background-color: transparent;
+	border: 0 ; 
+	font-size: 14px; 
+	font-family: '微软雅黑'; 
+	line-height: 22px; 
+	padding: 0;
+}
+.common-job-details .contain-body .job-content .left-part>dl>dd>dl {
+	margin: 0 0 10px;
+}
+
+.common-job-details .contain-body .job-content .left-part>dl>dd>dl>dt {
+	font-weight: normal;
+	padding: 0 0 5px;
+}
+
+.common-job-details .contain-body .job-content .left-part>dl>dd>dl>dd {
+	padding: 3px 0;
+}
+
+.common-job-details .contain-body .job-content .right-part {
+	width: 260px;
+	float: right;
+	color: #555;
+}
+
+.common-job-details .contain-body .job-content .right-part dl dt a:hover {
+	color: #555;
+}
+
+.common-job-details .contain-body .job-content .right-part dl dt a img {
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+
+.common-job-details .contain-body .job-content .right-part dl dt a div {
+	float: left;
+	margin: 60px 0 0 10px;
+}
+
+.common-job-details .contain-body .job-content .right-part dl dd ul {
+	margin: 20px 0 0;
+	padding: 0;
+}
+
+.common-job-details .contain-body .job-content .right-part dl dd ul li {
+	width: 170px;
+	padding: 20px 0 0 0;
+}
+
+.common-job-details .contain-body .admin-info {
+	width: 900px;
+	margin: 20px auto 0;
+}
+
+.common-job-details .contain-body .admin-info dl {
+	font-size: 30px;
+}
+
+.common-job-details .contain-body .admin-info dl dd {
+	float: left;
+}
+
+.common-job-details .contain-body .admin-info dl dt {
+	float: left;
+}
+.common-job-details .contain-body .student-info,
+.common-job-details .contain-body .company-info
+ {
+	width: 900px;
+	margin: 20px auto 0;
+	text-align: center;
+}
+
+/*公司投递箱页面*/
+
+.company-receive .contain-body .receive-title {
+	width: 750px;
+	margin: 15px auto 0;
+	background-color: #f2f2f2;
+	padding: 0;
+}
+
+.company-receive .contain-body .receive-title ul {
+	margin: 0 0 0 15px;
+}
+
+.company-receive .contain-body .receive-title ul li {
+	float: left;
+	padding: 13px 20px;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+	border-bottom: 2px solid #FFFFFF;
+	color: #777;
+	font-size: 16px;
+}
+.company-receive .contain-body .receive-title ul li:hover{
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
+.company-receive .contain-body .receive-title ul .active{
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
+
+.company-receive .contain-body .receive-list {
+	width: 750px;
+	margin: 20px auto;
+}
+
+.company-receive .contain-body .receive-list table {
+	width: 100%;
+	border-color: #d5dadf;
+	border-collapse: separate;
+	border: 1px solid #d5dadf;
+	border-radius: 2px;
+	overflow: hidden;
+	font-size: 14px;
+}
+
+.company-receive .contain-body .receive-list table tr {
+	border-left: 1px solid #d5dadf;
+	border-right: 1px solid #d5dadf;
+}
+
+.company-receive .contain-body .receive-list table tr th {
+	padding: 15px 16px;
+	vertical-align: middle;
+	color: #999;
+	background: #fff;
+	font-weight: normal;
+}
+
+.company-receive .contain-body .receive-list table tr td a {
+	color: #68B3C8;
+}
+
+.company-receive .contain-body .receive-list table tr td a:hover {
+	color: #68B3C8;
+}
+
+.company-receive .contain-body .receive-list table tr td {
+	padding: 15px 16px;
+	vertical-align: middle;
+	border-top-color: #eceff1;
+	color: #555;
+}
+.company-receive .contain-body .receive-list > p{
+	text-align: center;
+	color: #555;
+	font-size: 18px;
+}
+.company-receive .contain-body .interview-list {
+	width: 750px;
+	margin: 20px auto;
+}
+
+.company-receive .contain-body .interview-list table {
+	width: 100%;
+	border-color: #d5dadf;
+	border-collapse: separate;
+	border: 1px solid #d5dadf;
+	border-radius: 2px;
+	overflow: hidden;
+	font-size: 14px;
+}
+
+.company-receive .contain-body .interview-list table tr {
+	border-left: 1px solid #d5dadf;
+	border-right: 1px solid #d5dadf;
+}
+
+.company-receive .contain-body .interview-list table tr th {
+	padding: 15px 16px;
+	vertical-align: middle;
+	color: #999;
+	background: #fff;
+	font-weight: normal;
+}
+
+.company-receive .contain-body .interview-list table tr td {
+	padding: 15px 16px;
+	vertical-align: middle;
+	border-top-color: #eceff1;
+	color: #555;
+}
+
+.company-receive .contain-body .interview-list table tr td a {
+	color: #68B3C8;
+}
+
+.company-receive .contain-body .interview-list table tr td a:hover {
+	color: #68B3C8;
+}
+
+
+/*创建账号页面*/
+
+.admin-index .contain-body {
+	width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.admin-index .contain-body .creat-student-count,
+.admin-index .contain-body .creat-admin-count {
+	width: 520px;
+	height: 150px;
+	line-height: 150px;
+	border: 1px solid #68B3C8;
+	border-radius: 10px;
+	font-size: 30px;
+	background-color: #68B3C8;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.admin-index .contain-body .creat-student-count a,
+.admin-index .contain-body .creat-admin-count a {
+	color: #FFFFFF;
+}
+
+.admin-index .contain-body .creat-student-count {
+	margin: 50px 0;
+}
+
+.admin-index .contain-body .creat-admin-count {
+	margin-bottom: 80px;
+}
+
+
+/*创建学生账号页面*/
+
+.admin-create-student .contain-body {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.admin-create-student .contain-body>a {
+	padding: 0px 85px;
+	height: 60px;
+	line-height: 60px;
+	position: relative;
+	cursor: pointer;
+	color: #888;
+	background: #fafafa;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	overflow: hidden;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin: 30px 0;
+}
+
+.admin-create-student .contain-body>a:hover {
+	color: #444;
+	background: #eee;
+	border-color: #ccc;
+	text-decoration: none
+}
+
+.admin-create-student .contain-body>a>input {
+	position: absolute;
+	font-size: 100px;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	cursor: pointer
+}
+.admin-create-student input[type=file]{
+	display: none;
+}
+
+/*创建管理员账号页面*/
+
+.admin-creat-admin .contain-body {
+	width: 600px;
+	margin: 70px auto 0;
+}
+
+.admin-creat-admin .contain-body .creat-table {
+	text-align: center;
+}
+
+.admin-creat-admin .contain-body .creat-table dl {
+	margin: 50px 0;
+}
+
+.admin-creat-admin .contain-body .creat-table dl dt {
+	float: left;
+	line-height: 34px;
+	font-weight: normal;
+	font-size: 17px;
+}
+
+.admin-creat-admin .contain-body .creat-table dl dd {
+	float: left;
+}
+
+.admin-creat-admin .contain-body .creat-table .btn-line {
+	margin: 20px 0 50px;
+}
+
+.admin-creat-admin .contain-body .creat-table .btn-line a:nth-child(2) {
+	margin-left: 55px;
+}
+
+
+/*管理员查找账号页面*/
+
+.admin-search-count .contain-body .search-count-wraper {
+	background-color: #d8eaff;
+}
+
+.admin-search-count .contain-body .search-count-wraper .search-count {
+	width: 700px;
+	margin: 0 auto;
+}
+
+.admin-search-count .contain-body .search-count-wraper .search-count .input-group {
+	padding: 50px 0 70px;
+}
+
+.admin-search-count .contain-body .search-count-wraper .search-count .input-group input {
+	height: 50px;
+	font-size: 17px;
+}
+
+.admin-search-count .contain-body .search-count-wraper .search-count .input-group span {
+	padding: 0 30px;
+	font-size: 17px;
+	background-color: #68B3C8;
+	cursor: pointer;
+}
+
+.admin-search-count .contain-body .search-list {
+	width: 700px;
+	margin: 20px auto 40px;
+}
+
+.admin-search-count .contain-body .search-list li {
+	border: 1px solid #d5dadf;
+	margin: 15px 0;
+}
+
+.admin-search-count .contain-body .search-list li .left-part {
+	float: left;
+}
+
+.admin-search-count .contain-body .search-list li .left-part span {
+	display: block;
+	vertical-align: middle;
+	color: #555;
+}
+
+.admin-search-count .contain-body .search-list li .right-part {
+	float: right;
+}
+
+.admin-search-count .contain-body .search-list li .right-part span {
+	padding: 20px 50px;
+	font-size: 22px;
+	vertical-align: middle;
+	color: #555;
+	float: left;
+}
+
+.admin-search-count .contain-body .search-list li .left-part span:nth-child(1) {
+	padding: 20px 30px;
+}
+
+.admin-search-count .contain-body .search-list li .left-part span:nth-child(2) {
+	padding: 0 30px 20px;
+}
+
+.admin-search-count .contain-body .search-list li .left-part span:nth-child(1) a {
+	color: #68B3C8;
+	font-size: 18px;
+}
+
+.admin-search-count .contain-body .search-list .not-exist {
+	border: 0;
+	font-size: 25px;
+	margin: 0 auto;
+	width: 200px;
+}
+
+.admin-search-count .contain-body .input-group .input-group-addon {
+	padding: 0 30px;
+	font-size: 17px;
+	background-color: #68B3C8;
+	cursor: pointer;
+}
+
+
+/*学生信息页面*/
+
+.common-student-details .contain-body {
+	width: 600px;
+	margin: 30px auto 40px;
+}
+
+.common-student-details .contain-body .student-details .student-img img {
+	width: 120px;
+	border-radius: 5px;
+}
+
+.common-student-details .contain-body .student-details dl {}
+
+.common-student-details .contain-body .student-details dl dt {
+	width: 200px;
+	float: left;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.common-student-details .contain-body .student-details dl dd {
+	float: left;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.common-student-details .contain-body .student-details .btn-line {
+	margin: 40px 0 50px;
+	text-align: center;
+}
+
+.common-student-details .contain-body .student-details .btn-line a:nth-child(2),
+.common-student-details .contain-body .student-details .btn-line a:nth-child(3) {
+	margin-left: 55px;
+}
+
+
+/*企业信息页面*/
+
+.common-company-details .contain-body {
+	width: 600px;
+	margin: 30px auto 40px;
+}
+
+.common-company-details .contain-body .company-details dl {}
+
+.common-company-details .contain-body .company-details dl dt {
+	width: 200px;
+	float: left;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.common-company-details .contain-body .company-details dl dd {
+	float: left;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.common-company-details .contain-body .company-details .btn-line {
+	margin: 40px 0 50px;
+	text-align: center;
+}
+
+.common-company-details .contain-body .company-details .btn-line a:nth-child(2) {
+	margin-left: 55px;
+}
+
+.common-company-details .contain-body .company-details .company-lisence dd img {
+	width: 300px;
+}
+.common-company-details .contain-body .company-details .company-lisence .huge{
+	width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(104, 179, 200, 0.65);
+    padding: 5% 15.4%;
+}
+
+/*管理员审核账号页面*/
+
+.admin-audit-count .contain-body .audit-title {
+	width: 750px;
+	margin: 15px auto 0;
+	background-color: #f2f2f2;
+	padding: 0;
+}
+
+.admin-audit-count .contain-body .audit-title ul {}
+
+.admin-audit-count .contain-body .audit-title ul li {
+	float: left;
+	padding: 13px 20px;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+	border-bottom: 2px solid #FFFFFF;
+	color: #777;
+	font-size: 16px;
+}
+
+.admin-audit-count .contain-body .audit-title ul li:hover {
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
+.admin-audit-count .contain-body .audit-title ul .active{
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
+
+
+.admin-audit-count .contain-body .audit-list {
+	width: 750px;
+	margin: 15px auto 0;
+}
+
+
+.admin-audit-count .contain-body .audit-list ul li {
+	border: 1px solid #d5dadf;
+	background-color: #fff;
+	width: 100%;
+	margin: 0 0 15px 0;
+	border-radius: 4px;
+}
+
+.admin-audit-count .contain-body .audit-list ul li .top-part {
+	border-bottom: 1px dashed #e5e5e5;
+	padding: 17px 0 10px 15px;
+}
+
+.admin-audit-count .contain-body .audit-list ul li .top-part .left-part {
+	float: left;
+	padding: 8px 0 0 0;
+}
+
+.admin-audit-count .contain-body .audit-list ul li .top-part .left-part h3 {
+	font-size: 18px;
+	color: #555555;
+	font-weight: normal;
+	margin: 0;
+}
+
+.admin-audit-count .contain-body .audit-list ul li .top-part .left-part .company-info {
+	margin: 8px 0;
+	color: #999999;
+}
+
+.admin-audit-count .contain-body .audit-list ul li .top-part .left-part .company-info span:after {
+	content: "|";
+	margin: 0 6px 0 9px;
+	color: #d5dadf;
+	font-size: 9px;
+	vertical-align: top;
+}
+
+.admin-audit-count .contain-body .audit-list ul li .top-part .right-part {
+	float: right;
+	margin: 10px 30px 0 0;
+}
+
+.admin-audit-count .contain-body .audit-list ul li .bottom-part {
+	background-color: #f8f8f8;
+	width: 100%;
+	height: 38px;
+	color: #555;
+	position: relative;
+	line-height: 38px;
+}
+
+.admin-audit-count .contain-body .audit-list ul li .bottom-part span {
+	padding-left: 17px;
+}
+
+
+/*管理员学生信息添加页面*/
+.admin-create-student .contain-body .student-info-title {
+	width: 600px;
+	margin: 15px auto 0;
+	background-color: #f2f2f2;
+	padding: 0;
+	text-align: center;
+}
+
+.admin-create-student .contain-body .student-info-title ul li {
+	float: left;
+	padding: 13px 20px;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+	border-bottom: 2px solid #FFFFFF;
+	color: #777;
+	font-size: 16px;
+}
+
+.admin-create-student .contain-body .student-info-title ul li:hover {
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
+.admin-create-student .contain-body .student-info-title ul .active{
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
+
+.admin-create-student .contain-body {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+.admin-create-student .contain-body .student-info-content .wraper{
+	margin: 30px 0
+}
+.admin-create-student .contain-body .student-info-content .wraper a {
+	padding: 0px 85px;
+	height: 60px;
+	line-height: 60px;
+	position: relative;
+	cursor: pointer;
+	color: #888;
+	background: #fafafa;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	overflow: hidden;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.admin-create-student .contain-body .student-info-content .wraper a:hover {
+	color: #444;
+	background: #eee;
+	border-color: #ccc;
+	text-decoration: none
+}
+
+.admin-create-student .contain-body .student-info-content .wraper a > input {
+	position: absolute;
+	font-size: 100px;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	cursor: pointer
+}
+.admin-create-student .contain-body .student-info-content .wraper input[type=file]{
+	display: none;
+}
+
+/*学生简历页面*/
+
+.common-student-resume .contain-body {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.common-student-resume .contain-body .student-details {
+	padding: 10px 0 0 0;
+}
+
+.common-student-resume .contain-body .student-details .img-part {
+	width: 120px;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+.common-student-resume .contain-body .student-details .img-part img {
+	width: 120px;
+	border-radius: 5px;
+}
+
+.common-student-resume .contain-body .student-details .base-info {
+	text-align: center;
+}
+
+.common-student-resume .contain-body .student-details .base-info .line-1 .student-name {
+	font-size: 23px;
+	font-weight: bold;
+}
+
+.common-student-resume .contain-body .student-details .other-info>dl {
+	padding: 10px 0 10px 20px;
+	margin: 0;
+}
+
+.common-student-resume .contain-body .student-details .other-info>dl:nth-child(1)>dd {
+	text-indent: 3rem;
+}
+
+.common-student-resume .contain-body .student-details .other-info>dl>dt {
+	padding: 10px 0;
+}
+
+.common-student-resume .contain-body .student-details .other-info>dl>dd {
+	width: 550px;
+	padding: 0 0 0 75px;
+}
+
+.common-student-resume .contain-body .student-details .other-info>dl>dd>div>div>dl>dt {
+	float: left;
+	font-weight: normal;
+}
+
+.common-student-resume .contain-body .student-details .other-info>dl>dd>div>div>dl>dt {
+	float: left;
+}
+
+.common-student-resume .contain-body .student-details .btn-line {
+	text-align: center;
+}
+
+.common-student-resume .contain-body .student-details .btn-line button:nth-child(2),
+.common-student-resume .contain-body .student-details .btn-line a{
+	margin-left: 20px;
+}
+
+.common-student-resume .contain-body .one-piece-change {
+	margin-top: 20px;
+}
+
+.common-student-resume .contain-body .student-experience .experience-introduce .one-piece>dl>dt {}
+
+.common-student-resume .contain-body .student-experience .experience-introduce .one-piece>dl>dd>dl {}
+
+
+/*职位详情页面*/
+
+.company-jobs .contain-body {
+	width: 1000px;
+	margin: 20px auto 0;
+}
+
+.company-jobs .contain-body .title-wraper>span:nth-child(1) {
+	position: relative;
+	font-size: 18px;
+	float: left;
+	color: #000000;
+}
+
+.company-jobs .contain-body .job-base-info .line {
+	width: 800px;
+	float: right;
+	display: inline-block;
+	border-top: 1px solid #e8e8e8;
+	margin: 15px 55px 0 20px;
+}
+
+.company-jobs .contain-body .job-base-info>div {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.company-jobs .contain-body .change-btn {
+	position: absolute;
+	top: 5px;
+	right: 0;
+}
+
+.company-jobs .contain-body .job-base-info>div>div:nth-child(3),
+.company-jobs .contain-body .job-base-info>div>div:nth-child(4) {
+	padding: 10px 0 10px 15px;
+	font-size: 16px;
+}
+
+.company-jobs .contain-body .job-base-info>div>div:nth-child(3) {
+	width: 750px;
+}
+
+.company-jobs .contain-body .job-base-info>div>div:nth-child(3)>dl>dt {
+	font-weight: normal;
+	padding: 5px 0;
+}
+
+.company-jobs .contain-body .job-base-info>div>div:nth-child(3)>dl>dd {
+	padding: 3px 0;
+}
+
+.company-jobs .contain-body .job-base-info>div>div:nth-child(4) dl dt {
+	line-height: 34px;
+	font-weight: normal;
+	float: left;
+}
+
+.company-jobs .contain-body .job-base-info>div>div:nth-child(4) dl dd {
+	width: 650px;
+	float: left;
+}
+
+.company-jobs .contain-body .job-base-info>div>div:nth-child(4) .btn-line {
+	width: 700px;
+	text-align: center;
+}
+.company-jobs .contain-body .job-base-info>div:nth-child(6) h3{
+	font-size: 15px;
+}
+.company-jobs .contain-body .job-base-info>div:nth-child(6) textarea {
+	height: 75px;
+}
+.company-jobs .contain-body .job-base-info .job-type .job-type-changing > dl{
+	float: left;
+}
+.company-jobs .contain-body .job-base-info .job-type .job-type-changing > dl > dt{
+	width: 200px;
+	text-align: center;
+}
+.company-jobs .contain-body .job-base-info .job-type .job-type-changing > dl > dd{
+	width: 200px;
+	margin: 0 130px 0 0 ;
+	padding: 0;
+}
+/*公司注册页面*/
+
+.company-regedit .contain-body {
+	width: 600px;
+	margin: 50px auto 0;
+}
+
+.company-regedit .contain-body>dl>dt {
+	float: left;
+	font-weight: normal;
+	line-height: 34px;
+	width: 80px;
+}
+
+.company-regedit .contain-body>dl>dd {
+	float: left;
+	width: 400px;
+}
+
+.company-regedit .contain-body>dl>dd .upload-company-lisence {
+	width: 300px;
+	height: 130px;
+	background-color: #EDEDED;
+	text-align: center;
+	cursor: pointer;
+}
+
+.company-regedit .contain-body>dl>dd .upload-company-lisence span {
+	line-height: 130px;
+}
+
+.company-regedit .contain-body>dl:nth-child(7)>dd input {
+/*	display: none;
+*/}
+
+.company-regedit .btn-line {
+	text-align: center;
+	width: 510px;
+}
+
+.company-regedit .btn-line a:nth-child(2) {
+	margin-left: 20px;
+}
+.company-regedit .tips{
+	margin: -5px 0 0 0;
+}
+.company-regedit .tips .error-tip{
+	display: block;
+    padding-left: 20px;
+    color: #fd5f39;
+    background: url(../../../static/img/error-tip-icon.png) 0 center no-repeat;
+}
+
+/*企业职位修改页*/
+.company-jobs-change dd {
+	margin-top: 20px;
+}
+
+.company-jobs-change dt {
+	margin-top: 10px;
+	font-weight: normal;
+}
+
+.company-jobs-change .btn-line {
+	text-align: center;
+}
+
+.company-jobs-change .btn-line a:nth-child(2) {
+	margin-left: 40px;
+}
+.company-jobs-change .address select{
+    height: 55px;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+
+
+
+
+/*时间控件样式修改*/
+
+#send-invitation {
+	display: block;
+	width: 257px;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	text-align: center;
+}
+.vue-datepicker{
+	font-size: 15px!important;
+	font-family: "微软雅黑"!important;
+}
+.vue-datepicker-panels {
+	width: 257px!important;
+}
+
+.vue-datepicker .vue-datepicker-panel .vue-datepicker-tb tbody tr td.z-existed.z-on span,
+.vue-datepicker .vue-datepicker-panel .vue-datepicker-tb2 tbody tr td.z-existed.z-on span {
+	background-color: #5bc0de!important;
+}
+
+.vue-datepicker .vue-datepicker-panel .vue-datepicker-tb tbody tr td.z-existed:hover,
+.vue-datepicker .vue-datepicker-panel .vue-datepicker-tb2 tbody tr td.z-existed:hover {
+	color: #5bc0de!important;
+}
+.vue-datepicker .vue-datepicker-panel .vue-datepicker-tb thead tr th, .vue-datepicker .vue-datepicker-panel .vue-datepicker-tb2 thead tr th{
+	text-align: center;
+}
+
+
+
+/*职位列表页*/
+.job-list .contain-header{
+	background-color: #d8eaff;
+}
+.job-list .contain-header .search-wraper {
+	padding: 30px 0;
+}
+
+.job-list .contain-header .search-wraper .input-group {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.job-list .contain-header .search-wraper .input-group input {
+	height: 50px;
+	font-size: 17px;
+	z-index: 0;
+}
+
+.job-list .contain-header .search-wraper .input-group span {
+	padding: 0 30px;
+	font-size: 17px;
+	background-color: #68B3C8;
+	color: #FFFFFF;
+}
+
+.job-list .contain-header .search-wraper .popular-search {
+	width: 900px;
+	margin: 8px auto 0;
+}
+
+.job-list .contain-header .search-wraper .popular-search p .title {
+	float: left;
+}
+
+.job-list .contain-header .search-wraper .popular-search p .details a {
+	color: #68B3C8;
+	margin-right: 20px;
+}
+.job-list > .details{
+	position: relative;
+    overflow: visible;
+    background: #fafafa;
+    width: 1000px;
+    margin: 20px auto 0;
+    border: 1px solid #ededed;
+    background-color: #fafafa;
+}
+.job-list > .details .multi-chosen{
+	padding: 10px 16px;
+}
+.job-list > .details .multi-chosen span{
+	font-weight: 600;
+    margin-right: -5px;
+}
+.job-list > .details .multi-chosen span,
+.job-list > .details .multi-chosen a{
+	float: left;
+    margin-right: 5px;
+    padding: 5px 8px;
+    line-height: 14px;
+}
+.job-list > .details .multi-chosen a:hover{
+	background-color: #68B3C8;
+    color: #fff;
+}
+.job-list > .details .multi-chosen > .active{
+	background-color: #68B3C8;
+    color: #fff;
+}
+.job-list > .main-list{
+	position: relative;
+    background: #fafafa;
+    width: 1000px;
+    margin: 20px auto 0;
+}
+.job-list > .main-list > .job-one{
+	position: relative;
+    color: #555;
+    border: 1px solid #ededed;
+    margin-top: 18px;
+}
+.job-list > .main-list > .job-one > .top{
+	width: 1000px;
+    height: 68px;
+    padding: 14px 15px 0;
+    margin-bottom: 7px;
+}
+.job-list > .main-list > .job-one > .top > .left{
+	float: left;	
+	width: 528px;
+    margin-right: 20px;
+}
+.job-list > .main-list > .job-one > .top > .left > .jobName{
+	height: 34px;
+    line-height: 34px;
+}
+.job-list > .main-list > .job-one > .top > .left > .jobName > h3{
+	float: left;
+    max-width: 272px;
+    margin: 0;
+    font-size: 16px;
+    color: #68B3C8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    line-height: 34px;
+}
+.job-list > .main-list > .job-one > .top > .left > .jobName > span{
+	font-size: 16px;
+    color: #68B3C8;
+    float: left;
+    margin: 0;
+}
+.job-list > .main-list > .job-one > .top > .left > .salary span:nth-child(1){
+	margin-right: 1em;
+    font-size: 16px;
+    color: #fd5f39;
+}
+.job-list > .main-list > .job-one > .top > .middle{
+	float: left;
+	width: 303px;
+    margin-right: 15px;
+}
+.job-list > .main-list > .job-one > .top > .middle .companyName{
+	display: inline-block;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    color: #68B3C8;
+    font-size: 16px;
+    vertical-align: middle;
+    height: 34px;
+    line-height: 34px;
+}
+.job-list > .main-list > .job-one > .top > .right{
+	float: left;
+    width: 62px;
+}
+.job-list > .main-list > .job-one > .top > .right a img{
+	display: block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #f5f5f5;
+}
+.job-list > .main-list > .job-one > .bottom{
+    height: 40px;
+    padding: 0 15px;
+    background-color: #fafafa;
+}
+.job-list > .main-list > .job-one > .bottom > .left .labels{
+	float: left;
+    width: 528px;
+    height: 40px;
+    margin-right: 20px;
+    line-height: 40px;
+    overflow: hidden;
+}
+.job-list > .main-list > .job-one > .bottom > .left .labels span{
+	display: inline-block;
+    max-width: 108px;
+    height: 20px;
+    padding: 0 5px;
+    margin: 0 3px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #555;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.job-list > .main-list > .job-one > .bottom > .right .labels span{
+	padding: 0 3px;
+}
+.job-list > .main-list > .job-one > .bottom > .right{
+	float: left;
+    width: 380px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.job-list .none-list > .empty-tips{
+	display: block;
+	width: 1000px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+.job-list .none-list{
+	position: relative;
+    width: 1000px;
+    margin: 20px auto 0;
+}
+
+
+.admin-setting > ul{
+	margin: 20px 0 50px 0;
+	padding: 0;
+	background-color: #F2F5F4;
+	color:  #999;
+}
+.admin-setting > ul > li {
+	text-align: left;
+}
+.admin-setting > ul > li > span{
+	display: inline-block;
+	font-size: 16px;
+	padding: 10px 0 10px  20px ;
+	cursor: pointer;
+	user-select: none ;
+}
+.admin-setting > ul > .active{
+	color: #337ab7;
+}
+.admin-setting > ul > li > span:hover{
+	color: #337ab7;
+}
+.admin-setting > ul > li > .change-part > div {
+	padding: 5px 0 0px  20px ;
+}
+.admin-setting > ul > li > .change-part .top-part > span{
+	color: #999;
+}
+.admin-setting > ul > li > .change-part .top-part > a{
+	float: right;
+	margin-right: 80px;
+}
+.admin-setting > ul > li > .change-part .banner-one-piece{
+	padding-bottom: 40px;
+}
+.admin-setting > ul > li > .change-part .banner-one-piece .left-part{
+	float: left;
+}
+.admin-setting > ul > li > .change-part .banner-one-piece .left-part  img{
+	width: 320px;
+	border-radius: 10px;
+}
+.admin-setting > ul > li > .change-part .banner-one-piece .right-part{
+	float: left;
+	margin:  50px 0px 0 30px;
+}
+.admin-setting > ul > li > .change-part .change-btn{
+	padding: 0px 0 20px;
+	text-align: center;
+}
+.admin-setting > ul > li > .change-part .change-btn > a:nth-child(2){
+	margin-left: 40px;
+}
+.password-part{
+	padding: 40px 0;
+}
+.password-part ul li dl {
+	width: 400px;
+}
+.password-part ul li dl dt{
+	float: left;
+	width: 100px;
+	text-align: center;
+	font-weight: normal;
+	color: #030303;
+}
+.password-part ul li dl dd{
+	float: left;
+	width: 300px;
+}
+.password-part .btn-part{
+	width: 400px;
+	text-align: center;
+}
+.password-part .btn-part a{
+	margin: 0 20px;
+}
+.password-part .error-tips{
+	display: block;
+	margin: -15px 0 10px 100px;
+	padding-left: 20px;
+	color: #fd5f39;	
+	background: url(../../../static/img/error-tip-icon.png) 0 center no-repeat;
+}
+
+
+
+/*学生设置页面*/
+.student-index .contain-body {
+	width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+.student-setting > ul{
+	margin: 20px 0 50px 0;
+	padding: 0;
+	background-color: #F2F5F4;
+	color:  #999;
+}
+.student-setting > ul > li {
+	text-align: left;
+}
+.student-setting > ul > li > span{
+	display: inline-block;
+	font-size: 16px;
+	padding: 10px 0 10px  20px ;
+	cursor: pointer;
+	user-select: none ;
+}
+.student-setting > ul > .active{
+	color: #337ab7;
+}
+.student-setting > ul > li > span:hover{
+	color: #337ab7;
+}
+
+
+/*企业设置页面*/
+.company-setting{
+	width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+.company-setting .contain-body > ul{
+	margin: 20px 0 50px 0;
+	padding: 0;
+	background-color: #F2F5F4;
+	color:  #999;
+}
+.company-setting .contain-body > ul > li {
+	text-align: left;
+}
+.company-setting .contain-body > ul > li > span{
+	display: inline-block;
+	font-size: 16px;
+	padding: 10px 0 10px  20px ;
+	cursor: pointer;
+	user-select: none ;
+}
+.company-setting .contain-body > ul > .active{
+	color: #337ab7;
+}
+.company-setting .contain-body > ul > li > span:hover{
+	color: #337ab7;
+}

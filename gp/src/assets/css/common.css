@@ -1,0 +1,57 @@
+.kill-decoration{
+	text-decoration: none;
+}
+.kill-decoration:link{
+	text-decoration: none;
+}
+.kill-decoration:hover{
+	text-decoration: none;
+}
+.kill-decoration:visited{
+	text-decoration: none;
+}
+.kill-type{
+	list-style-type: none;
+}
+.header-a:link{
+	color: #c4c3c3;
+}
+.header-a:visited{
+	color: #c4c3c3;
+}
+.header-a:hover{
+	color: #ffffff;
+}
+
+
+/*时间控件颜色*/
+.jedateblue .daybox .arthead,
+.jedateblue .ymsbox .arthead{
+	background-color: #68B3C8;
+}
+.jedateblue .daybox .arthead .ymbtn:hover{
+	background-color: #5bc0de;
+}
+.jedateblue .ymsbox .arthead em:hover{
+	background-color: #5bc0de;
+}
+.jedateblue .daybox .arthead em:hover{
+	background-color: #5bc0de;
+}
+.jedateblue .daysul td.other, 
+.jedateblue .daysul td.other .nolunar, 
+.jedateblue .daysul td.other .lunar{
+	color: #68B3C8;
+}
+.jedateblue .daysul td.actdate, 
+.jedateblue .daysul td.actdate:hover, 
+.jedateblue .daysul td.actdate .lunar{
+	background-color: #68B3C8;
+}
+.jedateblue .mainfoot .btnscon span{
+	background-color: #68B3C8;
+}
+.jedateblue .ymsbox .ymcon td.actdate, 
+.jedateblue .ymsbox .ymcon td.actdate:hover{
+	background-color: #68B3C8;
+}

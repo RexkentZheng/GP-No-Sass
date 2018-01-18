@@ -1,0 +1,21 @@
+gp/.DS_Store
+gp/node_modules/
+gp/dist/
+server/node_modules/
+server/dist/
+gp/npm-debug.log*
+gp/yarn-debug.log*
+gp/yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.project
+
+
+# Test files
+gp/demo.html
