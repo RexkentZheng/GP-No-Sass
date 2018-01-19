@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<admin-header></admin-header>
-		<div class="container admin-audit-count">
+		<div class="container admin-companyInfo-audit">
 			<div class="contain-body">
 				<div class="audit-title clearfix">
 					<ul>

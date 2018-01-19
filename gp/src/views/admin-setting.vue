@@ -31,6 +31,10 @@
 						<!--确定cancelSubmitPwd这个方法意味什么，同时传给子组件isPasswordShow这个参数-->
 						<change-pwd v-on:cancelSubmitPwd='cancelSubmitPwd' v-bind:isPasswordShow=isPasswordShow></change-pwd>
 					</li>
+					<li v-bind:class="{'active':isCreateShow}">
+						<span @click="isCreateShow = !isCreateShow">管理员注册</span>
+						<create-admin v-on:cancelCreateAdmin='cancelCreateAdmin' v-bind:isCreateShow=isCreateShow></create-admin>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -42,6 +46,7 @@
 	import AdminHeader from './../components/AdminHeader'
 	import CommonFooter from './../components/CommonFooter'
 	import ChangePwd from './../components/ChangePwd'
+	import CreateAdmin from './../components/CreateAdmin'
 	import './../assets/css/bootstrap.min.css'
 	import './../assets/css/common.css'
 	import './../assets/css/style.css'
@@ -53,6 +58,7 @@
 			return {
 				isBannerShow: false,
 				isPasswordShow: false,
+				isCreateShow:false,
 				bannerImgs: [],
 			}
 		},
@@ -63,6 +69,7 @@
 			AdminHeader,
 			CommonFooter,
 			ChangePwd,
+			CreateAdmin,
 			'vue-core-image-upload': VueCoreImageUpload
 		},
 		methods: {
@@ -102,6 +109,9 @@
 			},
 			cancelSubmitPwd(){
 				this.isPasswordShow = !this.isPasswordShow;
+			},
+			cancelCreateAdmin(){
+				this.isCreateShow = !this.isCreateShow;
 			}
 		}
 	}

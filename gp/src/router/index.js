@@ -11,6 +11,9 @@ import AdminSearchCount from '@/views/admin-search-count'
 import AdminSetting from '@/views/admin-setting'
 import AdminStudentInfoAdd from '@/views/admin-student-info-add'
 import AdminStudentInfoSearch from '@/views/admin-student-info-search'
+import AdminCompanyInfoCheck from '@/views/admin-company-info-check'
+import AdminCompanyInfoSearch from '@/views/admin-company-info-search'
+
 import CommonJobList from '@/views/common-job-list'
 import CommonJobDetails from '@/views/common-job-details'
 import CommonCompanyDetails from '@/views/common-company-details'
@@ -60,6 +63,16 @@ export default new Router({
 			path: '/admin/studentInfo/search',
 			name: 'AdminStudentInfoSearch',
 			component: AdminStudentInfoSearch
+		},
+		{
+			path: '/admin/companyInfo/',
+			name: 'AdminCompanyInfoCheck',
+			component: AdminCompanyInfoCheck
+		},
+		{
+			path: '/admin/companyInfo/search',
+			name: 'AdminCompanyInfoSearch',
+			component: AdminCompanyInfoSearch
 		},
 		{
 			path: '/admin/audit/details',

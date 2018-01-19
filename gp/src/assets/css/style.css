@@ -2009,6 +2009,7 @@ input[type=file] {
 }
 
 
+
 /*创建学生账号页面*/
 
 .admin-create-student .contain-body {
@@ -2061,32 +2062,7 @@ input[type=file] {
 	margin: 70px auto 0;
 }
 
-.admin-creat-admin .contain-body .creat-table {
-	text-align: center;
-}
 
-.admin-creat-admin .contain-body .creat-table dl {
-	margin: 50px 0;
-}
-
-.admin-creat-admin .contain-body .creat-table dl dt {
-	float: left;
-	line-height: 34px;
-	font-weight: normal;
-	font-size: 17px;
-}
-
-.admin-creat-admin .contain-body .creat-table dl dd {
-	float: left;
-}
-
-.admin-creat-admin .contain-body .creat-table .btn-line {
-	margin: 20px 0 50px;
-}
-
-.admin-creat-admin .contain-body .creat-table .btn-line a:nth-child(2) {
-	margin-left: 55px;
-}
 
 
 /*管理员查找账号页面*/
@@ -2188,8 +2164,6 @@ input[type=file] {
 	border-radius: 5px;
 }
 
-.common-student-details .contain-body .student-details dl {}
-
 .common-student-details .contain-body .student-details dl dt {
 	width: 200px;
 	float: left;
@@ -2221,7 +2195,6 @@ input[type=file] {
 	margin: 30px auto 40px;
 }
 
-.common-company-details .contain-body .company-details dl {}
 
 .common-company-details .contain-body .company-details dl dt {
 	width: 200px;
@@ -2261,16 +2234,52 @@ input[type=file] {
 
 /*管理员审核账号页面*/
 
-.admin-audit-count .contain-body .audit-title {
+.admin-companyInfo-audit .contain-body .company-info-title{
+	width: 750px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.admin-companyInfo-audit .contain-body .company-info-title ul{
+	margin: 20px 0 0 0;
+	padding: 0;
+	text-align: center;
+	display: inline-block;
+}
+
+.admin-companyInfo-audit .contain-body .company-info-title ul li .active{
+	color: #68B3C8;
+}
+
+.admin-companyInfo-audit .contain-body .company-info-title ul li{
+	float: left;
+	width: 200px;
+	margin: 0 10px;
+	line-height: 60px;
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+.admin-companyInfo-audit .contain-body .company-info-title ul li a{
+	display: block;
+}
+
+.admin-companyInfo-audit .contain-body .company-info-title ul li:hover a
+{
+	color: #68B3C8;
+	cursor: pointer;
+}
+
+.admin-companyInfo-audit .contain-body .audit-title {
 	width: 750px;
 	margin: 15px auto 0;
 	background-color: #f2f2f2;
 	padding: 0;
 }
 
-.admin-audit-count .contain-body .audit-title ul {}
 
-.admin-audit-count .contain-body .audit-title ul li {
+.admin-companyInfo-audit .contain-body .audit-title ul li {
 	float: left;
 	padding: 13px 20px;
 	vertical-align: middle;
@@ -2281,23 +2290,27 @@ input[type=file] {
 	font-size: 16px;
 }
 
-.admin-audit-count .contain-body .audit-title ul li:hover {
+.admin-companyInfo-audit .contain-body .audit-title ul li:hover {
 	border-bottom: 2px solid #68B3C8;
 	color: #68B3C8;
 }
-.admin-audit-count .contain-body .audit-title ul .active{
+.admin-companyInfo-audit .contain-body .audit-title ul .active{
 	border-bottom: 2px solid #68B3C8;
 	color: #68B3C8;
 }
 
 
-.admin-audit-count .contain-body .audit-list {
+.admin-companyInfo-audit .contain-body .audit-list {
 	width: 750px;
 	margin: 15px auto 0;
 }
 
+.admin-companyInfo-audit .contain-body .audit-list ul{
+	margin: 0;
+	padding: 0 15px;
+}
 
-.admin-audit-count .contain-body .audit-list ul li {
+.admin-companyInfo-audit .contain-body .audit-list ul li {
 	border: 1px solid #d5dadf;
 	background-color: #fff;
 	width: 100%;
@@ -2305,29 +2318,29 @@ input[type=file] {
 	border-radius: 4px;
 }
 
-.admin-audit-count .contain-body .audit-list ul li .top-part {
+.admin-companyInfo-audit .contain-body .audit-list ul li .top-part {
 	border-bottom: 1px dashed #e5e5e5;
 	padding: 17px 0 10px 15px;
 }
 
-.admin-audit-count .contain-body .audit-list ul li .top-part .left-part {
+.admin-companyInfo-audit .contain-body .audit-list ul li .top-part .left-part {
 	float: left;
 	padding: 8px 0 0 0;
 }
 
-.admin-audit-count .contain-body .audit-list ul li .top-part .left-part h3 {
+.admin-companyInfo-audit .contain-body .audit-list ul li .top-part .left-part h3 {
 	font-size: 18px;
 	color: #555555;
 	font-weight: normal;
 	margin: 0;
 }
 
-.admin-audit-count .contain-body .audit-list ul li .top-part .left-part .company-info {
+.admin-companyInfo-audit .contain-body .audit-list ul li .top-part .left-part .company-info {
 	margin: 8px 0;
 	color: #999999;
 }
 
-.admin-audit-count .contain-body .audit-list ul li .top-part .left-part .company-info span:after {
+.admin-companyInfo-audit .contain-body .audit-list ul li .top-part .left-part .company-info span:after {
 	content: "|";
 	margin: 0 6px 0 9px;
 	color: #d5dadf;
@@ -2335,12 +2348,12 @@ input[type=file] {
 	vertical-align: top;
 }
 
-.admin-audit-count .contain-body .audit-list ul li .top-part .right-part {
+.admin-companyInfo-audit .contain-body .audit-list ul li .top-part .right-part {
 	float: right;
 	margin: 10px 30px 0 0;
 }
 
-.admin-audit-count .contain-body .audit-list ul li .bottom-part {
+.admin-companyInfo-audit .contain-body .audit-list ul li .bottom-part {
 	background-color: #f8f8f8;
 	width: 100%;
 	height: 38px;
@@ -2349,7 +2362,7 @@ input[type=file] {
 	line-height: 38px;
 }
 
-.admin-audit-count .contain-body .audit-list ul li .bottom-part span {
+.admin-companyInfo-audit .contain-body .audit-list ul li .bottom-part span {
 	padding-left: 17px;
 }
 
@@ -2923,7 +2936,7 @@ input[type=file] {
     margin: 20px auto 0;
 }
 
-
+/* 管理员设置页面 */
 .admin-setting > ul{
 	margin: 20px 0 50px 0;
 	padding: 0;
@@ -2977,37 +2990,69 @@ input[type=file] {
 .admin-setting > ul > li > .change-part .change-btn > a:nth-child(2){
 	margin-left: 40px;
 }
-.password-part{
+.admin-setting > ul > li .password-part{
 	padding: 40px 0;
 }
-.password-part ul li dl {
+.admin-setting > ul > li .password-part ul li dl {
 	width: 400px;
 }
-.password-part ul li dl dt{
+.admin-setting > ul > li .password-part ul li dl dt{
 	float: left;
 	width: 100px;
 	text-align: center;
 	font-weight: normal;
 	color: #030303;
 }
-.password-part ul li dl dd{
+.admin-setting > ul > li .password-part ul li dl dd{
 	float: left;
 	width: 300px;
 }
-.password-part .btn-part{
+.admin-setting > ul > li .password-part .btn-part{
 	width: 400px;
 	text-align: center;
 }
-.password-part .btn-part a{
+.admin-setting > ul > li .password-part .btn-part a{
 	margin: 0 20px;
 }
-.password-part .error-tips{
+.admin-setting > ul > li .password-part .error-tips{
 	display: block;
 	margin: -15px 0 10px 100px;
 	padding-left: 20px;
 	color: #fd5f39;	
 	background: url(../../../static/img/error-tip-icon.png) 0 center no-repeat;
 }
+.admin-setting > ul > li .create-admin {
+	padding: 40px 0;
+	margin-left: 40px;
+	text-align: center;
+}
+
+.admin-setting > ul > li .create-admin dl dt {
+	width: 100px;
+	float: left;
+	line-height: 34px;
+	font-size: 17px;
+	display: inline-block;
+	color: #030303;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.admin-setting > ul > li .create-admin dl dd {
+	width: 300px;
+	float: left;
+	display: inline-block;
+}
+
+.admin-setting > ul > li .create-admin .btn-line {
+	width: 400px;
+	text-align: center;
+}
+
+.admin-setting > ul > li .create-admin .btn-line a:nth-child(2) {
+	margin-left: 55px;
+}
+
 
 
 

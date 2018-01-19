@@ -31,7 +31,7 @@
 						<router-link to='/admin/studentInfo/'>学生信息</router-link>
 					</li>
 					<li>
-						<router-link to='/admin/search/count'>企业信息</router-link>
+						<router-link to='/admin/companyInfo/'>企业信息</router-link>
 					</li>
 					<li>
 						<router-link to='/admin/setting'>设置</router-link>
