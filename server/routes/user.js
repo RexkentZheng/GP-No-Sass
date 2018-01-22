@@ -160,17 +160,9 @@ router.post('/userName', function(req, res, next) {
 	}
 	User.find(param, function(err, doc) {
 		if(err) {
-			res.json({
-				status: 1,
-				msg: err.message,
-				result: ''
-			})
+			getWrong(res,err)
 		} else {
-			res.json({
-				status: 0,
-				msg: '',
-				result: doc
-			})
+			getRight(res,doc)
 		}
 	})
 })

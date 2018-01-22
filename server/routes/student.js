@@ -31,6 +31,39 @@ router.get('/', function(req, res, next) {
 	})
 })
 
+//根据姓名查找学生信息
+router.post('/studentName',(req,res,next)=>{
+	let studentName = req.body.studentName;
+	Student.find({
+		'personalInfo.studentName':{
+			$regex: studentName
+		}
+	},(err,doc)=>{
+		if (err) {
+			getWrong(res,err);
+		}else{
+			getRight(res,doc);
+		}
+	})
+})
+
+//根据学号查找学生信息
+router.post('/studentNum',(req,res,netx)=>{
+	let studentNum = req.body.studentNum;
+	Student.find({
+		'personalInfo.studentNum':studentNum
+		//这里有BUG，学生账号没有进行模糊匹配
+	},(err,doc)=>{
+		if (err) {
+			console.log(err);
+			getWrong(res,err);
+		}else{
+			console.log(doc);
+			getRight(res,doc);
+		}
+	})
+})
+
 //根据ID获取学生信息
 router.post('/studentDetails', function(req, res, next) {
 	let userId = parseInt(req.body.userId);

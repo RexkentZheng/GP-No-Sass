@@ -2476,9 +2476,97 @@ input[type=file] {
 	text-align: center;
 }
 .admin-search-student .contain-body .student-search-content{
-	
+
+}
+.admin-search-student .contain-body .search-count-wraper {
+	background-color: #d8eaff;
 }
 
+.admin-search-student .contain-body .search-count-wraper .search-count {
+	width: 500px;
+	margin: 10px auto 0;
+}
+
+.admin-search-student .contain-body .search-count-wraper .search-count .input-group {
+	padding: 40px 0 50px;
+}
+
+.admin-search-student .contain-body .search-count-wraper .search-count .input-group input {
+	height: 50px;
+	font-size: 17px;
+}
+
+.admin-search-student .contain-body .search-count-wraper .search-count .input-group span {
+	padding: 0 30px;
+	font-size: 17px;
+	background-color: #68B3C8;
+	cursor: pointer;
+}
+
+.admin-search-student .contain-body .search-list {
+	width: 500px;
+	margin: 20px auto 40px;
+}
+.admin-search-student .contain-body .search-list ul{
+	margin: 0;
+	padding: 0;
+}
+.admin-search-student .contain-body .search-list ul li {
+	border: 1px solid #d5dadf;
+	margin: 15px 0;
+}
+
+.admin-search-student .contain-body .search-list ul li .left-part {
+	float: left;
+}
+
+.admin-search-student .contain-body .search-list ul li .left-part span {
+	display: block;
+	vertical-align: middle;
+	color: #555;
+}
+
+.admin-search-student .contain-body .search-list ul li .right-part {
+	float: right;
+}
+
+.admin-search-student .contain-body .search-list ul li .right-part span {
+	/* padding: 20px 50px;
+	font-size: 22px;
+	vertical-align: middle;
+	color: #555;
+	float: left; */
+	display: block;
+	vertical-align: middle;
+	color: #555;
+}
+.admin-search-student .contain-body .search-list ul li .right-part span:nth-child(1){
+	text-align:right;
+	padding: 20px 30px;
+}
+.admin-search-student .contain-body .search-list ul li .right-part span:nth-child(2){
+	padding: 0 30px 20px;
+}
+.admin-search-student .contain-body .search-list li .left-part span:nth-child(1) {
+	text-align: left;
+	padding: 20px 30px;
+}
+
+.admin-search-student .contain-body .search-list li .left-part span:nth-child(2) {
+	padding: 0 30px 20px;
+}
+
+.admin-search-student .contain-body .search-list li .left-part span:nth-child(1) a {
+	color: #68B3C8;
+	font-size: 18px;
+}
+
+.admin-search-student .contain-body .search-list .not-exist {
+	border: 0;
+	font-size: 25px;
+	margin: 0 auto;
+	width: 200px;
+}
 
 
 
