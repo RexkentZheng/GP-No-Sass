@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<admin-header></admin-header>
-		<div class="container admin-create-student">
+		<div class="container admin-search-student">
 			<div class="contain-body">
 				<div class="student-info-title clearfix">
 					<ul>
@@ -16,7 +16,15 @@
 						</li>
 					</ul>
 				</div>
-				<div class="student-info-content">
+				<div class="student-search-content">
+					<div class="search-count-wraper">
+						<div class="search-count">
+							<div class="input-group">
+								<input autofocus="autofocus" class="form-control" v-model="countKeyWords" type="text" name="" id="" value="" placeholder="请输入账号名称或者账号ID" />
+								<span class="input-group-addon" @click="searchCount()">搜索</span>
+							</div>
+						</div>
+					</div>
 
 				</div>
 			</div>
