@@ -32,9 +32,8 @@ export default {
     return {
       adminName: "",
       adminAuthority: "",
-      adminPwd: "",
-      isCreateShow:true,
-    };
+      adminPwd: ""
+    }
   },
   methods: {
     creatAdmin() {
