@@ -16,32 +16,24 @@
 							</dl>
 							<dl class="hr-tel clearfix">
 								<dt>HR电话：</dt>
-								<dd>{{companyAllInfo.regeditInfo.hrTel}}</dd>
+								<dd>{{regeditInfo.hrTel}}</dd>
 							</dl>
 							<dl class="company-email clearfix">
 								<dt>HR邮箱：</dt>
-								<dd>{{companyAllInfo.regeditInfo.hrEmail}}</dd>
+								<dd>{{regeditInfo.hrEmail}}</dd>
 							</dl>
 							<dl class="company-email clearfix">
 								<dt>用户ID：</dt>
 								<dd>{{companyAllInfo.userId}}</dd>
 							</dl>
-							<dl class="company-id clearfix">
-								<dt>公司ID：</dt>
-								<dd>{{companyAllInfo.regeditInfo.companyId}}</dd>
-							</dl>
 							<dl class="company-name clearfix">
 								<dt>公司名称：</dt>
-								<dd>{{companyAllInfo.regeditInfo.companyName}}</dd>
-							</dl>
-							<dl class="company-location clearfix">
-								<dt>公司位置：</dt>
-								<dd>{{companyAllInfo.companyInfo.companyBaseInfo.companyLocation}}</dd>
+								<dd>{{regeditInfo.companyName}}</dd>
 							</dl>
 							<dl class="company-lisence clearfix">
 								<dt>公司执照：</dt>
 								<dd>
-									<img v-bind:src="companyAllInfo.regeditInfo.compnayLisence" />
+									<img v-bind:src="regeditInfo.compnayLisence" />
 								</dd>
 							</dl>
 						</dd>
@@ -53,7 +45,7 @@
 						</div>
 						<dd>
 							<div class="photo-unchange">
-								<img v-bind:src="companyAllInfo.companyInfo.companyLogo" />
+								<img v-bind:src="companyInfo.companyLogo" />
 							</div>
 						</dd>
 					</dl>
@@ -65,15 +57,15 @@
 						<div class="dl-wraper clearfix">
 							<dl class="clearfix">
 								<dt class="company-type"><span class="glyphicon glyphicon-th-large icon"></span>公司类型：</dt>
-								<dd>{{companyAllInfo.companyInfo.companyBaseInfo.companyType}}</dd>
+								<dd>{{companyBaseInfo.companyType}}</dd>
 							</dl>
 							<dl class="clearfix">
 								<dt class="company-count"><span class="glyphicon glyphicon-user icon"></span>公司人数：</dt>
-								<dd>{{companyAllInfo.companyInfo.companyBaseInfo.companyCount}}</dd>
+								<dd>{{companyBaseInfo.companyCount}}</dd>
 							</dl>
 							<dl class="clearfix">
 								<dt class="company-loaction"><span class="glyphicon glyphicon-map-marker icon"></span>公司位置：</dt>
-								<dd>{{companyAllInfo.companyInfo.companyBaseInfo.companyLocation}}</dd>
+								<dd>{{companyBaseInfo.companyProvince}}/{{companyBaseInfo.companyCity}}/{{companyBaseInfo.companyArea}}</dd>
 							</dl>
 						</div>
 					</dl>
@@ -121,7 +113,7 @@
 						<dd>
 							<div class="company-introduce-unchange">
 								<p>
-									{{companyAllInfo.companyInfo.companyIntroduce}}
+									{{companyInfo.companyIntroduce}}
 								</p>
 							</div>
 						</dd>
@@ -151,7 +143,10 @@
 				companyAllInfo: {},
 				labels: [],
 				productions: [],
-				userType:0
+				userType:0,
+				regeditInfo:{},
+				companyInfo:{},
+				companyBaseInfo:{}
 			}
 		},
 		components: {
@@ -188,6 +183,9 @@
 						this.companyAllInfo = res.result;
 						this.labels = this.companyAllInfo.companyInfo.companyLabel.split('+');
 						this.productions = this.companyAllInfo.companyProduction;
+						this.regeditInfo = this.companyAllInfo.regeditInfo;
+						this.companyInfo = this.companyAllInfo.companyInfo;
+						this.companyBaseInfo = this.companyInfo.companyBaseInfo;
 					}
 				})
 			},

@@ -30,7 +30,7 @@
 							<li class="clearfix" v-for="count in countList">
 								<div class="left-part">
 									<span @click="countDetails(count)" class="count-name"><a>{{count.personalInfo.studentName}}</a></span>
-									<span class="count-id">{{count.userId}}</span>
+									<span class="count-id">{{count.personalInfo.studentNum}}</span>
 								</div>
 								<div class="right-part">
 									<span class="count-sex">{{count.personalInfo.studentSex}}</span>
@@ -81,13 +81,13 @@
 		methods: {
 			searchCount() {
 				if (this.countKeyWordsType) {
-					axios.post('/student/studentName',{
-						studentName:this.countKeyWords
-					}).then((response)=>{
+					axios.post('/student/studentName', {
+						studentName: this.countKeyWords
+					}).then((response) => {
 						let res = response.data;
 						if (res.result.length === 0) {
 							this.countNotExist = true;
-						}else{
+						} else {
 							this.countNotExist = false;
 							this.countList = res.result;
 							console.log(this.countList);
@@ -118,14 +118,14 @@
 					// 	} else {}
 					// })
 				} else {
-					axios.post('/student/studentNum',{
-						studentNum:this.countKeyWords
-					}).then((response)=>{
+					axios.post('/student/studentNum', {
+						studentNum: this.countKeyWords
+					}).then((response) => {
 						let res = response.data;
 						console.log(res.result.length)
 						if (res.result.length === 0) {
 							this.countNotExist = true;
-						}else{
+						} else {
 							this.countNotExist = false;
 							this.countList = res.result;
 						}
@@ -158,22 +158,12 @@
 			},
 			countDetails(count) {
 				let userId = count.userId;
-				let userType = count.userType;
-				if (userType == 3) {
-					this.$router.push({
-						path: '/common/company/details',
-						query: {
-							'userId': userId
-						}
-					})
-				} else if (userType == 2) {
-					this.$router.push({
-						path: '/common/student/details',
-						query: {
-							'userId': userId
-						}
-					})
-				}
+				this.$router.push({
+					path: '/common/student/details',
+					query: {
+						'userId': userId
+					}
+				})
 			},
 			//回车触发搜索事件，只有将事件绑定在document上才能不用获取焦点就触发事件
 			enterClick() {

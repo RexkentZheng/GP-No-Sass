@@ -25,7 +25,6 @@
 						<img  src="./../../static/img/header-logo.png" />
 					</router-link>
 				</div>
-				
 			</div>
 		</div>
 		<div class="login-wraper" v-if="loginWrapFlag">
@@ -34,14 +33,14 @@
 					<dl class="clearfix userName">
 						<dt>用户名：</dt>
 						<dd>
-							<input class="form-control" v-model="userName" type="text" name="" id="" value="" />
+							<input v-bind:autofocus="loginWrapFlag" class="form-control" v-model="userName" type="text" />
 						</dd>
 					</dl>
 					<span class="errorTip" v-if="errorTipFlag">{{errorTipContent}}</span>
 					<dl class="clearfix userPwd">
 						<dt>密&nbsp;&nbsp;&nbsp;码：</dt>
 						<dd>
-							<input class="form-control" v-model="userPwd" type="password" name="" id="" value="" />
+							<input class="form-control" v-model="userPwd" type="password" />
 						</dd>
 					</dl>
 					<div class="btn-line">
@@ -51,7 +50,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 </template>
 
@@ -72,6 +70,7 @@
 		},
 		mounted(){
 			this.checkLogin();
+			this.enterClick();
 		},
 		methods:{
 			checkLogin(){
@@ -88,7 +87,7 @@
 			userLink(){
 				if (this.userType == 1) {
 					this.$router.push({
-						path:'/admin'
+						path:'/admin/studentInfo'
 					});
 				}else if (this.userType == 2) {
 					this.$router.push({
@@ -147,11 +146,17 @@
 				this.$router.push({
 					path:'/'
 				})
+			},
+			//回车触发搜索事件，只有将事件绑定在document上才能不用获取焦点就触发事件
+			enterClick() {
+				var tg = this;
+				document.onkeydown = function(e) {
+					var key = window.event.keyCode;
+					if (key == 13) {
+						tg.login();
+					}
+				}
 			}
 		}
 	}
 </script>
-
-<style>
-
-</style>

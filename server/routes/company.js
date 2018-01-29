@@ -42,6 +42,22 @@ router.get('/', function(req, res, next) {
 	})
 });
 
+//根据名称查找公司列表
+router.post('/companyName',(req,res,next)=>{
+	let companyName = req.body.companyName;
+	Company.find({
+		'regeditInfo.companyName':{
+			$regex:companyName
+		}
+	},(err,doc)=>{
+		if (err) {
+			getWrong(res,err);
+		}else{
+			getRight(res,doc);
+		}
+	})
+})
+
 //获取公司的收件箱列表
 router.post('/received', function(req, res, next) {
 	let userId = parseInt(req.body.userId);

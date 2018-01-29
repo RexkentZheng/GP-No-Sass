@@ -2367,6 +2367,141 @@ input[type=file] {
 }
 
 
+/* 管理员查找企业账户页面 */
+.admin-search-company .contain-body .company-search-title{
+	width: 750px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.admin-search-company .contain-body .company-search-title ul{
+	margin: 20px 0 0 0;
+	padding: 0;
+	text-align: center;
+	display: inline-block;
+}
+
+.admin-search-company .contain-body .company-search-title ul li .active{
+	color: #68B3C8;
+}
+
+.admin-search-company .contain-body .company-search-title ul li{
+	float: left;
+	width: 200px;
+	margin: 0 10px;
+	line-height: 60px;
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+.admin-search-company .contain-body .company-search-title ul li a{
+	display: block;
+}
+
+.admin-search-company .contain-body .company-search-title ul li:hover a
+{
+	color: #68B3C8;
+	cursor: pointer;
+}
+
+.admin-search-company .contain-body .company-search-content{
+	width: 600px;
+	margin: 0 auto;
+}
+.admin-search-company .contain-body .company-search-content .search-count-wraper {
+	background-color: #d8eaff;
+}
+
+.admin-search-company .contain-body .company-search-content .search-count-wraper .search-count {
+	width: 500px;
+	margin: 10px auto 0;
+}
+
+.admin-search-company .contain-body .company-search-content .search-count-wraper .search-count .input-group {
+	padding: 20px 0 30px;
+}
+
+.admin-search-company .contain-body .company-search-content .search-count-wraper .search-count .input-group input {
+	height: 50px;
+	font-size: 17px;
+}
+
+.admin-search-company .contain-body .company-search-content .search-count-wraper .search-count .input-group span {
+	padding: 0 30px;
+	font-size: 17px;
+	background-color: #68B3C8;
+	cursor: pointer;
+}
+
+.admin-search-company .contain-body .company-search-content .search-list {
+	width: 500px;
+	margin: 20px auto 40px;
+}
+.admin-search-company .contain-body .company-search-content .search-list ul{
+	margin: 0;
+	padding: 0;
+}
+.admin-search-company .contain-body .company-search-content .search-list ul li {
+	border: 1px solid #d5dadf;
+	margin: 15px 0;
+}
+
+.admin-search-company .contain-body .company-search-content .search-list ul li .left-part {
+	float: left;
+}
+
+.admin-search-company .contain-body .company-search-content .search-list ul li .left-part span {
+	display: block;
+	vertical-align: middle;
+	color: #555;
+}
+
+.admin-search-company .contain-body .company-search-content .search-list ul li .right-part {
+	float: right;
+}
+
+.admin-search-company .contain-body .company-search-content .search-list ul li .right-part span {
+	/* padding: 20px 50px;
+	font-size: 22px;
+	vertical-align: middle;
+	color: #555;
+	float: left; */
+	display: block;
+	vertical-align: middle;
+	color: #555;
+}
+.admin-search-company .contain-body .company-search-content .search-list ul li .right-part span:nth-child(1){
+	text-align:right;
+	padding: 20px 30px;
+}
+.admin-search-company .contain-body .company-search-content .search-list ul li .right-part span:nth-child(2){
+	padding: 0 30px 20px;
+}
+.admin-search-company .contain-body .company-search-content .search-list li .left-part span:nth-child(1) {
+	text-align: left;
+	padding: 20px 30px;
+}
+
+.admin-search-company .contain-body .company-search-content .search-list li .left-part span:nth-child(2) {
+	padding: 0 30px 20px;
+}
+
+.admin-search-company .contain-body .company-search-content .search-list li .left-part span:nth-child(1) a {
+	color: #68B3C8;
+	font-size: 18px;
+}
+
+.admin-search-company .contain-body .company-search-content .search-list .not-exist {
+	border: 0;
+	font-size: 25px;
+	margin: 0 auto;
+	width: 200px;
+}
+
+
+
+
 /*管理员学生信息添加页面*/
 .admin-create-student .contain-body .student-info-title {
 	width: 600px;
