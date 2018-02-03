@@ -277,9 +277,6 @@ body {
 .g-core-image-upload-form input{
 	cursor: pointer;
 }
-input[type=file] {
-	}
-
 
 /*container部分*/
 
@@ -384,9 +381,6 @@ input[type=file] {
     width: 7px;
     background: #fff;
     z-index: 102;
-}
-.index .contain-body .sidebar .menu-box .current:after{
-	
 }
 .index .contain-body .sidebar .menu-box .menu-main {
 	position: relative;
@@ -539,9 +533,9 @@ input[type=file] {
 	font-size: 16px;
 	display: inline-block;
 	margin: 0;
-	float: left;
 	color: #337ab7;
 	cursor: pointer;
+	float: left;
 }
 
 .index .job-list-wraper .job-list ul li .main-info .release-time {
@@ -614,7 +608,7 @@ input[type=file] {
 	font-size: 16px;
 	color: #68B3C8;
 	text-align: center;
-	-webkit-transition: background .3s, color .1s;
+	transition: background .3s, color .1s;
 	cursor: pointer;
 }
 
@@ -918,8 +912,6 @@ input[type=file] {
 	float: left;
 }
 
-.student-resume .contain-body .student-img>dd {}
-
 .student-resume .contain-body .student-img>dd .photo-changing {
 	text-align: center;
 }
@@ -940,8 +932,6 @@ input[type=file] {
 .student-resume .contain-body .student-img>dd .photo-changing input {
 	display: none;
 }
-
-.student-resume .contain-body .student-img>dd {}
 
 
 /*学生投递页面*/
@@ -1028,8 +1018,6 @@ input[type=file] {
 	padding: 0 0 0 10px;
 }
 
-
-.student-send .contain-body .interview-list {}
 
 .student-send .contain-body .interview-list ul {
 	width: 580px;
@@ -1122,8 +1110,6 @@ input[type=file] {
 
 
 /*商家等待页面*/
-
-.company-waiting .contain-body {}
 
 .company-waiting .contain-body .blue-bg {
 	height: 360px;
@@ -1232,8 +1218,6 @@ input[type=file] {
 	position: relative;
 	margin: 0 0 10px;
 }
-.company-index .contain-body .company-info .company-base-info .address{
-}
 .company-index .contain-body .company-info .company-base-info .address select{
 	display: block;
 	width: 100%;
@@ -1279,8 +1263,6 @@ input[type=file] {
 	top: 5px;
 	right: 0;
 }
-
-.company-index .contain-body .company-info dl dt {}
 
 .company-index .contain-body .company-info>dl>dd {
 	padding: 15px;
@@ -1520,8 +1502,6 @@ input[type=file] {
 
 /*企业职位页面*/
 
-.company-jobs-list .contain-body {}
-
 .company-jobs-list .contain-body .recruit-title {
 	width: 750px;
 	margin: 15px auto 0;
@@ -1565,8 +1545,6 @@ input[type=file] {
 	width: 750px;
 	margin: 15px auto 0;
 }
-
-.company-jobs-list .contain-body .job-list ul {}
 
 .company-jobs-list .contain-body .job-list ul li {
 	border: 1px solid #d5dadf;
@@ -2610,9 +2588,6 @@ input[type=file] {
 	margin: 0 auto;
 	text-align: center;
 }
-.admin-search-student .contain-body .student-search-content{
-
-}
 .admin-search-student .contain-body .search-count-wraper {
 	background-color: #d8eaff;
 }
@@ -2777,10 +2752,6 @@ input[type=file] {
 	margin-top: 20px;
 }
 
-.common-student-resume .contain-body .student-experience .experience-introduce .one-piece>dl>dt {}
-
-.common-student-resume .contain-body .student-experience .experience-introduce .one-piece>dl>dd>dl {}
-
 
 /*职位详情页面*/
 
@@ -2897,10 +2868,6 @@ input[type=file] {
 .company-regedit .contain-body>dl>dd .upload-company-lisence span {
 	line-height: 130px;
 }
-
-.company-regedit .contain-body>dl:nth-child(7)>dd input {
-/*	display: none;
-*/}
 
 .company-regedit .btn-line {
 	text-align: center;
