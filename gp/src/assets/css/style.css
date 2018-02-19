@@ -2678,8 +2678,126 @@ body {
 	width: 200px;
 }
 
+/* 管理员输出学生信息页面 */
+.admin-export-student .contain-body {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
 
+.admin-export-student .contain-body .student-info-title {
+	width: 600px;
+	margin: 15px auto 0;
+	background-color: #f2f2f2;
+	padding: 0;
+	text-align: center;
+}
 
+.admin-export-student .contain-body .student-info-title ul li {
+	float: left;
+	padding: 13px 20px;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+	border-bottom: 2px solid #FFFFFF;
+	color: #777;
+	font-size: 16px;
+}
+
+.admin-export-student .contain-body .student-info-title ul li:hover {
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
+.admin-export-student .contain-body .student-info-title ul .active{
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
+.admin-export-student .contain-body .student-export-content{
+	margin-top: 5px;
+}
+.admin-export-student .contain-body .student-export-content .condition-part{
+	width: 50%;
+	float: left;
+}
+.admin-export-student .contain-body .student-export-content .condition-part .condition-content{
+
+}
+.admin-export-student .contain-body .student-export-content .condition-part .condition-name,
+.admin-export-student .contain-body .student-export-content .result-part .result-name{
+	font-size: 17px;
+	padding: 10px 0;
+}
+.admin-export-student .contain-body .student-export-content .condition-part .condition-content dl{
+
+}
+.admin-export-student .contain-body .student-export-content .condition-part .condition-content dl dt{
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 30px;
+	text-align: left;
+	width: 40%;
+	float: left;
+	padding-left: 5%;
+}
+.admin-export-student .contain-body .student-export-content .condition-part .condition-content dl dd{
+	width: 59%;
+	float: left;
+}
+.admin-export-student .contain-body .student-export-content .result-part{
+	width: 50%;
+	float: left;
+}
+.admin-export-student .contain-body .student-export-content .result-part .result-content{
+
+}
+.admin-export-student .contain-body .student-export-content .result-part .result-content .tab-name li{
+	height: 25px;
+}
+.admin-export-student .contain-body .student-export-content .result-part .result-content .tab-name li p{
+	float: left;
+}
+.admin-export-student .contain-body .student-export-content .result-part .result-content .tab-name li p:nth-child(1){
+	float: left;
+	padding: 0;
+	margin-right: 5px;
+}
+.admin-export-student .contain-body .student-export-content .result-part .result-content .tab-name li p:nth-child(2){
+	margin-right: 10px;
+}
+.admin-export-student .contain-body .student-export-content .result-part .result-content .tab-name li p:nth-child(3){
+	margin-right: 20px;
+}
+.admin-export-student .contain-body .student-export-content .result-part .result-content .tab-content{
+
+}
+.admin-export-student .contain-body .student-export-content .result-part .result-content .tab-content li{
+	line-height: 20px;
+}
+.admin-export-student .contain-body .student-export-content .result-part .result-content .tab-content li input{
+	text-align: left;
+	float: left;
+	margin-right: 43px;
+}
+.admin-export-student .contain-body .student-export-content .result-part .result-content .tab-content li p{
+	float: left;
+}
+.admin-export-student .contain-body .student-export-content .result-part .result-content .tab-content li p:nth-child(2){
+	margin-right: 20px;
+}
+.admin-export-student .contain-body .choose-tab-name > p{
+	font-size: 16px;
+}
+.admin-export-student .contain-body .choose-tab-name ul{
+	display: flex;
+	justify-content: space-around;
+}
+.admin-export-student .contain-body .choose-tab-name ul li input{
+	float: left;
+	margin-right: 3px;
+}
+.admin-export-student .contain-body .choose-tab-name ul li p{
+	float: left;
+}
 
 /*学生简历页面*/
 
