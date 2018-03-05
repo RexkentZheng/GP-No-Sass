@@ -19,6 +19,42 @@ function getRight(res, doc) {
 		result: doc
 	})
 }
+function getYearsInfo(arr,startYear,endYear) {
+	if (startYear && endYear) {
+		const newArr= [];
+		arr.forEach((op)=>{
+			let studentYear = parseInt(op.personalInfo.studentNum.toString().slice(0,4));
+			if(studentYear >= parseInt(startYear) && studentYear <= endYear){
+				newArr.push(op)
+			}
+		})
+		return newArr
+	} else if(startYear && !endYear){
+		const newArr= [];
+		arr.forEach((op)=>{
+			let studentYear = parseInt(op.personalInfo.studentNum.toString().slice(0,4));
+			if(studentYear >= parseInt(startYear)){
+				newArr.push(op)
+			}
+		})
+		return newArr
+	}else{
+		return arr
+	}
+}
+function getNeededInfo(arr,filterName,filedCont) {
+	if(filedCont){
+		const newArr= [];
+		arr.forEach((op)=>{
+			if(op.personalInfo[''+filterName+''] == filedCont){
+				newArr.push(op)
+			}
+		})
+		return newArr
+	}else{
+		return arr
+	}
+}
 
 //测试
 router.get('/', function(req, res, next) {
@@ -200,6 +236,24 @@ router.post('/delArrayInfo',(req,res,next)=>{
 			getWrong(res,err);
 		}else{
 			getRight(res,err);
+		}
+	})
+})
+
+//输出学生信息之前的获取
+router.post('/exportInfo',(req,res,next)=>{
+	const { startYear,endYear,place,college,sex } = req.body.choosen;
+	Student.find({},(err,doc)=>{
+		if(err){
+			getWrong(res,err);
+		}else{
+			const docCont = doc;
+			let filterInfo = [];
+			filterInfo = getNeededInfo(docCont,'studentOrginPlace',place);
+			filterInfo = getNeededInfo(filterInfo,'studentMajor',college);
+			filterInfo = getNeededInfo(filterInfo,'studentSex',sex);
+			filterInfo = getYearsInfo(filterInfo,startYear,endYear);
+			getRight(res,filterInfo);
 		}
 	})
 })

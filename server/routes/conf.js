@@ -32,6 +32,18 @@ router.get('/jobType',(req,res,next)=>{
 	})
 })
 
+// //获取筛选条件接口
+// router.get('/filter',(req,res,next)=>{
+// 	Conf.findOne({},(err,doc)=>{
+// 		if (err) {
+// 			getWrong(res,err);
+// 		}else{
+// 			console.log(doc);
+// 			getRight(res,doc.filterExport);
+// 		}
+// 	})
+// })
+
 //删除banner图片
 router.post('/delBannerImg',(req,res,next)=>{
 	let imgName = req.body.imgName;

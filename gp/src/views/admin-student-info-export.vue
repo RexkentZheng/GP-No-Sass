@@ -24,66 +24,68 @@
             <div class="condition-content">
               <dl class="clearfix">
                 <dt>
-                  条件名称：
+                  初始入学年份：
                 </dt>
                 <dd>
-                  <select class="form-control" name="" id="">
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
+                  <select v-model="choosen.startYear" class="form-control" name="" id="">
+                    <option value="" selected>不做筛选</option>
+                    <option v-for="oneYear in conf.allYears" :value="oneYear">{{oneYear}}</option>
                   </select>
                 </dd>
               </dl>
               <dl class="clearfix">
                 <dt>
-                  条件名称：
+                  终止入学年份：
                 </dt>
                 <dd>
-                  <select class="form-control" name="" id="">
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
+                  <select v-model="choosen.endYear" class="form-control" name="" id="">
+                    <option value="">不做筛选</option>
+                    <option v-for="oneYear in endYears" :value="oneYear">{{oneYear}}</option>
                   </select>
                 </dd>
               </dl>
               <dl class="clearfix">
                 <dt>
-                  条件名称：
+                  性别：
                 </dt>
                 <dd>
-                  <select class="form-control" name="" id="">
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
+                  <select v-model="choosen.sex" class="form-control" name="" id="">
+                    <option value=''>不做筛选</option>
+                    <option value="male">仅限男生</option>
+                    <option value="female">仅限女生</option>
                   </select>
                 </dd>
               </dl>
               <dl class="clearfix">
                 <dt>
-                  条件名称：
+                  学院：
                 </dt>
                 <dd>
-                  <select class="form-control" name="" id="">
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
+                  <select v-model="choosen.college" class="form-control" name="" id="">
+                    <option value="">不做筛选</option>
+                    <option v-for="oneCollege in conf.allColleges" :value="oneCollege.levelName">{{oneCollege.levelName}}</option>
                   </select>
                 </dd>
               </dl>
               <dl class="clearfix">
                 <dt>
-                  条件名称：
+                  专业：
                 </dt>
                 <dd>
                   <select class="form-control" name="" id="">
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
-                    <option value="">条件内容</option>
+                    <option value="">不做筛选</option>
+                    <option v-for="oneMajor in choosenMajor" :value="oneMajor">{{oneMajor}}</option>
+                  </select>
+                </dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>
+                  学生籍贯：
+                </dt>
+                <dd>
+                  <select v-model="choosen.place" class="form-control" name="" id="">
+                    <option value="">不做筛选</option>
+                    <option v-for="onePlace in conf.allPlaces" :value="onePlace">{{onePlace}}</option>
                   </select>
                 </dd>
               </dl>
@@ -97,7 +99,7 @@
               <ul class="tab-name">
                 <li class="clearfix">
                   <p>
-                    <input type="checkbox">
+                    <input @click="checkToggle()" v-model="isCheckeAll" type="checkbox">
                   </p>
                   <p>
                     全选
@@ -111,16 +113,25 @@
                 </li>
               </ul>
               <ul class="tab-content">
-                <li class="clearfix">
-                  <input type="checkbox">
+                <li v-for="op in studentCurrentInfo" class="clearfix">
+                  <input @click="studentToggle(op.userId)" type="checkbox" v-model="op.isChecked">
                   <p>
-                    测试姓名
+                    {{op.personalInfo.studentName}}
                   </p>
                   <p>
-                    20130123010320
+                    {{op.personalInfo.studentNum}}
                   </p>
                 </li>
               </ul>
+            </div>
+            <div class="block">
+              <el-pagination
+                small
+                @current-change="changePage"
+                :page-size="8"
+                layout="total, prev, pager, next"
+                :total=studentAllInfo.length>
+              </el-pagination>
             </div>
           </div>
 				</div>
@@ -130,28 +141,53 @@
           </p>
           <ul class="clearfix">
             <li>
-              <input type="checkbox">
-              <p>学生姓名</p> 
-            </li>
-            <li>
-              <input type="checkbox">
+              <input v-model="exportTitle.studentName" type="checkbox">
               学生姓名
             </li>
             <li>
-              <input type="checkbox">
-              学生姓名
+              <input v-model="exportTitle.studentSex" type="checkbox">
+              学生性别
+            </li>
+            <li>
+              <input v-model="exportTitle.studentNum" type="checkbox">
+              学生学号
+            </li>
+            <li>
+              <input v-model="exportTitle.studentMajor" type="checkbox">
+              学生专业
             </li>
             <li>
               <input type="checkbox">
-              学生姓名
+              学生学院
+            </li>
+          </ul>
+        </div>
+        <div class="choose-tab-name">
+          <ul class="clearfix">
+            <li>
+              <input type="checkbox">
+              学生籍贯
             </li>
             <li>
               <input type="checkbox">
-              学生姓名
+              学生电话
+            </li>
+            <li>
+              <input type="checkbox">
+              是否就业
+            </li>
+            <li>
+              <input type="checkbox">
+              导师信息
+            </li>
+            <li>
+              <input type="checkbox">
+              论文标题
             </li>
           </ul>
         </div>
         <div class="export-btn">
+            <a @click="getStudentInfo()" class="btn btn-default" href="javascript:;">查看数据</a>
             <a class="btn btn-info" href="javascript:;">确认导出</a>
           </div>
 			</div>
@@ -171,14 +207,121 @@ import axios from "axios";
 export default {
   data() {
     return {
-      fileList: []
+      fileList: [],
+      conf:{
+        allYears:[],
+        allPlaces:[],
+        allColleges:[],
+        allMajors:[],
+      },
+      choosen:{
+        startYear:'',
+        endYear:'',
+        place:'',
+        college:'',
+        sex:''
+      },
+      exportTitle:{
+        studentName:false,
+        studentSex:false,
+        studentNum:false,
+        studentMajor:false
+      },
+      isCheckeAll:false,
+      studentAllInfo:[],
+      studentGroupedInfo:[],
+      studentCurrentInfo:[]
     };
   },
-  mounted() {},
+  mounted() {
+    this.getConf();
+  },
+  computed:{
+    choosenMajor(){
+      let nowArr = []
+      this.conf.allColleges.forEach((oneCollege) => {
+        if(this.choosen.college !== ''){
+          if (this.choosen.college == oneCollege.levelName) {
+            nowArr = oneCollege.secondLevel
+          }
+        }
+      })
+      return nowArr
+    },
+    endYears(){
+      let nowArr = []
+      this.conf.allYears.forEach((oneYear) => {
+        if(this.choosen.startYear !== ''){
+          if (parseInt(oneYear) >= parseInt(this.choosen.startYear) ) {
+            nowArr.push(parseInt(oneYear))
+          }
+        }
+      })
+      return nowArr
+    }
+  },
   components: {
     AdminHeader,
     CommonFooter
   },
-  methods: {}
+  methods: {
+    getConf() {
+      axios.get("/conf/jobType").then(response => {
+        let res = response.data;
+        if (res.status == 0) {
+          this.conf.allYears = res.result.filterExport.years;
+          this.conf.allPlaces = res.result.filterExport.nativePlace;
+          this.conf.allColleges = res.result.filterExport.majors;
+        } else {
+          console.log("没有获取到筛选条件");
+        }
+      });
+    },
+    getStudentInfo(){
+      if (this.choosen.startYear !== '' && this.choosen.endYear !== '' && parseInt(this.choosen.startYear) > parseInt(this.choosen.endYear)) {
+        alert('初始入学年份必须小于等于终止入学年份');
+      } else if(this.choosen.startYear == '' && this.choosen.endYear !== ''){
+        alert('不可只有终止入学年份');
+      }else{
+          axios.post("/student/exportInfo",{
+            choosen:this.choosen
+          }).then(response =>{
+            let res = response.data;
+            if (res.status == 0) {
+              this.studentAllInfo = res.result;
+              //添加checked属性
+              this.studentAllInfo.forEach((oneStudent)=>{
+                oneStudent.isChecked = false;
+              })
+              this.studentGroupedInfo = []
+              for(var i=0,len=res.result.length;i<len;i+=8){
+                this.studentGroupedInfo.push(res.result.slice(i,i+8));
+              }
+              this.studentCurrentInfo = this.studentGroupedInfo[0];
+            }
+          })
+      }
+    },
+    changePage(val){
+      this.studentCurrentInfo = this.studentGroupedInfo[''+(val-1)+'']
+    },
+    studentToggle(userId){
+      this.studentAllInfo.forEach((oneStudent)=>{
+        if(oneStudent.userId == userId)
+        oneStudent.isChecked = !oneStudent.isChecked;
+      })
+    },
+    checkToggle(){
+      console.log(this.isCheckeAll)
+      this.studentAllInfo.forEach((oneStudent)=>{
+        oneStudent.isChecked = !this.isCheckeAll;
+      })
+      this.studentGroupedInfo = []
+      for(var i=0,len=this.studentAllInfo.length;i<len;i+=8){
+        this.studentGroupedInfo.push(this.studentAllInfo.slice(i,i+8));
+      }
+      this.studentCurrentInfo = this.studentGroupedInfo[0];
+    }
+  }
 };
 </script>

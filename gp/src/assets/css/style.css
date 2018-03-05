@@ -2715,20 +2715,18 @@ body {
 .admin-export-student .contain-body .student-export-content{
 	margin-top: 5px;
 }
+.admin-export-student .contain-body .student-export-content .form-control{
+	width: 80%;
+}
 .admin-export-student .contain-body .student-export-content .condition-part{
 	width: 50%;
 	float: left;
-}
-.admin-export-student .contain-body .student-export-content .condition-part .condition-content{
-
 }
 .admin-export-student .contain-body .student-export-content .condition-part .condition-name,
 .admin-export-student .contain-body .student-export-content .result-part .result-name{
 	font-size: 17px;
 	padding: 10px 0;
-}
-.admin-export-student .contain-body .student-export-content .condition-part .condition-content dl{
-
+	margin-right: 20px;
 }
 .admin-export-student .contain-body .student-export-content .condition-part .condition-content dl dt{
 	font-size: 15px;
@@ -2768,7 +2766,7 @@ body {
 	margin-right: 20px;
 }
 .admin-export-student .contain-body .student-export-content .result-part .result-content .tab-content{
-
+	height: 240px;
 }
 .admin-export-student .contain-body .student-export-content .result-part .result-content .tab-content li{
 	line-height: 20px;
@@ -2798,6 +2796,10 @@ body {
 .admin-export-student .contain-body .choose-tab-name ul li p{
 	float: left;
 }
+.admin-export-student .contain-body .export-btn a:nth-child(1){
+	margin-right: 30px;
+}
+
 
 /*学生简历页面*/
 

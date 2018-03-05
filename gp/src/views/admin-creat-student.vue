@@ -5,7 +5,7 @@
 			<div class="contain-body">
 				<div class="wraper">
 					<el-upload
-			  		  ref="upload"
+			  		ref="upload"
 					  action="/upload/excel"
 					  name="test"
 					  :multiple="false"

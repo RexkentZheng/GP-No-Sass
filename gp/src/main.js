@@ -3,11 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import {Upload} from 'element-ui'
-import {Button} from 'element-ui'
+import {Upload,Button,Pagination} from 'element-ui'
 
 Vue.component(Upload.name, Upload)
 Vue.component(Button.name, Button)
+Vue.component(Pagination.name, Pagination)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
