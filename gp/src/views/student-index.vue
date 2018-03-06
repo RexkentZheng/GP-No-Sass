@@ -13,6 +13,11 @@
 					<span class="line"></span>
 					<dd>{{item.studentNum}}</dd>
 				</dl>
+				<dl class="student-college clearfix">
+					<dt>学院</dt>
+					<span class="line"></span>
+					<dd>{{item.studentCollege}}</dd>
+				</dl>
 				<dl class="student-major clearfix">
 					<dt>专业</dt>
 					<span class="line"></span>

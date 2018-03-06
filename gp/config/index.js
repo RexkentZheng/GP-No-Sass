@@ -55,6 +55,9 @@ module.exports = {
     	},
     	'/upload/*':{
     		target:'http://localhost:8888'
+      },
+      '/export/*':{
+    		target:'http://localhost:8888'
     	},
     	'/test/*':{
     		target:'http://localhost:8888'

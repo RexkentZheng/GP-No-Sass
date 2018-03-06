@@ -13,6 +13,10 @@
 						<dd>{{studentInfo.studentNum}}</dd>
 					</dl>
 					<dl class="student-major clearfix">
+						<dt>学院:</dt>
+						<dd>{{studentInfo.studentCollege}}</dd>
+					</dl>
+					<dl class="student-major clearfix">
 						<dt>专业:</dt>
 						<dd>{{studentInfo.studentMajor}}</dd>
 					</dl>

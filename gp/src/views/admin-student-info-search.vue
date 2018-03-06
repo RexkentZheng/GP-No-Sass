@@ -80,6 +80,7 @@
 		},
 		methods: {
 			searchCount() {
+				this.countList = [];
 				if (this.countKeyWordsType) {
 					axios.post('/student/studentName', {
 						studentName: this.countKeyWords
@@ -90,7 +91,6 @@
 						} else {
 							this.countNotExist = false;
 							this.countList = res.result;
-							console.log(this.countList);
 						}
 					})
 					// axios.post('/user/userName', {

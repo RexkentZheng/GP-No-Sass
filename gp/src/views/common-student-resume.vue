@@ -18,6 +18,7 @@
 							<span class="student-location">{{studentInfo.personalInfo.studentNativePlace}}</span>
 						</p>
 						<p class="line-3">
+							<span class="student-major pipe">{{studentInfo.personalInfo.studentCollege}}</span>
 							<span class="student-major pipe">{{studentInfo.personalInfo.studentMajor}}</span>
 							<span class="student-university">{{studentInfo.personalInfo.studentUniversity}}</span>
 						</p>

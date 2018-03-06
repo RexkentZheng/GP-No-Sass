@@ -188,7 +188,7 @@
         </div>
         <div class="export-btn">
             <a @click="getStudentInfo()" class="btn btn-default" href="javascript:;">查看数据</a>
-            <a class="btn btn-info" href="javascript:;">确认导出</a>
+            <a @click="exportStudentInfo()" class="btn btn-info" href="javascript:;">确认导出</a>
           </div>
 			</div>
 		</div>
@@ -213,6 +213,7 @@ export default {
         allPlaces:[],
         allColleges:[],
         allMajors:[],
+        allComparison:[]
       },
       choosen:{
         startYear:'',
@@ -272,6 +273,7 @@ export default {
           this.conf.allYears = res.result.filterExport.years;
           this.conf.allPlaces = res.result.filterExport.nativePlace;
           this.conf.allColleges = res.result.filterExport.majors;
+          this.conf.allComparison = res.result.comparison;
         } else {
           console.log("没有获取到筛选条件");
         }
@@ -312,7 +314,6 @@ export default {
       })
     },
     checkToggle(){
-      console.log(this.isCheckeAll)
       this.studentAllInfo.forEach((oneStudent)=>{
         oneStudent.isChecked = !this.isCheckeAll;
       })
@@ -321,6 +322,43 @@ export default {
         this.studentGroupedInfo.push(this.studentAllInfo.slice(i,i+8));
       }
       this.studentCurrentInfo = this.studentGroupedInfo[0];
+    },
+    exportStudentInfo(){
+      let checkedInfo = [];
+      let titleInfo = [];
+      let isNone = true;
+      for (let key in this.exportTitle){
+        if(this.exportTitle[key]){
+          this.conf.allComparison.forEach((op)=>{
+            if(op.englishName == key){
+              titleInfo.push(op);
+            }
+          })
+          isNone = false;
+        }
+      }
+      if (!isNone) {
+        this.studentAllInfo.forEach((oneStudent)=>{
+          if(oneStudent.isChecked){
+            checkedInfo.push(oneStudent);
+          }
+        });
+        console.log(checkedInfo);
+        axios.post('export/studentInfo',{
+          studentInfo:checkedInfo,
+          titleInfo:titleInfo
+        }).then((response)=>{
+          let res = response.data;
+          if (res.status == 0) {
+            
+          }else{
+            alert('导出失败')
+          }
+        })       
+      }else{
+        alert('输出数据不能为空')
+      }
+
     }
   }
 };

@@ -44,7 +44,7 @@
 						</dd>
 					</dl>
 					<div class="btn-line">
-						<a class="btn btn-info" href="javascript:;" @click="login()">登录</a>
+						<a class="btn btn-info" href="javascript:;" @keyup="login()" @click="login()">登录</a>
 						<a class="btn btn-default" href="javascript:;" @click="loginWrapFlag=false">取消</a>
 					</div>
 				</div>
