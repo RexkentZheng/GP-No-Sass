@@ -47,29 +47,66 @@ function sortInfo(filterInfo) {
   return sortedInfo
 }
 
-function fileName() {
+let getfileName = (titleInfo)=>{
   let nowDate = new Date();
-  let fileName =
-    "学生信息" +
+  let chinese = []
+  titleInfo.forEach((op)=>{
+    chinese.push(op.chineseName)
+  })
+  chinese = chinese.join('+');
+  let name = 
     nowDate.getFullYear() +
     "-" +
     (nowDate.getMonth() + 1) +
-    "月报"
-  return fileName;
+    "-" +
+    nowDate.getDate() +
+    "+" +
+    chinese
+  return name
 }
 
 router.post('/studentInfo',(req,res,next)=>{
   let { studentInfo, titleInfo } = req.body;
+  let fileName = getfileName(titleInfo);
   let filterInfo = [];
   let sortedInfo = [];
   filterInfo =  filter(studentInfo,filterInfo,titleInfo);
   sortedInfo = sortInfo(filterInfo);
-  ejsExcel.renderExcel(exlBuf, filterInfo).then(function(exlBuf2) {
-            fs.writeFileSync("./result/" + '123' + ".xlsx", exlBuf2);
-            console.log("end.xlsx");
-          }).catch(function(err) {
-            console.error(err);
-          });
+  ejsExcel.renderExcel(exlBuf, sortedInfo).then(function(exlBuf2){
+    fs.writeFileSync("./excel/"+fileName+".xlsx", exlBuf2);
+    console.log("生成"+fileName+".xlsx");
+    getRight(res,fileName)
+  }).catch(function(err) {
+    console.error(err);
+  });
+})
+
+router.get("/download", function(req, res, next) {
+  var currDir = path.normalize(req.query.dir),
+    fileName = req.query.name,
+    currFile = path.join(currDir, fileName),
+    fReadStream;
+
+  console.log(fileName);
+  console.log(currFile);
+
+  fs.exists(currFile, function(exist) {
+    if (exist) {
+      res.set({
+        "Content-type": "application/octet-stream",
+        "Content-Disposition": "attachment;filename=" + encodeURI(fileName)
+      });
+      fReadStream = fs.createReadStream(currFile);
+      fReadStream.on("data", chunk => res.write(chunk, "binary"));
+      fReadStream.on("end", function() {
+        res.end();
+      });
+    } else {
+      res.set("Content-type", "text/html");
+      res.send("file not exist!");
+      res.end();
+    }
+  });
 });
 
 //暴露路由

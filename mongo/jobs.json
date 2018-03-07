@@ -1,0 +1,246 @@
+{ 
+    "_id" : ObjectId("5a09a55dcc85c23288612f99"), 
+    "jobId" : 201711130400001.0, 
+    "jobName" : "Rex", 
+    "jobSalary" : "5-7k", 
+    "jobLoaction" : {
+        "jobProvince" : "河北省", 
+        "jobCity" : "秦皇岛市", 
+        "jobArea" : "北戴河区"
+    }, 
+    "jobRequirement" : "本科以上", 
+    "isOnline" : true, 
+    "jobCategory" : "行政", 
+    "jobAtempt" : "Rex+大大+阿达大+shit+nihao+nibuhao", 
+    "jobDiscription" : {
+        "jobDuty" : "1.Rex", 
+        "jobrequirement" : "2.Rex"
+    }, 
+    "companyId" : 201401010310000.0, 
+    "__v" : NumberInt(0), 
+    "jobTypeThird" : "JavaScript", 
+    "jobTypeSecond" : "前端开发", 
+    "jobTypeFirst" : "技术", 
+    "jobType" : "实习"
+}
+{ 
+    "_id" : ObjectId("5a09a575cc85c23288612f9a"), 
+    "jobId" : 20171113042.0, 
+    "jobName" : "Kent", 
+    "jobSalary" : "7-10k", 
+    "jobLoaction" : {
+        "jobProvince" : "内蒙古自治区", 
+        "jobCity" : "呼伦贝尔市", 
+        "jobArea" : "陈巴尔虎旗"
+    }, 
+    "jobType" : "实习", 
+    "jobRequirement" : "本科以上", 
+    "isOnline" : true, 
+    "jobCategory" : "行政", 
+    "jobAtempt" : "Kent", 
+    "jobDiscription" : {
+        "jobDuty" : "Kent", 
+        "jobrequirement" : "Kent"
+    }, 
+    "companyId" : 201401010310000.0, 
+    "__v" : NumberInt(0), 
+    "jobTypeThird" : "产品总监", 
+    "jobTypeSecond" : "高端职位", 
+    "jobTypeFirst" : "产品"
+}
+{ 
+    "_id" : ObjectId("5a17d6f38ac21031ecdc6106"), 
+    "jobId" : 201711240410000.0, 
+    "jobName" : "Zheng", 
+    "jobSalary" : "3-5k", 
+    "jobLoaction" : {
+        "jobProvince" : "内蒙古自治区", 
+        "jobCity" : "呼伦贝尔市", 
+        "jobArea" : "陈巴尔虎旗"
+    }, 
+    "jobTypeFirst" : "技术", 
+    "jobTypeSecond" : "前端开发", 
+    "jobTypeThird" : "JavaScript", 
+    "jobRequirement" : "本科以上", 
+    "isOnline" : true, 
+    "jobAtempt" : "asd ", 
+    "jobDiscription" : {
+        "jobDuty" : "aad", 
+        "jobrequirement" : "ad"
+    }, 
+    "companyId" : 201401010310000.0, 
+    "__v" : NumberInt(0), 
+    "jobType" : "全职"
+}
+{ 
+    "_id" : ObjectId("5a1ab84edd6a414e90ac2756"), 
+    "jobId" : 201711260410000.0, 
+    "jobName" : "qwe", 
+    "jobSalary" : "5-7k", 
+    "jobType" : "全职", 
+    "jobTypeFirst" : "产品", 
+    "jobTypeSecond" : "产品设计师", 
+    "jobTypeThird" : "无线产品设计师", 
+    "jobRequirement" : "本科以上", 
+    "isOnline" : true, 
+    "jobAtempt" : "wqe ", 
+    "jobLoaction" : {
+        "jobProvince" : "内蒙古自治区", 
+        "jobCity" : "呼伦贝尔市", 
+        "jobArea" : "扎兰屯市"
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : "wqe", 
+        "jobrequirement" : "qwe"
+    }, 
+    "companyId" : 201401010310000.0, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a1c1b0af916d738dc98c182"), 
+    "jobId" : 201711270410000.0, 
+    "jobName" : "mjj,g,", 
+    "jobSalary" : "7-10k", 
+    "jobType" : "全职", 
+    "jobTypeFirst" : "设计", 
+    "jobTypeSecond" : "视觉设计", 
+    "jobTypeThird" : "游戏特效", 
+    "jobRequirement" : "985/211以上", 
+    "isOnline" : true, 
+    "jobAtempt" : "gfnfhmf+454646", 
+    "jobLoaction" : {
+        "jobProvince" : "山西省", 
+        "jobCity" : "长治市", 
+        "jobArea" : "黎城县"
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : "1.4546\n2.646", 
+        "jobrequirement" : ""
+    }, 
+    "companyId" : 201401010310000.0, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a1cdab63006a40fe07f2a7b"), 
+    "jobId" : 201711280410000.0, 
+    "jobName" : "LaoZheng", 
+    "jobSalary" : "5-7k", 
+    "jobType" : "实习", 
+    "jobTypeFirst" : "设计", 
+    "jobTypeSecond" : "高端职位", 
+    "jobTypeThird" : "设计总监", 
+    "jobRequirement" : "本科以上", 
+    "isOnline" : true, 
+    "jobAtempt" : "1+2+3", 
+    "jobLoaction" : {
+        "jobProvince" : "北京市", 
+        "jobCity" : "市辖区", 
+        "jobArea" : "东城区"
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : "qwe", 
+        "jobrequirement" : "qwe"
+    }, 
+    "companyId" : 201711130300001.0, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a1f66c4a37a4c1110090d50"), 
+    "jobId" : 201711300410000.0, 
+    "jobName" : "时间", 
+    "jobSalary" : "3-5k", 
+    "jobType" : "实习", 
+    "jobTypeFirst" : "设计", 
+    "jobTypeSecond" : "高端职位", 
+    "jobTypeThird" : "视觉设计经理/主管", 
+    "jobRequirement" : "985/211以上", 
+    "isOnline" : true, 
+    "companyId" : 201401010310000.0, 
+    "jobAtempt" : " 请问", 
+    "createdTime" : "2017-11-30 10:02:44", 
+    "jobLoaction" : {
+        "jobProvince" : "河南省", 
+        "jobCity" : "周口市", 
+        "jobArea" : "西华县"
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : " 去", 
+        "jobrequirement" : "去"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a1f6d54ed34022d80e5bc2d"), 
+    "jobId" : 201711300410001.0, 
+    "jobName" : "时间2", 
+    "jobSalary" : "7-10k", 
+    "jobType" : "全职", 
+    "jobTypeFirst" : "产品", 
+    "jobTypeSecond" : "产品设计师", 
+    "jobTypeThird" : "无线产品设计师", 
+    "jobRequirement" : "本科以上", 
+    "isOnline" : true, 
+    "companyId" : 201401010310000.0, 
+    "jobAtempt" : " ", 
+    "createdTime" : 1512009044000.0, 
+    "jobLoaction" : {
+        "jobProvince" : "河北省", 
+        "jobCity" : "唐山市", 
+        "jobArea" : "路南区"
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : "", 
+        "jobrequirement" : ""
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a212e130916fc1384f47a9a"), 
+    "jobId" : 201712010410000.0, 
+    "jobName" : "12", 
+    "jobSalary" : "2-3k", 
+    "jobType" : "全职", 
+    "jobTypeFirst" : "技术", 
+    "jobTypeSecond" : "项目管理", 
+    "jobTypeThird" : "项目助理", 
+    "jobRequirement" : "本科以上", 
+    "isOnline" : true, 
+    "companyId" : 201401010310000.0, 
+    "jobAtempt" : "123", 
+    "createdTime" : 1512123923000.0, 
+    "jobLoaction" : {
+        "jobProvince" : "江苏省", 
+        "jobCity" : "泰州市", 
+        "jobArea" : "靖江市"
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : "123", 
+        "jobrequirement" : "123"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a213d44cea64b0770ffc59b"), 
+    "jobId" : 201712010410001.0, 
+    "jobName" : "123", 
+    "jobSalary" : "3-5k", 
+    "jobType" : "全职", 
+    "jobTypeFirst" : "产品", 
+    "jobTypeSecond" : "产品设计师", 
+    "jobTypeThird" : "无线产品设计师", 
+    "jobRequirement" : "大专以上", 
+    "isOnline" : true, 
+    "companyId" : 201401010310000.0, 
+    "jobAtempt" : "a", 
+    "createdTime" : 1512127812000.0, 
+    "jobLoaction" : {
+        "jobProvince" : "", 
+        "jobCity" : "", 
+        "jobArea" : ""
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : "a", 
+        "jobrequirement" : "a"
+    }, 
+    "__v" : NumberInt(0)
+}

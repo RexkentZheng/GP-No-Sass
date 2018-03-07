@@ -1,0 +1,520 @@
+{ 
+    "_id" : ObjectId("59e9b82e890805e8f3cdf9ff"), 
+    "userId" : NumberLong(201401010210000), 
+    "userType" : NumberInt(2), 
+    "personalInfo" : {
+        "studentSex" : "男", 
+        "studentName" : "老郑", 
+        "studentNum" : NumberInt(999999), 
+        "studentEducation" : "本科", 
+        "studentMajor" : "计算机科学", 
+        "studentCollege" : "计算机与信息管理", 
+        "studentUniversity" : "BUA", 
+        "studentNativePlace" : "北京", 
+        "studentOrginPlace" : "安徽", 
+        "employmentInfo" : {
+            "isEmployment" : false, 
+            "companyID" : "", 
+            "companyNmae" : ""
+        }, 
+        "studentTutorInfo" : {
+            "tutorName" : "YS", 
+            "tutorPosition" : ""
+        }, 
+        "studentPaperInfo" : {
+            "paperTitle" : "小屎球子", 
+            "paperContent" : ""
+        }
+    }, 
+    "resumetInfo" : {
+        "pic" : "./../static/studentProtrait/201401010210000-student.png", 
+        "tel" : 12312312311.0, 
+        "email" : "123@shit.com", 
+        "introduce" : "12321321eawe ", 
+        "worksInfo" : [
+            {
+                "_id" : ObjectId("5a210ee00916fc1384f47a96"), 
+                "isShow" : true, 
+                "workLink" : "213", 
+                "workDescription" : "8", 
+                "workName" : "123"
+            }
+        ], 
+        "intershipInfo" : [
+            {
+                "_id" : ObjectId("5a0ba8e751e5261910c8a156"), 
+                "isShow" : true, 
+                "intershipIntroduce" : "爱我的", 
+                "intershipEndTime" : "2017-11-30", 
+                "intershipStartTime" : "2017-11-22", 
+                "companyName" : "问问群"
+            }
+        ]
+    }, 
+    "sendInfo" : [
+        {
+            "_id" : ObjectId("5a1e2ffa94dd720384956bbb"), 
+            "sendDate" : "2017-11-29", 
+            "jobId" : 201711130400001.0, 
+            "sendStatus" : "邀请面试", 
+            "companyId" : 201401010310000.0, 
+            "interviewDate" : "2017-11-30", 
+            "interviewHalfday" : "上午", 
+            "interviewTime" : "10:00"
+        }, 
+        {
+            "_id" : ObjectId("5a1e2ffd94dd720384956bbd"), 
+            "sendDate" : "2017-11-29", 
+            "jobId" : 20171113042.0, 
+            "sendStatus" : "邀请面试", 
+            "companyId" : 201401010310000.0, 
+            "interviewDate" : "2017-11-30", 
+            "interviewHalfday" : "上午", 
+            "interviewTime" : "11:00", 
+            "interviewDist" : "测试地址测试地址测试地址测试地址"
+        }, 
+        {
+            "_id" : ObjectId("5a1e300294dd720384956bbf"), 
+            "sendDate" : "2017-11-29", 
+            "jobId" : 201711240410000.0, 
+            "sendStatus" : "待沟通", 
+            "companyId" : 201401010310000.0
+        }, 
+        {
+            "_id" : ObjectId("5a1e300694dd720384956bc1"), 
+            "sendDate" : "2017-11-29", 
+            "jobId" : 201711260410000.0, 
+            "sendStatus" : "待沟通", 
+            "companyId" : 201401010310000.0
+        }, 
+        {
+            "_id" : ObjectId("5a2137510c14602630dad261"), 
+            "sendDate" : "2017-12-01", 
+            "jobId" : 201711270410000.0, 
+            "sendStatus" : "待沟通", 
+            "companyId" : 201401010310000.0
+        }, 
+        {
+            "_id" : ObjectId("5a2137600c14602630dad263"), 
+            "sendDate" : "2017-12-01", 
+            "jobId" : 201711280410000.0, 
+            "sendStatus" : "待沟通", 
+            "companyId" : 201711130300001.0
+        }, 
+        {
+            "_id" : ObjectId("5a21379bce178a2ae46811d1"), 
+            "sendDate" : "2017-12-01", 
+            "jobId" : 201711300410000.0, 
+            "sendStatus" : "待沟通", 
+            "companyId" : 201401010310000.0
+        }, 
+        {
+            "_id" : ObjectId("5a2137f2ce178a2ae46811d3"), 
+            "sendDate" : "2017-12-01", 
+            "jobId" : 201711300410001.0, 
+            "sendStatus" : "待沟通", 
+            "companyId" : 201401010310000.0
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("5a1290dd9572642e8cfd560e"), 
+    "userId" : 201711200210000.0, 
+    "userType" : NumberInt(2), 
+    "sendInfo" : [
+
+    ], 
+    "resumetInfo" : {
+        "intershipInfo" : [
+
+        ], 
+        "worksInfo" : [
+
+        ], 
+        "pic" : "./../static/studentProtrait/201711200210000-student.png"
+    }, 
+    "personalInfo" : {
+        "studentName" : "老郑", 
+        "studentNum" : 201420732061.0, 
+        "studentSex" : "男", 
+        "studentEducation" : "本科", 
+        "studentMajor" : "计算机科学", 
+        "studentUniversity" : "北农", 
+        "studentNativePlace" : "安徽", 
+        "studentOrginPlace" : "安徽", 
+        "employmentInfo" : {
+            "isEmployment" : false, 
+            "companyId" : "", 
+            "companyName" : ""
+        }, 
+        "studentTutorInfo" : {
+            "tutorName" : "姚山", 
+            "tutorPosition" : "布吉岛"
+        }, 
+        "studentPaperInfo" : {
+            "paperTitle" : "小屎球子", 
+            "paperContent" : "小屎球子"
+        }
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a1290dd9572642e8cfd5610"), 
+    "userId" : 201711200210001.0, 
+    "userType" : NumberInt(2), 
+    "sendInfo" : [
+
+    ], 
+    "resumetInfo" : {
+        "intershipInfo" : [
+
+        ], 
+        "worksInfo" : [
+
+        ]
+    }, 
+    "personalInfo" : {
+        "studentName" : "小宇", 
+        "studentNum" : 201420732071.0, 
+        "studentSex" : "男", 
+        "studentEducation" : "本科", 
+        "studentMajor" : "计算机科学", 
+        "studentUniversity" : "北农", 
+        "studentNativePlace" : "北京", 
+        "studentOrginPlace" : "北京", 
+        "employmentInfo" : {
+            "isEmployment" : false, 
+            "companyId" : "", 
+            "companyName" : ""
+        }, 
+        "studentTutorInfo" : {
+            "tutorName" : "姚山", 
+            "tutorPosition" : "布吉岛"
+        }, 
+        "studentPaperInfo" : {
+            "paperTitle" : "消失曲子", 
+            "paperContent" : "消失曲子"
+        }
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a9d00b9fcfa8c7f9a24d9c7"), 
+    "userId" : 201711200210009.0, 
+    "userType" : NumberInt(2), 
+    "sendInfo" : [
+
+    ], 
+    "resumetInfo" : {
+        "intershipInfo" : [
+
+        ], 
+        "worksInfo" : [
+
+        ]
+    }, 
+    "personalInfo" : {
+        "studentName" : "小宇", 
+        "studentNum" : 201520732071.0, 
+        "studentSex" : "男", 
+        "studentMajor" : "信管", 
+        "studentUniversity" : "北农", 
+        "studentEducation" : "本科", 
+        "studentNativePlace" : "北京", 
+        "studentOrginPlace" : "北京", 
+        "employmentInfo" : {
+            "isEmployment" : false, 
+            "companyId" : "", 
+            "companyName" : ""
+        }, 
+        "studentTutorInfo" : {
+            "tutorName" : "姚山", 
+            "tutorPosition" : "布吉岛"
+        }, 
+        "studentPaperInfo" : {
+            "paperTitle" : "消失曲子", 
+            "paperContent" : "消失曲子"
+        }
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a9d00f2fcfa8c7f9a24d9dd"), 
+    "userId" : 201711200210011.0, 
+    "userType" : NumberInt(2), 
+    "sendInfo" : [
+
+    ], 
+    "resumetInfo" : {
+        "intershipInfo" : [
+
+        ], 
+        "worksInfo" : [
+
+        ]
+    }, 
+    "personalInfo" : {
+        "studentName" : "小宇", 
+        "studentNum" : 201620732071.0, 
+        "studentSex" : "男", 
+        "studentEducation" : "本科", 
+        "studentMajor" : "计算机科学", 
+        "studentUniversity" : "北农", 
+        "studentNativePlace" : "北京", 
+        "studentOrginPlace" : "北京", 
+        "employmentInfo" : {
+            "isEmployment" : false, 
+            "companyId" : "", 
+            "companyName" : ""
+        }, 
+        "studentTutorInfo" : {
+            "tutorName" : "姚山", 
+            "tutorPosition" : "布吉岛"
+        }, 
+        "studentPaperInfo" : {
+            "paperTitle" : "消失曲子", 
+            "paperContent" : "消失曲子"
+        }
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a9d1221fcfa8c7f9a24dfc9"), 
+    "userId" : 201711200210021.0, 
+    "userType" : NumberInt(2), 
+    "sendInfo" : [
+
+    ], 
+    "resumetInfo" : {
+        "intershipInfo" : [
+
+        ], 
+        "worksInfo" : [
+
+        ]
+    }, 
+    "personalInfo" : {
+        "studentName" : "小宇", 
+        "studentNum" : 201620732071.0, 
+        "studentSex" : "男", 
+        "studentMajor" : "信管", 
+        "studentUniversity" : "北农", 
+        "studentEducation" : "本科", 
+        "studentNativePlace" : "北京", 
+        "studentOrginPlace" : "北京", 
+        "employmentInfo" : {
+            "isEmployment" : false, 
+            "companyId" : "", 
+            "companyName" : ""
+        }, 
+        "studentTutorInfo" : {
+            "tutorName" : "姚山", 
+            "tutorPosition" : "布吉岛"
+        }, 
+        "studentPaperInfo" : {
+            "paperTitle" : "消失曲子", 
+            "paperContent" : "消失曲子"
+        }
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a9d1228fcfa8c7f9a24dfcd"), 
+    "userId" : 201711200210031.0, 
+    "userType" : NumberInt(2), 
+    "sendInfo" : [
+
+    ], 
+    "resumetInfo" : {
+        "intershipInfo" : [
+
+        ], 
+        "worksInfo" : [
+
+        ]
+    }, 
+    "personalInfo" : {
+        "studentName" : "小宇", 
+        "studentNum" : 201620732071.0, 
+        "studentSex" : "男", 
+        "studentMajor" : "信管", 
+        "studentUniversity" : "北农", 
+        "studentEducation" : "本科", 
+        "studentNativePlace" : "北京", 
+        "studentOrginPlace" : "北京", 
+        "employmentInfo" : {
+            "isEmployment" : false, 
+            "companyId" : "", 
+            "companyName" : ""
+        }, 
+        "studentTutorInfo" : {
+            "tutorName" : "姚山", 
+            "tutorPosition" : "布吉岛"
+        }, 
+        "studentPaperInfo" : {
+            "paperTitle" : "消失曲子", 
+            "paperContent" : "消失曲子"
+        }
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a9d122ffcfa8c7f9a24dfd0"), 
+    "userId" : 201711200210041.0, 
+    "userType" : NumberInt(2), 
+    "sendInfo" : [
+
+    ], 
+    "resumetInfo" : {
+        "intershipInfo" : [
+
+        ], 
+        "worksInfo" : [
+
+        ]
+    }, 
+    "personalInfo" : {
+        "studentName" : "小宇", 
+        "studentNum" : 201620732071.0, 
+        "studentSex" : "男", 
+        "studentMajor" : "信管", 
+        "studentUniversity" : "北农", 
+        "studentEducation" : "本科", 
+        "studentNativePlace" : "北京", 
+        "studentOrginPlace" : "北京", 
+        "employmentInfo" : {
+            "isEmployment" : false, 
+            "companyId" : "", 
+            "companyName" : ""
+        }, 
+        "studentTutorInfo" : {
+            "tutorName" : "姚山", 
+            "tutorPosition" : "布吉岛"
+        }, 
+        "studentPaperInfo" : {
+            "paperTitle" : "消失曲子", 
+            "paperContent" : "消失曲子"
+        }
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a9d1237fcfa8c7f9a24dfd7"), 
+    "userId" : 201711200211021.0, 
+    "userType" : NumberInt(2), 
+    "sendInfo" : [
+
+    ], 
+    "resumetInfo" : {
+        "intershipInfo" : [
+
+        ], 
+        "worksInfo" : [
+
+        ]
+    }, 
+    "personalInfo" : {
+        "studentName" : "小宇", 
+        "studentNum" : 201620732071.0, 
+        "studentSex" : "男", 
+        "studentMajor" : "信管", 
+        "studentUniversity" : "北农", 
+        "studentEducation" : "本科", 
+        "studentNativePlace" : "北京", 
+        "studentOrginPlace" : "北京", 
+        "employmentInfo" : {
+            "isEmployment" : false, 
+            "companyId" : "", 
+            "companyName" : ""
+        }, 
+        "studentTutorInfo" : {
+            "tutorName" : "姚山", 
+            "tutorPosition" : "布吉岛"
+        }, 
+        "studentPaperInfo" : {
+            "paperTitle" : "消失曲子", 
+            "paperContent" : "消失曲子"
+        }
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a9d123cfcfa8c7f9a24dfda"), 
+    "userId" : 201711200220021.0, 
+    "userType" : NumberInt(2), 
+    "sendInfo" : [
+
+    ], 
+    "resumetInfo" : {
+        "intershipInfo" : [
+
+        ], 
+        "worksInfo" : [
+
+        ]
+    }, 
+    "personalInfo" : {
+        "studentName" : "小宇", 
+        "studentNum" : 201620732071.0, 
+        "studentSex" : "男", 
+        "studentMajor" : "信管", 
+        "studentUniversity" : "北农", 
+        "studentEducation" : "本科", 
+        "studentNativePlace" : "北京", 
+        "studentOrginPlace" : "北京", 
+        "employmentInfo" : {
+            "isEmployment" : false, 
+            "companyId" : "", 
+            "companyName" : ""
+        }, 
+        "studentTutorInfo" : {
+            "tutorName" : "姚山", 
+            "tutorPosition" : "布吉岛"
+        }, 
+        "studentPaperInfo" : {
+            "paperTitle" : "消失曲子", 
+            "paperContent" : "消失曲子"
+        }
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a9d15d4fcfa8c7f9a24e134"), 
+    "userId" : 201711200223221.0, 
+    "userType" : NumberInt(2), 
+    "sendInfo" : [
+
+    ], 
+    "resumetInfo" : {
+        "intershipInfo" : [
+
+        ], 
+        "worksInfo" : [
+
+        ]
+    }, 
+    "personalInfo" : {
+        "studentName" : "小宇123", 
+        "studentNum" : 201620732071.0, 
+        "studentSex" : "男", 
+        "studentMajor" : "信管", 
+        "studentUniversity" : "北农", 
+        "studentEducation" : "本科", 
+        "studentNativePlace" : "北京", 
+        "studentOrginPlace" : "北京", 
+        "employmentInfo" : {
+            "isEmployment" : false, 
+            "companyId" : "", 
+            "companyName" : ""
+        }, 
+        "studentTutorInfo" : {
+            "tutorName" : "姚山", 
+            "tutorPosition" : "布吉岛"
+        }, 
+        "studentPaperInfo" : {
+            "paperTitle" : "消失曲子", 
+            "paperContent" : "消失曲子"
+        }
+    }, 
+    "__v" : NumberInt(0)
+}

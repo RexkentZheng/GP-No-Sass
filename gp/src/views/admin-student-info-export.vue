@@ -350,7 +350,9 @@ export default {
         }).then((response)=>{
           let res = response.data;
           if (res.status == 0) {
-            
+            setTimeout(() => {
+              this.download(res.result);
+            }, 1000);
           }else{
             alert('导出失败')
           }
@@ -358,7 +360,12 @@ export default {
       }else{
         alert('输出数据不能为空')
       }
-
+    },
+    download(fileName) {
+      window.location.href =
+        "http://127.0.0.1:8888/export/download?dir=excel&name=" +
+        fileName+
+        ".xlsx";
     }
   }
 };

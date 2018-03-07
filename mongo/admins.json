@@ -1,0 +1,6 @@
+{ 
+    "_id" : ObjectId("59e9b4c0993bed6083a36201"), 
+    "userId" : NumberLong(201401010110000), 
+    "userType" : NumberInt(1), 
+    "fullAuthority" : true
+}
