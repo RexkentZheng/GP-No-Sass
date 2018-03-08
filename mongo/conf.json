@@ -691,16 +691,20 @@
             "chineseName" : "学生籍贯"
         }, 
         {
-            "englishName" : "", 
-            "chineseName" : ""
+            "englishName" : "employmentInfo.companyName", 
+            "chineseName" : "就业公司"
         }, 
         {
-            "englishName" : "", 
-            "chineseName" : ""
+            "englishName" : "employmentInfo.isEmployment", 
+            "chineseName" : "是否就业"
         }, 
         {
-            "englishName" : "", 
-            "chineseName" : ""
+            "englishName" : "studentTutorInfo.tutorName", 
+            "chineseName" : "导师姓名"
+        }, 
+        {
+            "englishName" : "studentPaperInfo.paperTitle", 
+            "chineseName" : "论文标题"
         }
     ]
 }
