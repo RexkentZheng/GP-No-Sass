@@ -45,7 +45,11 @@ function sortInfo(filterInfo) {
   for (let i = 0; i < filterInfo[0].length; i++) {
     let og = [];
     for (let j = 0; j < filterInfo.length; j++) {
-      og.push(filterInfo[j][i]);
+      if (filterInfo[j][i] === false) {
+        og.push('否')
+      } else {
+        og.push(filterInfo[j][i]);
+      }
     }
     sortedInfo.push(og);
   }
