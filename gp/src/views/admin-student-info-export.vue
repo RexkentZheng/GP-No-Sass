@@ -51,8 +51,8 @@
                 <dd>
                   <select v-model="choosen.sex" class="form-control" name="" id="">
                     <option value=''>不做筛选</option>
-                    <option value="male">仅限男生</option>
-                    <option value="female">仅限女生</option>
+                    <option value="男">仅限男生</option>
+                    <option value="女">仅限女生</option>
                   </select>
                 </dd>
               </dl>
@@ -72,7 +72,7 @@
                   专业：
                 </dt>
                 <dd>
-                  <select class="form-control" name="" id="">
+                  <select v-model="choosen.major" class="form-control" name="" id="">
                     <option value="">不做筛选</option>
                     <option v-for="oneMajor in choosenMajor" :value="oneMajor">{{oneMajor}}</option>
                   </select>
@@ -141,23 +141,23 @@
           </p>
           <ul class="clearfix">
             <li>
-              <input v-model="exportTitle.studentName" type="checkbox">
+              <input v-model="exportTitle.学生姓名" type="checkbox">
               学生姓名
             </li>
             <li>
-              <input v-model="exportTitle.studentSex" type="checkbox">
+              <input v-model="exportTitle.学生性别" type="checkbox">
               学生性别
             </li>
             <li>
-              <input v-model="exportTitle.studentNum" type="checkbox">
+              <input v-model="exportTitle.学生学号" type="checkbox">
               学生学号
             </li>
             <li>
-              <input v-model="exportTitle.studentMajor" type="checkbox">
+              <input v-model="exportTitle.学生专业" type="checkbox">
               学生专业
             </li>
             <li>
-              <input type="checkbox">
+              <input v-model="exportTitle.学生学院" type="checkbox">
               学生学院
             </li>
           </ul>
@@ -165,24 +165,24 @@
         <div class="choose-tab-name">
           <ul class="clearfix">
             <li>
-              <input type="checkbox">
+              <input v-model="exportTitle.学生籍贯" type="checkbox">
               学生籍贯
             </li>
             <li>
-              <input type="checkbox">
-              学生电话
+              <input v-model="exportTitle.导师姓名" type="checkbox">
+              导师姓名
             </li>
             <li>
-              <input type="checkbox">
+              <input v-model="exportTitle.论文标题" type="checkbox">
+              论文标题
+            </li>
+            <li>
+              <input v-model="exportTitle.是否就业" type="checkbox">
               是否就业
             </li>
             <li>
-              <input type="checkbox">
-              导师信息
-            </li>
-            <li>
-              <input type="checkbox">
-              论文标题
+              <input v-model="exportTitle.就业公司" type="checkbox">
+              就业公司
             </li>
           </ul>
         </div>
@@ -219,14 +219,20 @@ export default {
         startYear:'',
         endYear:'',
         place:'',
+        major:'',
         college:'',
         sex:''
       },
       exportTitle:{
-        studentName:false,
-        studentSex:false,
-        studentNum:false,
-        studentMajor:false
+        学生性别:false,
+        学生姓名:false,
+        学生学号:false,
+        学生学院:false,
+        学生专业:false,
+        学生籍贯:false,
+        就业公司:false,
+        是否就业:false,
+        导师姓名:false,
       },
       isCheckeAll:false,
       studentAllInfo:[],
@@ -285,6 +291,7 @@ export default {
       } else if(this.choosen.startYear == '' && this.choosen.endYear !== ''){
         alert('不可只有终止入学年份');
       }else{
+          this.isCheckeAll = false
           axios.post("/student/exportInfo",{
             choosen:this.choosen
           }).then(response =>{
@@ -330,7 +337,7 @@ export default {
       for (let key in this.exportTitle){
         if(this.exportTitle[key]){
           this.conf.allComparison.forEach((op)=>{
-            if(op.englishName == key){
+            if(op.chineseName == key){
               titleInfo.push(op);
             }
           })
@@ -343,7 +350,6 @@ export default {
             checkedInfo.push(oneStudent);
           }
         });
-        console.log(checkedInfo);
         axios.post('export/studentInfo',{
           studentInfo:checkedInfo,
           titleInfo:titleInfo

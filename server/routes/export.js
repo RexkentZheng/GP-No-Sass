@@ -28,7 +28,12 @@ function filter(studentInfo,filterInfo,titleInfo) {
     let sortArr = [];
     sortArr.push(oneTitle.chineseName);
     studentInfo.forEach((oneStudent)=>{
-      sortArr.push(oneStudent.personalInfo[''+oneTitle.englishName+'']);
+      if (oneTitle.englishName.indexOf('.')>0) {
+        const titlePart = oneTitle.englishName.split('.');
+        sortArr.push(oneStudent.personalInfo[titlePart[0]][titlePart[1]]);
+      }else{
+        sortArr.push(oneStudent.personalInfo[oneTitle.englishName]);
+      }
     })    
     filterInfo.push(sortArr);
   });
@@ -53,14 +58,14 @@ let getfileName = (titleInfo)=>{
   titleInfo.forEach((op)=>{
     chinese.push(op.chineseName)
   })
-  chinese = chinese.join('+');
+  chinese = chinese.join('-');
   let name = 
     nowDate.getFullYear() +
     "-" +
     (nowDate.getMonth() + 1) +
     "-" +
     nowDate.getDate() +
-    "+" +
+    "-" +
     chinese
   return name
 }
@@ -86,9 +91,6 @@ router.get("/download", function(req, res, next) {
     fileName = req.query.name,
     currFile = path.join(currDir, fileName),
     fReadStream;
-
-  console.log(fileName);
-  console.log(currFile);
 
   fs.exists(currFile, function(exist) {
     if (exist) {

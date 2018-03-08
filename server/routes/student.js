@@ -46,7 +46,7 @@ function getNeededInfo(arr,filterName,filedCont) {
 	if(filedCont){
 		const newArr= [];
 		arr.forEach((op)=>{
-			if(op.personalInfo[''+filterName+''] == filedCont){
+			if(op.personalInfo[filterName] == filedCont){
 				newArr.push(op)
 			}
 		})
@@ -94,7 +94,6 @@ router.post('/studentNum',(req,res,netx)=>{
 			console.log(err);
 			getWrong(res,err);
 		}else{
-			console.log(doc);
 			getRight(res,doc);
 		}
 	})
@@ -242,15 +241,16 @@ router.post('/delArrayInfo',(req,res,next)=>{
 
 //输出学生信息之前的获取
 router.post('/exportInfo',(req,res,next)=>{
-	const { startYear,endYear,place,college,sex } = req.body.choosen;
+	const { startYear,endYear,place,college,major,sex } = req.body.choosen;
 	Student.find({},(err,doc)=>{
 		if(err){
 			getWrong(res,err);
 		}else{
 			const docCont = doc;
 			let filterInfo = [];
-			filterInfo = getNeededInfo(docCont,'studentOrginPlace',place);
-			filterInfo = getNeededInfo(filterInfo,'studentMajor',college);
+			filterInfo = getNeededInfo(docCont,'studentOriginPlace',place);
+			filterInfo = getNeededInfo(filterInfo,'studentCollege',college);
+			filterInfo = getNeededInfo(filterInfo,'studentMajor',major);
 			filterInfo = getNeededInfo(filterInfo,'studentSex',sex);
 			filterInfo = getYearsInfo(filterInfo,startYear,endYear);
 			getRight(res,filterInfo);

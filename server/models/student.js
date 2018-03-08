@@ -10,10 +10,11 @@ var studentSchema = new Schema({
         	"studentSex":String,
             "studentName" : String,
             "studentNum" : Number,
+            "studentCollege" : String,
             "studentMajor" : String,
             "studentUniversity" : String,
             "studentNativePlace" : String,
-            "studentOrginPlace" :String,
+            "studentOriginPlace" :String,
             "studentPaperInfo" :  
                 {
                     "paperTitle" : String,
