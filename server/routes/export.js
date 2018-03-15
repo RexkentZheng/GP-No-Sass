@@ -45,10 +45,19 @@ function sortInfo(filterInfo) {
   for (let i = 0; i < filterInfo[0].length; i++) {
     let og = [];
     for (let j = 0; j < filterInfo.length; j++) {
-      og.push(filterInfo[j][i]);
+      if (typeof(filterInfo[j][i]) === 'boolean') {
+        if (filterInfo[j][i]) {
+          og.push('是');
+        } else {
+          og.push('否') 
+        }
+      } else {
+        og.push(filterInfo[j][i]);
+      }
     }
     sortedInfo.push(og);
   }
+  console.log(sortedInfo);
   return sortedInfo
 }
 
