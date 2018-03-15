@@ -30,7 +30,7 @@
 					</dl>
 					<dl class="student-origin clearfix">
 						<dt>籍贯:</dt>
-						<dd>{{studentInfo.studentOrginPlace}}</dd>
+						<dd>{{studentInfo.studentOriginPlace}}</dd>
 					</dl>
 					<dl class="student-paper-info clearfix">
 						<dt>论文标题:</dt>
@@ -74,7 +74,7 @@
 					studentMajor:'',
 					studentUniversity:'',
 					studentNativePlace:'',
-					studentOrginPlace:'',
+					studentOriginPlace:'',
 					studentPaperInfo:{
 						paperTitle:'',
 						paperContent:''
