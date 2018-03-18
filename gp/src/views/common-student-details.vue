@@ -135,9 +135,7 @@
 				})
 			},
 			cancelChange(){
-				this.$router.push({
-					path:'./../../admin'
-				})
+				this.$router.go(-1);
 			}
 		}
 	}
