@@ -42,7 +42,7 @@
 				<div v-for="job in realJobs" class="job-one clearfix">
 					<div class="top">
 						<div class="left">
-							<div class="jobName clearfix">
+							<div @click="linkDeatils('job',job)" class="jobName clearfix">
 								<h3>{{job.jobName}}</h3>
 								<span>[{{job.jobType}}]</span>
 							</div>
@@ -54,7 +54,7 @@
 							</div>
 						</div>
 						<div class="middle">
-							<div class="companyName">
+							<div @click="linkDeatils('company',job)" class="companyName">
 								<span>{{job.companyInfo.companyBaseInfo.companyName}}</span>
 							</div>
 							<div class="companyInfo">
@@ -191,6 +191,23 @@
 					}
 				})
 			},
+			linkDeatils(type,item){
+				if (type === 'job') {
+					this.$router.push({
+						path: '/common/job/details',
+						query: {
+							jobId: item.jobId,
+						}
+					})
+				} else {
+					this.$router.push({
+						path: '/common/company/details',
+						query: {
+							companyId: item.companyId,
+						}
+					})
+				}
+			}
 		}
 	}
 </script>

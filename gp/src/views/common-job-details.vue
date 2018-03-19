@@ -34,6 +34,12 @@
 				<div v-if="allInfo != ''" class="job-content clearfix">
 					<div class="left-part clearfix">
 						<dl>
+							<dt>职位类别</dt>
+							<dd class="clearfix">
+								<p>{{allInfo.jobInfo.jobTypeFirst}}-{{allInfo.jobInfo.jobTypeSecond}}-{{allInfo.jobInfo.jobTypeThird}}</p>
+							</dd>
+						</dl>
+						<dl>
 							<dt>职位诱惑</dt>
 							<dd class="clearfix">
 								<p class="attempt-label" v-for="label in jobAttemptLabel">{{label}}</p>
@@ -88,9 +94,10 @@
 					</div>
 				</div>
 				<div class="student-info">
-					<router-link v-if="this.$route.query.isSend == 'true'" class="btn btn-default" :to="{path:'/student/send'}">返回</router-link>
+					<a class="btn btn-default"  v-if="allInfo.jobInfo.companyId != userId " @click="getBackPage">返回</a>
+					<!-- <router-link v-if="this.$route.query.isSend == 'true'" class="btn btn-default" :to="{path:'/student/send'}">返回</router-link>
 					<router-link v-if="this.$route.query.isSend == 'false'" class="btn btn-default" :to="{path:'/'}">返回</router-link>
-					<router-link v-if="this.getCookies('userType') == '1'" class="btn btn-default" :to="{path:'/admin'}">返回</router-link>
+					<router-link v-if="this.getCookies('userType') == '1'" class="btn btn-default" :to="{path:'/admin'}">返回</router-link> -->
 				</div>
 				<div v-if="this.getCookies('userType') == '3'" class="company-info">
 					<a class="btn btn-default"  v-if="allInfo.jobInfo.companyId != userId " @click="getBackPage">返回</a>
