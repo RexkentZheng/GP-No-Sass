@@ -91,6 +91,20 @@
             "sendStatus" : "待沟通", 
             "jobId" : 201711300410001.0, 
             "studentId" : 201401010210000.0
+        }, 
+        {
+            "_id" : ObjectId("5aae676620303c2004587eaa"), 
+            "receivedTime" : "2018-03-18", 
+            "sendStatus" : "待沟通", 
+            "jobId" : 201712010410000.0, 
+            "studentId" : 201401010210000.0
+        }, 
+        {
+            "_id" : ObjectId("5aae679a20303c2004587eac"), 
+            "receivedTime" : "2018-03-18", 
+            "sendStatus" : "待沟通", 
+            "jobId" : 201712010410001.0, 
+            "studentId" : 201401010210000.0
         }
     ], 
     "interview" : [
@@ -183,6 +197,42 @@
         "hrTel" : NumberInt(123), 
         "hrEmail" : "123", 
         "companyName" : "123"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5aae66c920303c2004587ea9"), 
+    "userId" : 201803180310000.0, 
+    "userName" : "123", 
+    "userPwd" : "1231231", 
+    "userType" : NumberInt(3), 
+    "interview" : [
+
+    ], 
+    "received" : [
+
+    ], 
+    "companyProduction" : [
+
+    ], 
+    "companyInfo" : {
+        "companyLogo" : "", 
+        "companyIntroduce" : "", 
+        "companyLabel" : "", 
+        "companyBaseInfo" : {
+            "companyType" : "", 
+            "companyCount" : null, 
+            "companyHref" : "", 
+            "companyProvince" : "", 
+            "companyCity" : "", 
+            "companyArea" : ""
+        }
+    }, 
+    "regeditInfo" : {
+        "hrName" : "123", 
+        "hrTel" : 11111111111.0, 
+        "hrEmail" : "111dee@qq.com", 
+        "companyName" : "qwe"
     }, 
     "__v" : NumberInt(0)
 }

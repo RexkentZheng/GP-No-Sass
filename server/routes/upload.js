@@ -1,4 +1,5 @@
 var express = require('express');
+const md5 = require('md5');
 var router = express.Router();
 var multer = require('multer');
 var fs = require('fs');
@@ -91,7 +92,7 @@ router.post("/excel", (req, res, next) => {
 						})
 						User.create({
 							'userName': item.学号,
-							'userPwd': item.学号,
+							'userPwd': md5(item.学号),
 							'userType': userType,
 							'userId': userId,
 							'isWaitting': false,

@@ -1,7 +1,7 @@
 { 
     "_id" : ObjectId("59fadff143b118cf4e4307a7"), 
     "userName" : "admin", 
-    "userPwd" : "admin1", 
+    "userPwd" : "e00cf25ad42683b3df678c61f42c6bda", 
     "userType" : NumberInt(1), 
     "userId" : NumberLong(201401010110000), 
     "isPass" : true, 
@@ -116,8 +116,10 @@
     "userName" : "123", 
     "userPwd" : "1231231", 
     "userType" : NumberInt(3), 
-    "isWaitting" : true, 
-    "__v" : NumberInt(0)
+    "isWaitting" : false, 
+    "__v" : NumberInt(0), 
+    "isPass" : true, 
+    "userId" : 201803180310000.0
 }
 { 
     "_id" : ObjectId("5a2649983a0fcf2bcc37df1b"), 

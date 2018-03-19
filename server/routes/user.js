@@ -1,6 +1,7 @@
 //获取需要的文件
 'use strict';
 var express = require('express');
+const md5 = require('md5');
 var router = express.Router();
 var User = require('../models/user');
 var Apply = require('../models/apply');
@@ -28,7 +29,7 @@ function getRight(res, doc) {
 router.post('/login', function(req, res, next) {
 	let param = {
 		userName: req.body.userName,
-		userPwd: req.body.userPwd
+		userPwd: md5(req.body.userPwd)
 	}
 	User.findOne(param, function(err, doc) {
 		if(err) {
@@ -195,7 +196,7 @@ router.post('/userId', function(req, res, next) {
 router.post('/createUser', function(req, res, next) {
 	let param = {
 		userName: req.body.adminName,
-		userPwd: req.body.adminPwd,
+		userPwd: md5(req.body.adminPwd),
 		userType: 1,
 		userId: 10011
 	};
@@ -378,7 +379,7 @@ router.post('/clearUserInfo', (req, res, next) => {
 router.post('/changePassword',(req,res,next)=>{
 	let userId = req.body.userId;
 	let oldPws = req.body.oldPassword;
-	let newPwd = req.body.newPassword;
+	let newPwd = md5(req.body.newPassword);
 	User.findOne({
 		'userId':userId
 	},(err,doc)=>{

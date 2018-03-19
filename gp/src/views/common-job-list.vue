@@ -203,7 +203,7 @@
 					this.$router.push({
 						path: '/common/company/details',
 						query: {
-							companyId: item.companyId,
+							userId: item.companyId,
 						}
 					})
 				}

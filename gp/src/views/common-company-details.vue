@@ -122,6 +122,9 @@
 						<a  class="btn btn-danger btn-lg" href="javascreipt:;">删除</a>
 						<a @click="cancelDel" class="btn btn-default btn-lg" href="javascreipt:;">取消</a>
 					</div>
+					<div v-if="userType !== 1" class="btn-line">
+						<a @click="cancelDel" class="btn btn-default btn-lg" href="javascreipt:;">取消</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -190,7 +193,7 @@
 				})
 			},
 			cancelDel(){
-				window.history.back();
+				this.$router.go(-1);
 			},
 			
 		}

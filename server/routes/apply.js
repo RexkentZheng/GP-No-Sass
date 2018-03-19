@@ -1,5 +1,6 @@
 //获取需要的部件
 var express = require('express');
+const md5 = require('md5');
 var router = express.Router();
 var mongoose = require('mongoose');
 var Apply = require('../models/apply');
@@ -37,7 +38,7 @@ router.get('/',function (req,res,next) {
 router.post('/regedit',function (req,res,next) {
 	let param = {
 		userName:req.body.userName,
-		userPwd:req.body.userPwd,
+		userPwd:md5(req.body.userPwd),
 		hrName : req.body.hrName,
 		hrTel : req.body.hrTel,
 		hrEmail : req.body.hrEmail,

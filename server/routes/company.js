@@ -1,5 +1,6 @@
 //获取需要的文件
 var express = require('express');
+const md5 = require('md5');
 var router = express.Router();
 var Company = require('../models/company');
 var Student = require('../models/student');

@@ -29,7 +29,7 @@
     "hrTel" : 11111111111.0, 
     "hrEmail" : "111dee@qq.com", 
     "companyName" : "qwe", 
-    "isChecked" : false, 
+    "isChecked" : true, 
     "__v" : NumberInt(0), 
     "companyLisence" : "./../../static/companyLicense/123-11111111111.png"
 }
