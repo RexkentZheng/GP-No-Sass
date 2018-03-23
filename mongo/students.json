@@ -3,11 +3,70 @@
     "userId" : 201803230210000.0, 
     "userType" : NumberInt(2), 
     "sendInfo" : [
-
+        {
+            "_id" : ObjectId("5ab4aa84714201096ec7556a"), 
+            "sendDate" : "2018-03-23", 
+            "jobId" : 201803230410000.0, 
+            "sendStatus" : "邀请面试", 
+            "companyId" : 201803230310003.0, 
+            "interviewDate" : "2018-03-28", 
+            "interviewDist" : "宇宙", 
+            "interviewHalfday" : "上午", 
+            "interviewTime" : "10:00"
+        }, 
+        {
+            "_id" : ObjectId("5ab4aa88714201096ec7556c"), 
+            "sendDate" : "2018-03-23", 
+            "jobId" : 201803230410002.0, 
+            "sendStatus" : "不合适", 
+            "companyId" : 201803230310003.0
+        }, 
+        {
+            "_id" : ObjectId("5ab4aa8d714201096ec7556e"), 
+            "sendDate" : "2018-03-23", 
+            "jobId" : 201803230410001.0, 
+            "sendStatus" : "不合适", 
+            "companyId" : 201803230310003.0
+        }, 
+        {
+            "_id" : ObjectId("5ab4aa91714201096ec75570"), 
+            "sendDate" : "2018-03-23", 
+            "jobId" : 201803230410003.0, 
+            "sendStatus" : "待沟通", 
+            "companyId" : 201803230310003.0
+        }, 
+        {
+            "_id" : ObjectId("5ab4aa95714201096ec75572"), 
+            "sendDate" : "2018-03-23", 
+            "jobId" : 201803230410004.0, 
+            "sendStatus" : "待沟通", 
+            "companyId" : 201803230310003.0
+        }, 
+        {
+            "_id" : ObjectId("5ab4aa98714201096ec75574"), 
+            "sendDate" : "2018-03-23", 
+            "jobId" : 201803230410005.0, 
+            "sendStatus" : "待沟通", 
+            "companyId" : 201803230310003.0
+        }, 
+        {
+            "_id" : ObjectId("5ab4aa9b714201096ec75576"), 
+            "sendDate" : "2018-03-23", 
+            "jobId" : 201803230410006.0, 
+            "sendStatus" : "待沟通", 
+            "companyId" : 201803230310003.0
+        }
     ], 
     "resumetInfo" : {
         "intershipInfo" : [
-
+            {
+                "_id" : ObjectId("5ab4aa7b714201096ec75568"), 
+                "isShow" : true, 
+                "intershipIntroduce" : "测试实习描述\n", 
+                "intershipEndTime" : "2018-03-15", 
+                "intershipStartTime" : "2018-03-05", 
+                "companyName" : "测试实习公司"
+            }
         ], 
         "worksInfo" : [
             {
@@ -20,7 +79,8 @@
         ], 
         "tel" : 12312312312.0, 
         "email" : "123123123@qq.com", 
-        "pic" : "./../static/studentProtrait/201803230210000-student.png"
+        "pic" : "./../static/studentProtrait/201803230210000-student.png", 
+        "introduce" : "测试个人简介\n"
     }, 
     "personalInfo" : {
         "studentName" : "小明", 

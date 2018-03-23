@@ -5,10 +5,66 @@
     "userPwd" : "e10adc3949ba59abbe56e057f20f883e", 
     "userType" : NumberInt(3), 
     "interview" : [
-
+        {
+            "_id" : ObjectId("5ab4d724714201096ec75577"), 
+            "jobId" : 201803230410000.0, 
+            "studentId" : 201803230210000.0, 
+            "interviewTime" : "10:00", 
+            "interviewHalfday" : "上午", 
+            "interviewDate" : "2018-03-28", 
+            "interviewDist" : "宇宙"
+        }
     ], 
     "received" : [
-
+        {
+            "_id" : ObjectId("5ab4aa84714201096ec75569"), 
+            "receivedTime" : "2018-03-23", 
+            "sendStatus" : "已邀请", 
+            "jobId" : 201803230410000.0, 
+            "studentId" : 201803230210000.0
+        }, 
+        {
+            "_id" : ObjectId("5ab4aa88714201096ec7556b"), 
+            "receivedTime" : "2018-03-23", 
+            "sendStatus" : "已拒绝", 
+            "jobId" : 201803230410002.0, 
+            "studentId" : 201803230210000.0
+        }, 
+        {
+            "_id" : ObjectId("5ab4aa8d714201096ec7556d"), 
+            "receivedTime" : "2018-03-23", 
+            "sendStatus" : "已拒绝", 
+            "jobId" : 201803230410001.0, 
+            "studentId" : 201803230210000.0
+        }, 
+        {
+            "_id" : ObjectId("5ab4aa91714201096ec7556f"), 
+            "receivedTime" : "2018-03-23", 
+            "sendStatus" : "待沟通", 
+            "jobId" : 201803230410003.0, 
+            "studentId" : 201803230210000.0
+        }, 
+        {
+            "_id" : ObjectId("5ab4aa95714201096ec75571"), 
+            "receivedTime" : "2018-03-23", 
+            "sendStatus" : "待沟通", 
+            "jobId" : 201803230410004.0, 
+            "studentId" : 201803230210000.0
+        }, 
+        {
+            "_id" : ObjectId("5ab4aa98714201096ec75573"), 
+            "receivedTime" : "2018-03-23", 
+            "sendStatus" : "待沟通", 
+            "jobId" : 201803230410005.0, 
+            "studentId" : 201803230210000.0
+        }, 
+        {
+            "_id" : ObjectId("5ab4aa9b714201096ec75575"), 
+            "receivedTime" : "2018-03-23", 
+            "sendStatus" : "待沟通", 
+            "jobId" : 201803230410006.0, 
+            "studentId" : 201803230210000.0
+        }
     ], 
     "companyProduction" : [
         {
