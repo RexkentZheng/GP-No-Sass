@@ -27,7 +27,6 @@
 						</div>
 						<div v-if="userType == 2 " class="right-part clearfix">
 							<a v-if="this.$route.query.isSend == 'false'" @click="sendResume" class="btn btn-info" href="javascript:;">投个简历</a>
-							<span><span class="glyphicon glyphicon-th-list icon"></span>在线简历</span>
 						</div>
 					</div>
 				</div>
@@ -95,9 +94,6 @@
 				</div>
 				<div class="student-info">
 					<a class="btn btn-default"  v-if="allInfo.jobInfo.companyId != userId " @click="getBackPage">返回</a>
-					<!-- <router-link v-if="this.$route.query.isSend == 'true'" class="btn btn-default" :to="{path:'/student/send'}">返回</router-link>
-					<router-link v-if="this.$route.query.isSend == 'false'" class="btn btn-default" :to="{path:'/'}">返回</router-link>
-					<router-link v-if="this.getCookies('userType') == '1'" class="btn btn-default" :to="{path:'/admin'}">返回</router-link> -->
 				</div>
 				<div v-if="this.getCookies('userType') == '3'" class="company-info">
 					<a class="btn btn-default"  v-if="allInfo.jobInfo.companyId != userId " @click="getBackPage">返回</a>
@@ -139,7 +135,7 @@
 		components: {
 			CommonHeader,
 			CommonFooter,
-			StudentHeader
+			StudentHeader,
 		},
 		computed:{
 			jobAttemptLabel(){

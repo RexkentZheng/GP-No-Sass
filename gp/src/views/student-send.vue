@@ -17,11 +17,14 @@
 						<li v-bind:class="{'active':activeName=='面试安排'}" ref="interview" @click="getInterviewList">
 							面试安排
 						</li>
+						<li v-bind:class="{'active':activeName=='投递概况'}" ref="chart" @click="getChartList">
+							投递概况
+						</li>
 					</ul>
 				</div>
 				<div class="send-list" v-if="listFlag">
 					<ul class="kill-type">
-						<li v-for="item in changedStudentSendList">
+						<li v-for="item in changedStudentSendList" :key="item.jobInfo.jobId">
 							<div class="job-main clearfix">
 								<router-link class="jobName" :to="{path:'/common/job/details',query:{jobId: item.jobId,isSend:'true'}}">{{item.jobInfo.jobName}}</router-link>
 								<span>{{item.jobInfo.jobSalary}}</span>
@@ -41,7 +44,7 @@
 				</div>
 				<div class="interview-list" v-if="interviewFlag">
 					<ul  class="kill-type">
-						<li v-for="item in changedStudentSendList">
+						<li v-for="item in changedStudentSendList" :key="item.jobInfo.jobId">
 							<div class="job-main clearfix">
 								<router-link class="jobName" :to="{path:'/common/job/details',query:{jobId: item.jobId,isSend:'true'}}">{{item.jobInfo.jobName}}</router-link>
 								<span>{{item.jobInfo.jobSalary}}</span>
@@ -64,6 +67,10 @@
 						</li>
 					</ul>
 				</div>
+				<div class="chart-list" v-if="chartFlag">
+					<student-chart-type :studentSendList = 'studentSendList'></student-chart-type>
+					<student-chart-status :studentSendList = 'studentSendList'></student-chart-status>
+				</div>
 			</div>
 		</div>
 		<common-footer></common-footer>
@@ -73,6 +80,8 @@
 <script>
 	import StudentHeader from './../components/StudentHeader'
 	import CommonFooter from './../components/CommonFooter'
+	import StudentChartType from './../components/StudentChartType'
+	import StudentChartStatus from './../components/StudentChartStatus'
 	import './../assets/css/bootstrap.min.css'
 	import './../assets/css/common.css'
 	import './../assets/css/style.css'
@@ -85,14 +94,17 @@
 				changedStudentSendList: [],
 				listFlag: false,
 				interviewFlag: false,
-				activeName:'全部'
+				activeName:'全部',
+				chartFlag:false
 			}
 		},
 		components: {
 			StudentHeader,
-			CommonFooter
+			CommonFooter,
+			StudentChartType,
+			StudentChartStatus,
 		},
-		mounted() {
+		created() {
 			this.getSendList();
 		},
 		methods: {
@@ -151,7 +163,7 @@
 			trigger() {
 				setTimeout(() => {
 					this.listFlag = true;
-				}, 200);
+				}, 1000);
 			},
 			//获取不同状态的List
 			getAllList() {
@@ -164,6 +176,7 @@
 			getWaittingList() {
 				this.listFlag = true;
 				this.interviewFlag = false;
+				this.chartFlag = false;
 				this.changedStudentSendList = [];
 				this.studentSendList.forEach((item) => {
 					if(item.sendStatus == "待沟通") {
@@ -175,6 +188,7 @@
 			getInterviewList() {
 				this.listFlag = false;
 				this.interviewFlag = true;
+				this.chartFlag = false;
 				this.changedStudentSendList = [];
 				this.studentSendList.forEach((item) => {
 					if(item.sendStatus == "邀请面试") {
@@ -186,6 +200,7 @@
 			getRefuseList() {
 				this.listFlag = true;
 				this.interviewFlag = false;
+				this.chartFlag = false;
 				this.changedStudentSendList = [];
 				this.studentSendList.forEach((item) => {
 					if(item.sendStatus == "不合适") {
@@ -193,6 +208,12 @@
 					}
 				})
 				this.activeName = this.$refs.refuse.innerText; 
+			},
+			getChartList(){
+				this.listFlag = false;
+				this.interviewFlag = false;
+				this.chartFlag = true;
+				this.activeName = this.$refs.chart.innerText; 
 			}
 		}
 	}

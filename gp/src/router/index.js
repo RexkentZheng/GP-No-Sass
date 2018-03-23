@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import CommonIndex from '@/views/common-index'
 import AdminIndex from '@/views/admin-index'
 import AdminAudit from '@/views/admin-audit'
