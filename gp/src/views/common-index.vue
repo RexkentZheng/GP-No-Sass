@@ -5,14 +5,14 @@
 			<div class="contain-header">
 				<div class="search-wraper clearfix">
 					<div class="input-group">
-						<input v-model="keyWords" class="form-control" type="text" placeholder="请输入小屎球子" />
+						<input v-model="keyWords" class="form-control" type="text" placeholder="请输入职位名称" />
 						<router-link class="input-group-addon" :to="{path:'/common/job/list',query:{keyWords:keyWords,searchWay:'key'}}">搜索</router-link>
 					</div>
 					<div class="popular-search">
 						<p><span class="title">热门搜索：</span><span class="details">
-							<router-link :to="{path:'/common/job/list',query:{keyWords:'java',searchWay:'type'}}">java</router-link>
+							<router-link :to="{path:'/common/job/list',query:{keyWords:'Java',searchWay:'type'}}">Java</router-link>
 							<router-link :to="{path:'/common/job/list',query:{keyWords:'JavaScript',searchWay:'type'}}">JavaScript</router-link>
-							<router-link :to="{path:'/common/job/list',query:{keyWords:'java',searchWay:'type'}}">java</router-link>
+							<router-link :to="{path:'/common/job/list',query:{keyWords:'PHP',searchWay:'type'}}">PHP</router-link>
 						</span></p>
 					</div>
 				</div>
@@ -124,7 +124,7 @@
 			return {
 				jobList: [],
 				changedJobList: [],
-				jobLimit: 3,
+				jobLimit: 6,
 				limitBtn: "查看更多",
 				jobTypes: [],
 				bannerImgs: [],
@@ -231,11 +231,11 @@
 				})
 			},
 			showAlljobs(e) {
-				if(this.jobLimit == 3) {
+				if(this.jobLimit == 6) {
 					this.jobLimit = this.jobList.length;
 					e.target.text = "收起";
 				} else {
-					this.jobLimit = 3;
+					this.jobLimit = 6;
 					e.target.text = "查看更多";
 				}
 			},

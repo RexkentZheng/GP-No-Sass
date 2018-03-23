@@ -73,3 +73,103 @@
     }, 
     "__v" : NumberInt(0)
 }
+{ 
+    "_id" : ObjectId("5ab4a2d9714201096ec75564"), 
+    "jobId" : 201803230410003.0, 
+    "jobName" : "产品经理 ", 
+    "jobSalary" : "7-10k", 
+    "jobType" : "实习", 
+    "jobTypeFirst" : "产品", 
+    "jobTypeSecond" : "产品经理", 
+    "jobTypeThird" : "网页产品经理", 
+    "jobRequirement" : "大专以上", 
+    "isOnline" : true, 
+    "companyId" : 201803230310003.0, 
+    "jobAtempt" : "14薪+房租补贴+超赞晚餐+快速发展", 
+    "createdTime" : 1521787609000.0, 
+    "jobLoaction" : {
+        "jobProvince" : "天津市", 
+        "jobCity" : "市辖区", 
+        "jobArea" : "河东区"
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : "1、负责作业盒子学科方向的产品规划、设计以及持续改进优化，不断创新、挖掘、设计新的产品或功能\n\n2、负责学科产品需求的收集、整理、撰写，进行用户需求分析，了解竞品动态与行业发展\n\n3、负责与设计研发团队紧密合作，并协助团队理解和掌握需求，共同推动产品及功能上线\n\n4、配合运营推广工作，协助内外运营推广策略实现，完成业绩目标", 
+        "jobrequirement" : "1、全日制统招本科或以上学历，211/985优先\n\n2、有较丰富的无线产品设计经验，互联网2年以上从业经历\n\n3、优秀的创新能力、逻辑思维能力，深度理解用户需求和市场现状\n\n4、具备熟练的数据分析、总结能力，能够通过各种数据的收集，归纳，分析对产品的设计和运营进行及时的调整及改进\n\n5、出色的文字和口头表达能力，善于沟通，具备优秀的团队合作能力\n\n6、具备优秀的产品设计能力，可熟练使用相关软件\n\n"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ab4a315714201096ec75565"), 
+    "jobId" : 201803230410004.0, 
+    "jobName" : "视觉设计师 ", 
+    "jobSalary" : "20-30k", 
+    "jobType" : "全职", 
+    "jobTypeFirst" : "设计", 
+    "jobTypeSecond" : "视觉设计", 
+    "jobTypeThird" : "视觉设计师", 
+    "jobRequirement" : "985/211以上", 
+    "isOnline" : true, 
+    "companyId" : 201803230310003.0, 
+    "jobAtempt" : "弹性工作+免费三餐+租房补贴+休闲下午茶+健身瑜伽", 
+    "createdTime" : 1521787669000.0, 
+    "jobLoaction" : {
+        "jobProvince" : "河北省", 
+        "jobCity" : "秦皇岛市", 
+        "jobArea" : "北戴河区"
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : "1、对接今日头条汽车业务日常专题（活动）设计需求； \n2、探讨适合汽车业务的视觉调性和主导大型活动的视觉设计； \n3、在品牌调性的基础上与各部门协作，优化汽车业务对外视觉产出质量。 \n", 
+        "jobrequirement" : "1、优秀的设计功底，不错的手绘能力，能驾驭各种设计风格； \n2、丰富的互联网设计经验且有拿得出手的高质量作品； \n3、具有敏锐的设计嗅觉，热爱设计富有责任感； \n4、良好的表达沟通能力和团队协作精神； \n5、结果导向、快速执行、自我驱动。\n"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ab4a3c2714201096ec75566"), 
+    "jobId" : 201803230410005.0, 
+    "jobName" : "产品运营 ", 
+    "jobSalary" : "7-10k", 
+    "jobType" : "全职", 
+    "jobTypeFirst" : "运营", 
+    "jobTypeSecond" : "运营", 
+    "jobTypeThird" : "产品运营", 
+    "jobRequirement" : "985/211以上", 
+    "isOnline" : true, 
+    "companyId" : 201803230310003.0, 
+    "jobAtempt" : "六险一金+弹性工作+免费三餐+餐补+租房补贴+带薪休假", 
+    "createdTime" : 1521787842000.0, 
+    "jobLoaction" : {
+        "jobProvince" : "吉林省", 
+        "jobCity" : "辽源市", 
+        "jobArea" : "东辽县"
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : "1、负责公司人力系统的日常运营，包含用户问题处理、需求收集、培训和最佳实践推广； \n2、参与产品设计，为产品提供用户 Insight； \n3、关注运营数据，用创新的方法推进系统最佳实践； \n", 
+        "jobrequirement" : "1、优秀的沟通能力； \n2、责任心强、注重细节； \n3、关注数据，有运营推动的能力，有产品 sense； \n4、本科以上学历； \n5、有人力资源相关背景（HR，eHR 产品经理等）优先。\n"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ab4a40a714201096ec75567"), 
+    "jobId" : 201803230410006.0, 
+    "jobName" : "资深项目管理-市场营销类 ", 
+    "jobSalary" : "7-10k", 
+    "jobType" : "全职", 
+    "jobTypeFirst" : "市场", 
+    "jobTypeSecond" : "市场/营销", 
+    "jobTypeThird" : "市场营销", 
+    "jobRequirement" : "本科以上", 
+    "isOnline" : true, 
+    "companyId" : 201803230310003.0, 
+    "jobAtempt" : "七险一金+ 带薪年假 +发展空间大 +期权", 
+    "createdTime" : 1521787914000.0, 
+    "jobLoaction" : {
+        "jobProvince" : "辽宁省", 
+        "jobCity" : "抚顺市", 
+        "jobArea" : "望花区"
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : "1、用专业的方法推进部门内招聘市场营销活动、年度大型营销活动、商业活动等按照业务规划发展，做好项目过程追踪和阶段总结； \n2、整合团队资源，协同策划、产品、技术、数据等，提升业务和团队协作效率； \n3、根据公司市场推广需求，参与制订营销策略，并负责对项目关键环节的把控。", 
+        "jobrequirement" : "1、统招本科及以上学历，具备互联网公司市场营销类项目管理经验 \n2、优秀的项目管理和推动能力，具有独立设计流程标准，项目方案及实施的能力，具备3年以上项目管理经验，至少独立负责过2个以上大型项目，项目管理能力优秀\n3、沟通能力佳、乐观积极、抗压能力，关注过程和结果导向。\n\n"
+    }, 
+    "__v" : NumberInt(0)
+}
