@@ -9,7 +9,7 @@ const Admin = require('../models/admin')
 mongoose.connect('mongodb://127.0.0.1:27017/graduationProject')
 
 mongoose.connection.on('connected', () => {
-  console.log('MongoDB connected success.')
+  console.log('MongoDB connected success.');
 })
 
 mongoose.connection.on('error', () => {

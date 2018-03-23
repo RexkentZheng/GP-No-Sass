@@ -1,6 +1,3 @@
-// 获取需要的文件
-
-
 const express = require('express');
 const md5 = require('md5');
 
@@ -368,7 +365,7 @@ router.post('/clearUserInfo', (req, res, next) => {
 // 用户修改密码
 router.post('/changePassword', (req, res, next) => {
   const { userId } = req.body;
-  const oldPws = req.body.oldPassword;
+  const oldPws = md5(req.body.oldPassword);
   const newPwd = md5(req.body.newPassword);
   User.findOne({
     userId,

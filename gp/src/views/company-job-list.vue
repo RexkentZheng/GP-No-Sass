@@ -19,6 +19,9 @@
 						<span class="add-job"><span class="glyphicon glyphicon-plus icon"></span>发布新职位</span>
 					</router-link>
 				</div>
+				<div class="job-list" v-if="changedJobList.length == 0">
+					<p>暂无信息</p>
+				</div>
 				<div class="job-list">
 					<ul>
 						<li v-for="job in changedJobList">

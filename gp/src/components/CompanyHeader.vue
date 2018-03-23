@@ -27,7 +27,7 @@
 				</div>
 				<ul class="clearfix kill-type">
 					<li>
-						<router-link to='/company'>企业简介</router-link>
+						<router-link to='/company/introduce'>企业简介</router-link>
 					</li>
 					<li>
 						<router-link to='/company/job/list'>职位列表</router-link>

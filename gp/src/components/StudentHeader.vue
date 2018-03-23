@@ -28,7 +28,7 @@
 					</div>
 					<ul class="clearfix kill-type">
 						<li>
-							<router-link to='/student'>个人信息</router-link>
+							<router-link to='/student/personalInfo'>个人信息</router-link>
 						</li>
 						<li>
 							<router-link to='/student/resume'>简历信息</router-link>

@@ -91,11 +91,11 @@
 					});
 				}else if (this.userType == 2) {
 					this.$router.push({
-						path:'/student'
+						path:'/student/personalInfo'
 					});
 				}else{
 					this.$router.push({
-						path:'/company'
+						path:'/company/introduce'
 					});
 				}
 			},

@@ -1,238 +1,43 @@
 { 
-    "_id" : ObjectId("59e9b4c0993bed6083a36201"), 
-    "userId" : NumberLong(201401010310000), 
-    "userName" : "测试1", 
-    "userPwd" : "123456", 
+    "_id" : ObjectId("5ab49b53714201096ec7555f"), 
+    "userId" : 201803230310003.0, 
+    "userName" : "company", 
+    "userPwd" : "e10adc3949ba59abbe56e057f20f883e", 
     "userType" : NumberInt(3), 
-    "regeditInfo" : {
-        "hrName" : "小屎球子", 
-        "hrTel" : NumberInt(5656565), 
-        "hrEmail" : "5656@shit.com", 
-        "companyName" : "小屎球子", 
-        "compnayLisence" : "../../static/img/banner.jpg"
-    }, 
-    "companyInfo" : {
-        "companyLogo" : "./../static/companylogo/201401010310000-logo.png", 
-        "companyBaseInfo" : {
-            "companyType" : "企业服务", 
-            "companyCount" : NumberInt(12), 
-            "companyProvince" : "山西省", 
-            "companyCity" : "长治市", 
-            "companyArea" : "黎城县", 
-            "companyHref" : "www.shit.com"
-        }, 
-        "companyIntroduce" : "你好十多个qweqweqwasdasdasdddddddddddnih你好你好一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。\nqweqweqweqwew", 
-        "companyLabel" : "你好+金的么"
-    }, 
+    "interview" : [
+
+    ], 
+    "received" : [
+
+    ], 
     "companyProduction" : [
         {
-            "productionImg" : "./../static/companyProduction/201401010310000-5a0eaef1a54f68297ce94511.png", 
-            "productionTitle" : "阿达", 
-            "productionIntroduce" : "阿萨德", 
+            "_id" : ObjectId("5ab49c49714201096ec75560"), 
+            "imgName" : "companyProduction_1521785920633_20132222221146247705.jpg", 
             "productionShow" : true, 
-            "imgName" : "", 
-            "_id" : ObjectId("5a0eaef1a54f68297ce94511")
-        }, 
-        {
-            "productionImg" : "./../static/companyProduction/201401010310000-5a0eaf0ba54f68297ce94512.png", 
-            "productionTitle" : "阿萨德", 
-            "productionIntroduce" : " 爱是", 
-            "productionShow" : true, 
-            "imgName" : "", 
-            "_id" : ObjectId("5a0eaf0ba54f68297ce94512")
+            "productionIntroduce" : "测试产品简介", 
+            "productionTitle" : "测试产品", 
+            "productionImg" : "./../static/companyProduction/companyProduction_1521785920633_20132222221146247705.jpg"
         }
-    ], 
-    "received" : [
-        {
-            "_id" : ObjectId("5a1e2ffa94dd720384956bba"), 
-            "receivedTime" : "2017-11-29", 
-            "sendStatus" : "已邀请", 
-            "jobId" : 201711130400001.0, 
-            "studentId" : 201401010210000.0
-        }, 
-        {
-            "_id" : ObjectId("5a1e2ffd94dd720384956bbc"), 
-            "receivedTime" : "2017-11-29", 
-            "sendStatus" : "已邀请", 
-            "jobId" : 20171113042.0, 
-            "studentId" : 201401010210000.0
-        }, 
-        {
-            "_id" : ObjectId("5a1e300294dd720384956bbe"), 
-            "receivedTime" : "2017-11-29", 
-            "sendStatus" : "待沟通", 
-            "jobId" : 201711240410000.0, 
-            "studentId" : 201401010210000.0
-        }, 
-        {
-            "_id" : ObjectId("5a1e300694dd720384956bc0"), 
-            "receivedTime" : "2017-11-29", 
-            "sendStatus" : "待沟通", 
-            "jobId" : 201711260410000.0, 
-            "studentId" : 201401010210000.0
-        }, 
-        {
-            "_id" : ObjectId("5a2137510c14602630dad260"), 
-            "receivedTime" : "2017-12-01", 
-            "sendStatus" : "待沟通", 
-            "jobId" : 201711270410000.0, 
-            "studentId" : 201401010210000.0
-        }, 
-        {
-            "_id" : ObjectId("5a21379bce178a2ae46811d0"), 
-            "receivedTime" : "2017-12-01", 
-            "sendStatus" : "待沟通", 
-            "jobId" : 201711300410000.0, 
-            "studentId" : 201401010210000.0
-        }, 
-        {
-            "_id" : ObjectId("5a2137f2ce178a2ae46811d2"), 
-            "receivedTime" : "2017-12-01", 
-            "sendStatus" : "待沟通", 
-            "jobId" : 201711300410001.0, 
-            "studentId" : 201401010210000.0
-        }, 
-        {
-            "_id" : ObjectId("5aae676620303c2004587eaa"), 
-            "receivedTime" : "2018-03-18", 
-            "sendStatus" : "待沟通", 
-            "jobId" : 201712010410000.0, 
-            "studentId" : 201401010210000.0
-        }, 
-        {
-            "_id" : ObjectId("5aae679a20303c2004587eac"), 
-            "receivedTime" : "2018-03-18", 
-            "sendStatus" : "待沟通", 
-            "jobId" : 201712010410001.0, 
-            "studentId" : 201401010210000.0
-        }
-    ], 
-    "interview" : [
-        {
-            "_id" : ObjectId("5a1e301b94dd720384956bc2"), 
-            "jobId" : 201711130400001.0, 
-            "studentId" : 201401010210000.0, 
-            "interviewTime" : "10:00", 
-            "interviewHalfday" : "上午", 
-            "interviewDate" : "2017-11-30"
-        }, 
-        {
-            "_id" : ObjectId("5a1e443e5b2a2006081df69b"), 
-            "jobId" : 20171113042.0, 
-            "studentId" : 201401010210000.0, 
-            "interviewTime" : "11:00", 
-            "interviewHalfday" : "上午", 
-            "interviewDate" : "2017-11-30", 
-            "interviewDist" : "测试地址测试地址测试地址测试地址"
-        }
-    ]
-}
-{ 
-    "_id" : ObjectId("5a08fc818c2d673da0068f4d"), 
-    "userId" : 201711130300001.0, 
-    "userName" : "laozheng", 
-    "userPwd" : "123456", 
-    "userType" : NumberInt(3), 
-    "interview" : [
-
-    ], 
-    "received" : [
-        {
-            "_id" : ObjectId("5a2137600c14602630dad262"), 
-            "receivedTime" : "2017-12-01", 
-            "sendStatus" : "待沟通", 
-            "jobId" : 201711280410000.0, 
-            "studentId" : 201401010210000.0
-        }
-    ], 
-    "companyProduction" : [
-
     ], 
     "companyInfo" : {
-        "companyLogo" : "./../static/companylogo/201711130300001-logo.png", 
+        "companyLogo" : "./../static/companylogo/201803230310003-logo.png", 
+        "companyIntroduce" : "测试公司介绍", 
+        "companyLabel" : "测试标签+测试标签", 
         "companyBaseInfo" : {
-            "companyType" : "", 
-            "companyCount" : "", 
-            "companyLocation" : "", 
-            "companyHref" : ""
-        }, 
-        "companyIntroduce" : "", 
-        "companyLabel" : ""
-    }, 
-    "regeditInfo" : {
-        "hrName" : "laozheng", 
-        "hrTel" : NumberInt(1234756), 
-        "hrEmail" : "das45", 
-        "companyName" : "dasda"
-    }, 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("5a11492a537efb553c8e5bb4"), 
-    "userId" : 201711190310000.0, 
-    "userName" : "1231", 
-    "userPwd" : "123", 
-    "userType" : NumberInt(3), 
-    "interview" : [
-
-    ], 
-    "received" : [
-
-    ], 
-    "companyProduction" : [
-
-    ], 
-    "companyInfo" : {
-        "companyLogo" : "", 
-        "companyIntroduce" : "", 
-        "companyLabel" : "", 
-        "companyBaseInfo" : {
-            "companyType" : "", 
-            "companyCount" : null, 
-            "companyLocation" : ""
+            "companyType" : "电子商务", 
+            "companyCount" : NumberInt(50), 
+            "companyHref" : "www.ceshi.com", 
+            "companyProvince" : "北京市", 
+            "companyCity" : "市辖区", 
+            "companyArea" : "昌平区"
         }
     }, 
     "regeditInfo" : {
-        "hrName" : "123", 
-        "hrTel" : NumberInt(123), 
-        "hrEmail" : "123", 
-        "companyName" : "123"
-    }, 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("5aae66c920303c2004587ea9"), 
-    "userId" : 201803180310000.0, 
-    "userName" : "123", 
-    "userPwd" : "1231231", 
-    "userType" : NumberInt(3), 
-    "interview" : [
-
-    ], 
-    "received" : [
-
-    ], 
-    "companyProduction" : [
-
-    ], 
-    "companyInfo" : {
-        "companyLogo" : "", 
-        "companyIntroduce" : "", 
-        "companyLabel" : "", 
-        "companyBaseInfo" : {
-            "companyType" : "", 
-            "companyCount" : null, 
-            "companyHref" : "", 
-            "companyProvince" : "", 
-            "companyCity" : "", 
-            "companyArea" : ""
-        }
-    }, 
-    "regeditInfo" : {
-        "hrName" : "123", 
-        "hrTel" : 11111111111.0, 
-        "hrEmail" : "111dee@qq.com", 
-        "companyName" : "qwe"
+        "hrName" : "测试HR", 
+        "hrTel" : 12345678901.0, 
+        "hrEmail" : "123@qq.com", 
+        "companyName" : "测试公司"
     }, 
     "__v" : NumberInt(0)
 }

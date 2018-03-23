@@ -140,7 +140,7 @@ export default new Router({
 			component: CommonStudentResume
 		},
 		{
-			path: '/company',
+			path: '/company/introduce',
 			name: 'CompanyIndex',
 			component: CompanyIndex
 		},
@@ -180,7 +180,7 @@ export default new Router({
 			component: CompanySetting
 		},
 		{
-			path: '/student',
+			path: '/student/personalInfo',
 			name: 'StudentIndex',
 			component: StudentIndex
 		},

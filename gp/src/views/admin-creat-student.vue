@@ -52,7 +52,7 @@
 		      	if (res.status == 0) {
 		      		alert('导入成功');
 		      		this.$router.push({
-		      			path:'/admin'
+		      			path:'/admin/studentInfo'
 		      		})
 		      	}else{
 		      		alert('导入失败')

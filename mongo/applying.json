@@ -1,47 +1,12 @@
 { 
-    "_id" : ObjectId("5a08fc728c2d673da0068f4b"), 
-    "userName" : "laozheng", 
-    "userPwd" : "123456", 
-    "hrName" : "laozheng", 
-    "hrTel" : NumberInt(1234756), 
-    "hrEmail" : "das45", 
-    "companyName" : "dasda", 
-    "isChecked" : true, 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("5a0ecd42092d190dd8b9a53e"), 
-    "userName" : "1231", 
-    "userPwd" : "123", 
-    "hrName" : "123", 
-    "hrTel" : NumberInt(123), 
-    "hrEmail" : "123", 
-    "companyName" : "123", 
+    "_id" : ObjectId("5ab49b36714201096ec7555d"), 
+    "userName" : "company", 
+    "userPwd" : "e10adc3949ba59abbe56e057f20f883e", 
+    "hrName" : "测试HR", 
+    "hrTel" : 12345678901.0, 
+    "hrEmail" : "123@qq.com", 
+    "companyName" : "测试公司", 
     "isChecked" : true, 
     "__v" : NumberInt(0), 
-    "companyLisence" : "./../../static/companyLicense/123-123.png"
-}
-{ 
-    "_id" : ObjectId("5a26494e3a0fcf2bcc37df18"), 
-    "userName" : "123", 
-    "userPwd" : "1231231", 
-    "hrName" : "123", 
-    "hrTel" : 11111111111.0, 
-    "hrEmail" : "111dee@qq.com", 
-    "companyName" : "qwe", 
-    "isChecked" : true, 
-    "__v" : NumberInt(0), 
-    "companyLisence" : "./../../static/companyLicense/123-11111111111.png"
-}
-{ 
-    "_id" : ObjectId("5a2649983a0fcf2bcc37df1a"), 
-    "userName" : "123123", 
-    "userPwd" : "123123", 
-    "hrName" : "123", 
-    "hrTel" : 12313212312.0, 
-    "hrEmail" : "123@qq.copjm", 
-    "companyName" : "123", 
-    "isChecked" : false, 
-    "__v" : NumberInt(0), 
-    "companyLisence" : "./../../static/companyLicense/123-12313212312.png"
+    "companyLisence" : "./../../static/companyLicense/测试HR-12345678901.png"
 }

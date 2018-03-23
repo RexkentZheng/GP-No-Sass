@@ -65,8 +65,15 @@ router.post('/excel', (req, res, next) => {
           let userId = 0;
           let maxDate = 0;
           const userType = 2;
-          maxDate = doc.userId;
+          console.log(doc);
+          if (doc) {
+            maxDate = doc.userId;
+          } else {
+            maxDate = 0000;
+          }
+          // maxDate = doc.userId ? 00000 : doc.userId;
           all.forEach((item) => {
+            console.log(item);
             userId = hello.createUserId(maxDate, userType);
             Student.create({
               userId,
@@ -75,20 +82,24 @@ router.post('/excel', (req, res, next) => {
               'personalInfo.studentNum': item.学号,
               'personalInfo.studentSex': item.性别,
               'personalInfo.studentMajor': item.专业,
+              'personalInfo.studentCollege': item.学院,
               'personalInfo.studentUniversity': item.学校,
               'personalInfo.studentEducation': item.学历,
               'personalInfo.studentNativePlace': item.籍贯,
               'personalInfo.studentOrginPlace': item.生源地,
-              'personalInfo.studentPaperInfo.paperTitle': item.论文标题,
-              'personalInfo.studentPaperInfo.paperContent': item.论文内容,
-              'personalInfo.studentTutorInfo.tutorName': item.导师姓名,
-              'personalInfo.studentTutorInfo.tutorPosition': item.导师职位,
-              'personalInfo.employmentInfo.isEmployment': false,
-              'personalInfo.employmentInfo.companyId': '',
-              'personalInfo.employmentInfo.companyName': '',
+              'personalInfo.studentPaperInfo':{},
+              'personalInfo.studentPaperInfo.paperTitle': ('论文标题' in item) ? '' : item.论文标题,
+              'personalInfo.studentPaperInfo.paperContent': ('论文内容' in item) ? '' : item.论文内容,
+              'personalInfo.studentTutorInfo':{},
+              'personalInfo.studentTutorInfo.tutorName': ('导师姓名' in item) ? '' : item.导师姓名,
+              'personalInfo.studentTutorInfo.tutorPosition': ('导师职位' in item) ? '' : item.导师职位,
+              'personalInfo.employmentInfo.isEmployment': ('是否就业' in item) ? false : item.是否就业,
+              'personalInfo.employmentInfo.companyName': ('公司名称' in item) ? '' : item.公司名称,
             }, (err1, doc1) => {
               if (err1) {
                 getWrong(res, err1);
+              }else{
+                console.log(doc1);
               }
             });
             User.create({

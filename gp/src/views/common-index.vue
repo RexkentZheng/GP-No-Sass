@@ -25,7 +25,8 @@
 								<div class="categpry-list clearfix">
 									<h3>{{main.mainName}}</h3>
 									<div class="hotWraper">
-										<a v-for="hotJob in main.hotJobs" href="">{{hotJob}}</a>
+										<router-link v-for="hotJob in main.hotJobs" :to="{path:'/common/job/list',query:{keyWords:hotJob,searchWay:'type'}}">{{hotJob}}</router-link>
+										<a v-for="hotJob in main.hotJobs" href="javascript:;" @click="">{{hotJob}}</a>
 									</div>
 									<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
 								</div>
@@ -36,7 +37,7 @@
 										<span>{{second.secondName}}</span>
 									</dt>
 									<dd>
-										<router-link v-for="third in second.minClassify" :key="third.id":to="{path:'/common/job/list',query:{keyWords:third,searchWay:'type'}}">{{third}}</router-link>
+										<router-link v-for="third in second.minClassify" :key="third.id" :to="{path:'/common/job/list',query:{keyWords:third,searchWay:'type'}}">{{third}}</router-link>
 									</dd>
 								</dl>
 							</div>
@@ -55,8 +56,6 @@
 				<div class="job-tab">
 					<ul class="kill-type clearfix">
 						<li>推荐职位</li>
-						<li>热门职位</li>
-						<li>最新职位</li>
 					</ul>
 				</div>
 				<div class="job-list-wraper">
@@ -88,7 +87,7 @@
 								</div>
 							</li>
 						</ul>
-						<a class="show-more" @click="showAlljobs($event)">{{limitBtn}}</a>
+						<a v-show="changedJobList.length > 6" class="show-more" @click="showAlljobs($event)">{{limitBtn}}</a>
 					</div>
 				</div>
 			</div>
@@ -177,9 +176,6 @@
 						if(res.status == 0) {
 							this.jobList = res.result;
 							this.changedJobList = this.jobList;
-//							console.log('首次方法' + this.jobList);
-//							console.log('用户类型' + userType);
-//							console.log('总职位列表' + this.jobList);
 							axios.post('/job/receivedList', {
 								studentId: parseInt(this.getCookies('userId'))
 							}).then((response) => {
@@ -187,9 +183,7 @@
 								if(res.status == 0) {
 									let receivedList = [];
 									receivedList = res.result;
-//									console.log('接收职位列表' + receivedList);
 									this.changedJobList = [];
-//									console.log('初始化职位列表' + this.changedJobList)
 									//取出jobId不同的部分
 									//这里用了两个for循环来找出不同的部分，不能用forEach，因为forEach不能被中断
 									//第一个数组是所有的职位列表，第二个数组是学生投递信息

@@ -8,124 +8,42 @@
     "isWaitting" : false
 }
 { 
-    "_id" : ObjectId("59fae07843b118cf4e4307f4"), 
-    "userName" : "student", 
-    "userPwd" : "student", 
-    "userId" : NumberLong(201401010210000), 
+    "_id" : ObjectId("5ab48eb530732d09396cd783"), 
+    "userName" : "201420726541", 
+    "userPwd" : "e10adc3949ba59abbe56e057f20f883e", 
     "userType" : NumberInt(2), 
+    "userId" : 201803230210000.0, 
+    "isWaitting" : false, 
     "isPass" : true, 
-    "isWaitting" : false
+    "__v" : NumberInt(0)
 }
 { 
-    "_id" : ObjectId("5a027206879e0585dc1ea37d"), 
+    "_id" : ObjectId("5ab48eb530732d09396cd785"), 
+    "userName" : "201420517894", 
+    "userPwd" : "707e63c1feaf25a18d9f23dd5826528f", 
+    "userType" : NumberInt(2), 
+    "userId" : 201803230210001.0, 
+    "isWaitting" : false, 
+    "isPass" : true, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ab48eb530732d09396cd787"), 
+    "userName" : "201645579999", 
+    "userPwd" : "20a8296177fbb2496954da2b959cac08", 
+    "userType" : NumberInt(2), 
+    "userId" : 201803230210002.0, 
+    "isWaitting" : false, 
+    "isPass" : true, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ab49b36714201096ec7555e"), 
     "userName" : "company", 
-    "userPwd" : "company", 
-    "userId" : NumberLong(201401010310000), 
-    "userType" : NumberInt(3), 
-    "isPass" : true, 
-    "isWaitting" : false
-}
-{ 
-    "_id" : ObjectId("5a02fdb6ce64860994a43854"), 
-    "userName" : "c1", 
-    "userPwd" : "c1", 
+    "userPwd" : "e10adc3949ba59abbe56e057f20f883e", 
     "userType" : NumberInt(3), 
     "isWaitting" : false, 
     "__v" : NumberInt(0), 
     "isPass" : true, 
-    "userId" : 201711080300001.0
-}
-{ 
-    "_id" : ObjectId("5a02fe05ce64860994a43858"), 
-    "userName" : "c3", 
-    "userPwd" : "c3", 
-    "userType" : NumberInt(3), 
-    "isWaitting" : true, 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("5a066dfbef529e2f3841c67b"), 
-    "userName" : "company2", 
-    "userPwd" : "company2", 
-    "userType" : NumberInt(3), 
-    "isWaitting" : false, 
-    "__v" : NumberInt(0), 
-    "isPass" : true, 
-    "userId" : 201711110300001.0
-}
-{ 
-    "_id" : ObjectId("5a0674e638c6e51974af7610"), 
-    "userName" : "c5", 
-    "userPwd" : "c5", 
-    "userType" : NumberInt(3), 
-    "isWaitting" : false, 
-    "__v" : NumberInt(0), 
-    "isPass" : true, 
-    "userId" : 20171111032.0
-}
-{ 
-    "_id" : ObjectId("5a08fc728c2d673da0068f4c"), 
-    "userName" : "laozheng", 
-    "userPwd" : "123456", 
-    "userType" : NumberInt(3), 
-    "isWaitting" : false, 
-    "__v" : NumberInt(0), 
-    "isPass" : true, 
-    "userId" : 201711130300001.0
-}
-{ 
-    "_id" : ObjectId("5a0ecd42092d190dd8b9a53f"), 
-    "userName" : "1231", 
-    "userPwd" : "123", 
-    "userType" : NumberInt(3), 
-    "isWaitting" : false, 
-    "__v" : NumberInt(0), 
-    "isPass" : true, 
-    "userId" : 201711190310000.0
-}
-{ 
-    "_id" : ObjectId("5a1290dd9572642e8cfd560f"), 
-    "userName" : "201420732061", 
-    "userPwd" : "201420732061", 
-    "userType" : NumberInt(2), 
-    "userId" : 201711200210000.0, 
-    "isWaitting" : false, 
-    "isPass" : true, 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("5a1290dd9572642e8cfd5611"), 
-    "userName" : "201420732071", 
-    "userPwd" : "201420732071", 
-    "userType" : NumberInt(2), 
-    "userId" : 201711200210001.0, 
-    "isWaitting" : false, 
-    "isPass" : true, 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("5a1c0fef5e0b453450d7d7e9"), 
-    "userName" : "", 
-    "userPwd" : "", 
-    "userType" : NumberInt(3), 
-    "isWaitting" : true, 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("5a26494e3a0fcf2bcc37df19"), 
-    "userName" : "123", 
-    "userPwd" : "1231231", 
-    "userType" : NumberInt(3), 
-    "isWaitting" : false, 
-    "__v" : NumberInt(0), 
-    "isPass" : true, 
-    "userId" : 201803180310000.0
-}
-{ 
-    "_id" : ObjectId("5a2649983a0fcf2bcc37df1b"), 
-    "userName" : "123123", 
-    "userPwd" : "123123", 
-    "userType" : NumberInt(3), 
-    "isWaitting" : true, 
-    "__v" : NumberInt(0)
+    "userId" : 201803230310003.0
 }

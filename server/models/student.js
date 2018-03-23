@@ -30,7 +30,6 @@ var studentSchema = new Schema({
             "employmentInfo" :  
                 {
                     "isEmployment" : Boolean,
-                    "companyId" : String,
                     "companyName" : String
                 }
             

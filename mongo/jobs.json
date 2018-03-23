@@ -1,246 +1,75 @@
 { 
-    "_id" : ObjectId("5a09a55dcc85c23288612f99"), 
-    "jobId" : 201711130400001.0, 
-    "jobName" : "Rex", 
-    "jobSalary" : "5-7k", 
-    "jobLoaction" : {
-        "jobProvince" : "河北省", 
-        "jobCity" : "秦皇岛市", 
-        "jobArea" : "北戴河区"
-    }, 
-    "jobRequirement" : "本科以上", 
-    "isOnline" : true, 
-    "jobCategory" : "行政", 
-    "jobAtempt" : "Rex+大大+阿达大+shit+nihao+nibuhao", 
-    "jobDiscription" : {
-        "jobDuty" : "1.Rex", 
-        "jobrequirement" : "2.Rex"
-    }, 
-    "companyId" : 201401010310000.0, 
-    "__v" : NumberInt(0), 
-    "jobTypeThird" : "JavaScript", 
-    "jobTypeSecond" : "前端开发", 
-    "jobTypeFirst" : "技术", 
-    "jobType" : "实习"
-}
-{ 
-    "_id" : ObjectId("5a09a575cc85c23288612f9a"), 
-    "jobId" : 20171113042.0, 
-    "jobName" : "Kent", 
-    "jobSalary" : "7-10k", 
-    "jobLoaction" : {
-        "jobProvince" : "内蒙古自治区", 
-        "jobCity" : "呼伦贝尔市", 
-        "jobArea" : "陈巴尔虎旗"
-    }, 
-    "jobType" : "实习", 
-    "jobRequirement" : "本科以上", 
-    "isOnline" : true, 
-    "jobCategory" : "行政", 
-    "jobAtempt" : "Kent", 
-    "jobDiscription" : {
-        "jobDuty" : "Kent", 
-        "jobrequirement" : "Kent"
-    }, 
-    "companyId" : 201401010310000.0, 
-    "__v" : NumberInt(0), 
-    "jobTypeThird" : "产品总监", 
-    "jobTypeSecond" : "高端职位", 
-    "jobTypeFirst" : "产品"
-}
-{ 
-    "_id" : ObjectId("5a17d6f38ac21031ecdc6106"), 
-    "jobId" : 201711240410000.0, 
-    "jobName" : "Zheng", 
-    "jobSalary" : "3-5k", 
-    "jobLoaction" : {
-        "jobProvince" : "内蒙古自治区", 
-        "jobCity" : "呼伦贝尔市", 
-        "jobArea" : "陈巴尔虎旗"
-    }, 
-    "jobTypeFirst" : "技术", 
-    "jobTypeSecond" : "前端开发", 
-    "jobTypeThird" : "JavaScript", 
-    "jobRequirement" : "本科以上", 
-    "isOnline" : true, 
-    "jobAtempt" : "asd ", 
-    "jobDiscription" : {
-        "jobDuty" : "aad", 
-        "jobrequirement" : "ad"
-    }, 
-    "companyId" : 201401010310000.0, 
-    "__v" : NumberInt(0), 
-    "jobType" : "全职"
-}
-{ 
-    "_id" : ObjectId("5a1ab84edd6a414e90ac2756"), 
-    "jobId" : 201711260410000.0, 
-    "jobName" : "qwe", 
-    "jobSalary" : "5-7k", 
-    "jobType" : "全职", 
-    "jobTypeFirst" : "产品", 
-    "jobTypeSecond" : "产品设计师", 
-    "jobTypeThird" : "无线产品设计师", 
-    "jobRequirement" : "本科以上", 
-    "isOnline" : true, 
-    "jobAtempt" : "wqe ", 
-    "jobLoaction" : {
-        "jobProvince" : "内蒙古自治区", 
-        "jobCity" : "呼伦贝尔市", 
-        "jobArea" : "扎兰屯市"
-    }, 
-    "jobDiscription" : {
-        "jobDuty" : "wqe", 
-        "jobrequirement" : "qwe"
-    }, 
-    "companyId" : 201401010310000.0, 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("5a1c1b0af916d738dc98c182"), 
-    "jobId" : 201711270410000.0, 
-    "jobName" : "mjj,g,", 
+    "_id" : ObjectId("5ab49e3a714201096ec75561"), 
+    "jobId" : 201803230410000.0, 
+    "jobName" : "JAVA工程师 ", 
     "jobSalary" : "7-10k", 
     "jobType" : "全职", 
-    "jobTypeFirst" : "设计", 
-    "jobTypeSecond" : "视觉设计", 
-    "jobTypeThird" : "游戏特效", 
-    "jobRequirement" : "985/211以上", 
-    "isOnline" : true, 
-    "jobAtempt" : "gfnfhmf+454646", 
-    "jobLoaction" : {
-        "jobProvince" : "山西省", 
-        "jobCity" : "长治市", 
-        "jobArea" : "黎城县"
-    }, 
-    "jobDiscription" : {
-        "jobDuty" : "1.4546\n2.646", 
-        "jobrequirement" : ""
-    }, 
-    "companyId" : 201401010310000.0, 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("5a1cdab63006a40fe07f2a7b"), 
-    "jobId" : 201711280410000.0, 
-    "jobName" : "LaoZheng", 
-    "jobSalary" : "5-7k", 
-    "jobType" : "实习", 
-    "jobTypeFirst" : "设计", 
-    "jobTypeSecond" : "高端职位", 
-    "jobTypeThird" : "设计总监", 
+    "jobTypeFirst" : "技术", 
+    "jobTypeSecond" : "后端开发", 
+    "jobTypeThird" : "Java", 
     "jobRequirement" : "本科以上", 
     "isOnline" : true, 
-    "jobAtempt" : "1+2+3", 
+    "companyId" : 201803230310003.0, 
+    "jobAtempt" : "发展空间大+年底双薪+有期权+五险一金", 
+    "createdTime" : 1521786426000.0, 
     "jobLoaction" : {
         "jobProvince" : "北京市", 
         "jobCity" : "市辖区", 
-        "jobArea" : "东城区"
+        "jobArea" : "昌平区"
     }, 
     "jobDiscription" : {
-        "jobDuty" : "qwe", 
-        "jobrequirement" : "qwe"
-    }, 
-    "companyId" : 201711130300001.0, 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("5a1f66c4a37a4c1110090d50"), 
-    "jobId" : 201711300410000.0, 
-    "jobName" : "时间", 
-    "jobSalary" : "3-5k", 
-    "jobType" : "实习", 
-    "jobTypeFirst" : "设计", 
-    "jobTypeSecond" : "高端职位", 
-    "jobTypeThird" : "视觉设计经理/主管", 
-    "jobRequirement" : "985/211以上", 
-    "isOnline" : true, 
-    "companyId" : 201401010310000.0, 
-    "jobAtempt" : " 请问", 
-    "createdTime" : "2017-11-30 10:02:44", 
-    "jobLoaction" : {
-        "jobProvince" : "河南省", 
-        "jobCity" : "周口市", 
-        "jobArea" : "西华县"
-    }, 
-    "jobDiscription" : {
-        "jobDuty" : " 去", 
-        "jobrequirement" : "去"
+        "jobDuty" : "负责内部系统的后台开发", 
+        "jobrequirement" : "本科及以上学历，计算机相关专业；\n\n3 年以上互联网公司后端开发经验，具备扎实的计算机专业基本功；\n\n熟悉 Java 及面向对象的分布式系统设计与开发，具有 Restful Web 开发经验，对 JVM 原理有一定的了解；\n\n熟悉 IO/NIO、多线程、集合等基础框架，熟悉分布式、缓存、消息等机制；\n\n熟悉主流 Web 框架，熟悉网络编程、TCP/IP 协议、互联网应用协议；\n\n熟悉 Spring/Spring-boot、Redis、Zookeeper、MySQL、RPC 框架等开源系统者优先；\n\n熟练使用 Shell、Python 等一种脚本语言，能够在日常工作中使用脚本简化工作；\n\n熟悉单元测试、功能测试、性能测试；\n\n具有高度的抽象设计能力，思路清晰，善于思考，能独立分析和解决问题。"
     }, 
     "__v" : NumberInt(0)
 }
 { 
-    "_id" : ObjectId("5a1f6d54ed34022d80e5bc2d"), 
-    "jobId" : 201711300410001.0, 
-    "jobName" : "时间2", 
-    "jobSalary" : "7-10k", 
-    "jobType" : "全职", 
-    "jobTypeFirst" : "产品", 
-    "jobTypeSecond" : "产品设计师", 
-    "jobTypeThird" : "无线产品设计师", 
-    "jobRequirement" : "本科以上", 
-    "isOnline" : true, 
-    "companyId" : 201401010310000.0, 
-    "jobAtempt" : " ", 
-    "createdTime" : 1512009044000.0, 
-    "jobLoaction" : {
-        "jobProvince" : "河北省", 
-        "jobCity" : "唐山市", 
-        "jobArea" : "路南区"
-    }, 
-    "jobDiscription" : {
-        "jobDuty" : "", 
-        "jobrequirement" : ""
-    }, 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("5a212e130916fc1384f47a9a"), 
-    "jobId" : 201712010410000.0, 
-    "jobName" : "12", 
-    "jobSalary" : "2-3k", 
+    "_id" : ObjectId("5ab49ef8714201096ec75562"), 
+    "jobId" : 201803230410001.0, 
+    "jobName" : "高级PHP开发工程师 ", 
+    "jobSalary" : "20-30k", 
     "jobType" : "全职", 
     "jobTypeFirst" : "技术", 
-    "jobTypeSecond" : "项目管理", 
-    "jobTypeThird" : "项目助理", 
-    "jobRequirement" : "本科以上", 
+    "jobTypeSecond" : "后端开发", 
+    "jobTypeThird" : "PHP", 
+    "jobRequirement" : "985/211以上", 
     "isOnline" : true, 
-    "companyId" : 201401010310000.0, 
-    "jobAtempt" : "123", 
-    "createdTime" : 1512123923000.0, 
+    "companyId" : 201803230310003.0, 
+    "jobAtempt" : "行业独角兽+电商平台+挑战大", 
+    "createdTime" : 1521786616000.0, 
     "jobLoaction" : {
-        "jobProvince" : "江苏省", 
-        "jobCity" : "泰州市", 
-        "jobArea" : "靖江市"
+        "jobProvince" : "北京市", 
+        "jobCity" : "市辖区", 
+        "jobArea" : "丰台区"
     }, 
     "jobDiscription" : {
-        "jobDuty" : "123", 
-        "jobrequirement" : "123"
+        "jobDuty" : "1、准确理解产品需求，参与并负责产品的开发、维护与改进；\n\n高效完成代码编写和调试，良好保证产品需求实现；\n\n2、有丰富的解决问题经验，至少有作为骨干角色、两年线上运营产品的开发经验；\n\n3、参与进行关键技术验证以及技术选型工作；\n\n4、积极了解业界发展、相关新技术与趋势，促进技术进步和创新。", 
+        "jobrequirement" : "1、统招本科或以上学历,5年以上PHP开发经验；\n\n2、精通PHP，并对PHP源码有一定了解，熟悉至少一种PHP开源框架，有基于YAF开发经验者优先；\n\n3、熟练使用Javascript，熟悉Ajax技术及主流js框架，熟悉Html与css及相关特性。\n\n4、熟悉memcache和redis等缓存，并了解其缓存机制，有相关开发经验者优先；\n\n5、熟悉mysql数据库，具备一定的Mysql索引优化、查询优化能力；\n\n6、熟悉Linux系统，熟悉 Shell 脚本编程及常用的管理命令，熟悉LNMP环境及相关配置；\n\n7、具备百万级用户以上系统开发经验，了解至少一个大型互联网产品的架构设计，有架构设计经验者优先；\n\n8、责任心强，良好的对外沟通和团队协作能力，主动，好学；\n\n"
     }, 
     "__v" : NumberInt(0)
 }
 { 
-    "_id" : ObjectId("5a213d44cea64b0770ffc59b"), 
-    "jobId" : 201712010410001.0, 
-    "jobName" : "123", 
-    "jobSalary" : "3-5k", 
+    "_id" : ObjectId("5ab49f66714201096ec75563"), 
+    "jobId" : 201803230410002.0, 
+    "jobName" : "c++游戏服务器开发 ", 
+    "jobSalary" : "20-30k", 
     "jobType" : "全职", 
-    "jobTypeFirst" : "产品", 
-    "jobTypeSecond" : "产品设计师", 
-    "jobTypeThird" : "无线产品设计师", 
-    "jobRequirement" : "大专以上", 
+    "jobTypeFirst" : "技术", 
+    "jobTypeSecond" : "后端开发", 
+    "jobTypeThird" : "C++", 
+    "jobRequirement" : "本科以上", 
     "isOnline" : true, 
-    "companyId" : 201401010310000.0, 
-    "jobAtempt" : "a", 
-    "createdTime" : 1512127812000.0, 
+    "companyId" : 201803230310003.0, 
+    "jobAtempt" : "六险一金+健身", 
+    "createdTime" : 1521786726000.0, 
     "jobLoaction" : {
-        "jobProvince" : "", 
-        "jobCity" : "", 
-        "jobArea" : ""
+        "jobProvince" : "北京市", 
+        "jobCity" : "市辖区", 
+        "jobArea" : "朝阳区"
     }, 
     "jobDiscription" : {
-        "jobDuty" : "a", 
-        "jobrequirement" : "a"
+        "jobDuty" : "1.   负责游戏服务器网络、数据库底层开发；\n\n2.   负责游戏服务器游戏逻辑开发；\n\n3.   负责游戏服务器辅助工具开发. ", 
+        "jobrequirement" : "1.   精通c/c++语言特性；\n\n2.   精通vs/gdb等开发工具进行开发，调试；\n\n3.   精通多线程、socket、数据库开发；\n\n4.   熟悉数据结构，对算法有独特见解；\n\n5.   计算机、信息、通信相关专业本科及以上学历；3年以上C++服务器开发经验；\n\n6.   至少熟息一种以上脚本开发语言；\n\n7.   具备大型游戏服务器端程序开发经验者优先；\n\n8.   有棋牌类游戏（麻将，斗地主）项目经验更佳。 \n\n"
     }, 
     "__v" : NumberInt(0)
 }

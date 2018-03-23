@@ -621,6 +621,7 @@ body {
 .index .link-box {
 	width: 1200px;
 	margin: 0 auto;
+	padding: 0 10px;
 }
 
 .index .link-box dl dt {
@@ -1541,9 +1542,17 @@ body {
 	line-height: 45px;
 }
 
+
+
 .company-jobs-list .contain-body .job-list {
 	width: 750px;
 	margin: 15px auto 0;
+}
+
+.company-jobs-list .contain-body .job-list > p {
+	text-align: center;
+	color: #555;
+	font-size: 18px;
 }
 
 .company-jobs-list .contain-body .job-list ul li {
@@ -1753,6 +1762,7 @@ body {
 	margin: 0 10px 0 0 ;
 }
 .common-job-details .contain-body .job-content .left-part dl dd pre{
+	width: 1000px;
 	background-color: transparent;
 	border: 0 ; 
 	font-size: 14px; 
@@ -1949,7 +1959,11 @@ body {
 .company-receive .contain-body .interview-list table tr td a:hover {
 	color: #68B3C8;
 }
-
+.company-receive .contain-body .interview-list > p{
+	text-align: center;
+	color: #555;
+	font-size: 18px;
+}
 
 /*创建账号页面*/
 
