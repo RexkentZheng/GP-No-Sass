@@ -11,6 +11,9 @@
 						<li>
 							<router-link to='/admin/companyInfo/search'>企业查找</router-link>
 						</li>
+						<li>
+							<router-link to='/admin/companyInfo/chart'>信息概况</router-link>
+						</li>
 					</ul>
 				</div>
 				<div class="audit-title clearfix">

@@ -13,6 +13,7 @@ import AdminStudentInfoSearch from '@/views/admin-student-info-search'
 import AdminStudentInfoExport from '@/views/admin-student-info-export'
 import AdminCompanyInfoCheck from '@/views/admin-company-info-check'
 import AdminCompanyInfoSearch from '@/views/admin-company-info-search'
+import AdminCompanyInfoChart from '@/views/admin-company-info-chart'
 import CommonJobList from '@/views/common-job-list'
 import CommonJobDetails from '@/views/common-job-details'
 import CommonCompanyDetails from '@/views/common-company-details'
@@ -77,6 +78,11 @@ export default new Router({
 			path: '/admin/companyInfo/search',
 			name: 'AdminCompanyInfoSearch',
 			component: AdminCompanyInfoSearch
+		},
+		{
+			path: '/admin/companyInfo/chart',
+			name: 'AdminCompanyInfoChart',
+			component: AdminCompanyInfoChart
 		},
 		{
 			path: '/admin/audit/details',

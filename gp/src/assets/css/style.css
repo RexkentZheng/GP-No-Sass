@@ -2454,11 +2454,6 @@ body {
 }
 
 .admin-search-company .contain-body .company-search-content .search-list ul li .right-part span {
-	/* padding: 20px 50px;
-	font-size: 22px;
-	vertical-align: middle;
-	color: #555;
-	float: left; */
 	display: block;
 	vertical-align: middle;
 	color: #555;
@@ -2492,6 +2487,72 @@ body {
 }
 
 
+/* 管理员图表页面 */
+
+.admin-companyInfo-chart .contain-body .company-info-title{
+	width: 750px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.admin-companyInfo-chart .contain-body .company-info-title ul{
+	margin: 20px 0 0 0;
+	padding: 0;
+	text-align: center;
+	display: inline-block;
+}
+
+.admin-companyInfo-chart .contain-body .company-info-title ul li .active{
+	color: #68B3C8;
+}
+
+.admin-companyInfo-chart .contain-body .company-info-title ul li{
+	float: left;
+	width: 200px;
+	margin: 0 10px;
+	line-height: 60px;
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+.admin-companyInfo-chart .contain-body .company-info-title ul li a{
+	display: block;
+}
+
+.admin-companyInfo-chart .contain-body .company-info-title ul li:hover a
+{
+	color: #68B3C8;
+	cursor: pointer;
+}
+
+.admin-companyInfo-chart .contain-body .chart-title {
+	width: 750px;
+	margin: 15px auto 0;
+	background-color: #f2f2f2;
+	padding: 0;
+}
+
+
+.admin-companyInfo-chart .contain-body .chart-title ul li {
+	float: left;
+	padding: 13px 20px;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+	border-bottom: 2px solid #FFFFFF;
+	color: #777;
+	font-size: 16px;
+}
+
+.admin-companyInfo-chart .contain-body .chart-title ul li:hover {
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
+.admin-companyInfo-chart .contain-body .chart-title ul .active{
+	border-bottom: 2px solid #68B3C8;
+	color: #68B3C8;
+}
 
 
 /*管理员学生信息添加页面*/

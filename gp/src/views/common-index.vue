@@ -224,7 +224,6 @@
 					if(res.status == 0) {
 						this.jobList = res.result;
 						this.changedJobList = this.jobList;
-						console.log(this.changedJobList);
 					} else {
 						this.jobList = [];
 					}
