@@ -6,11 +6,12 @@
 
 <script>
 import echarts from "echarts";
+import chinaJson from "./../assets/json/china.json";
 
 export default {
   data() {
     return {
-      locationStatus:null
+      locationStatus: null
     };
   },
   props: ["jobLocationInfo"],
@@ -19,112 +20,104 @@ export default {
   },
   methods: {
     initChart() {
-      setTimeout(function () {
-          myChart.on('mouseup', function (params) {
-              if (!down) {
-                  return;
-              }
-              down = false;
-              var e = params.event;
-              var geoCoord = myChart.convertFromPixel('series', [e.offsetX, e.offsetY]);
-              myChart.setOption({
-                  series: [{
-                      center: geoCoord,
-                      zoom: 4,
-                      animationDurationUpdate: 1000,
-                      animationEasingUpdate: 'cubicInOut'
-                  }]
-              });
-          });
-          var down;
-          myChart.on('mousedown', function () {
-              down = true;
-          });
-          myChart.on('mousemove', function () {
-              down = false;
-          });
-
-      }, 0);
-
+      let na = [];
+      let max = 0;
+      this.jobLocationInfo.forEach(op => {
+        let arr = "";
+        arr = op.name.substring(0, op.name.length - 1);
+        if (op.value > max) {
+          max = op.value;
+        }
+        na.push({ name: arr, value: op.value });
+      });
+      echarts.registerMap("china", chinaJson);
       this.locationStatus = echarts.init(this.$refs.jobLocation);
       this.locationStatus.setOption({
-        title: {
-        text: '降水量',
-        subtext: '纯属虚构',
-        left: 'center'
-    },
-    tooltip: {
-        trigger: 'item'
-    },
-    visualMap: {
-        min: 0,
-        max: 1000,
-        left: 'left',
-        top: 'bottom',
-        text: ['高','低'],
-        calculable: true
-    },
-    toolbox: {
-        show: true,
-        orient: 'vertical',
-        left: 'right',
-        top: 'center',
-        feature: {
-            dataView: {readOnly: false},
+				title: {
+          text: "职位地理分布",
+          left: "center",
+          top: 20,
+          textStyle: {
+            color: "#ccc"
+          }
+        },
+        tooltip: {
+					trigger: "item",
+					formatter: (op)=> {
+						return op.value ? '详细信息<br />地理位置：'+op.name +'<br/>职位数量：'+op.value : '该地区目前没有职位'
+					},
+				},
+        visualMap: {
+          min: 0,
+          max: max + 1,
+          left: "left",
+          top: "bottom",
+          text: ["高", "低"],
+					calculable: false,
+					show:false,
+					inRange: {
+            color: ['#e0ffff', '#006edd']
+	        },
+        },
+        toolbox: {
+          show: true,
+          orient: "vertical",
+          left: "right",
+          top: "center",
+          feature: {
             saveAsImage: {}
-        }
-    },
-    animation: true,
-    animationDurationUpdate: 1000,
-    animationEasingUpdate: 'cubicInOut',
-    series: [
-        {
-            name: 'a',
-            type: 'map',
-            mapType: 'china',
+          }
+				},
+        animation: true,
+        animationDurationUpdate: 1000,
+        animationEasingUpdate: "cubicInOut",
+        series: [
+          {
+            name: "a",
+            type: "map",
+						mapType: "china",
+						itemStyle:{
+                normal:{
+								label:{show:true},
+								},
+						},
             roam: true,
             label: {
-                normal: {
-                    show: true,
-                    formatter: function (params) {
-                        var icon = params.data.value[1] ? 'up' : 'down';
-                        var valueType = params.data.value[1] ? 'valueUp' : 'valueDown';
-                        return params.name
-                            + '：{' + valueType + '|' + params.value + '} {' + icon + '|}';
-                    },
-                    position: 'inside',
-                    backgroundColor: '#fff',
-                    padding: [4, 5],
-                    borderRadius: 3,
-                    borderWidth: 1,
-                    borderColor: 'rgba(0,0,0,0.5)',
-                    color: '#777',
-                    rich: {
-                        valueUp: {
-                            color: '#019D2D',
-                            fontSize: 14
-                        },
-                        valueDown: {
-                            color: 'red',
-                            fontSize: 14
-                        },
-                         up: {
-                            height: 14,
-                            align: 'center',
-                        },
-                        down: {
-                            height: 14,
-                            align: 'center',
-                        }
-                    }
+              normal: {
+                show: true,
+                formatter: function(params) {
+                  var valueType = params.data.value[1]
+                    ? "valueUp"
+                    : "valueDown";
+                  return (
+                    params.name 
+                  );
                 },
-                emphasis: {
-                    show: true
+                position: "inside",
+                backgroundColor: "#fff",
+                padding: [4, 5],
+                borderRadius: 3,
+                borderWidth: 1,
+                borderColor: "rgba(0,0,0,0.5)",
+                color: "#777",
+                rich: {
+                  valueUp: {
+                    color: "#019D2D",
+                    fontSize: 14
+                  },
+                  valueDown: {
+                    color: "red",
+                    fontSize: 14
+                  }
                 }
-            },
-            data: this.jobLocationInfo
-        }
-    ]
+              },
+              emphasis: {
+								show: true,
+              }
+						},
+            data: na
+          }
+        ]
       });
     }
   }
@@ -132,13 +125,13 @@ export default {
 </script>
 <style scoped>
 .student-chart {
-  width: 1300px;
+  width: 750px;
   margin: 0 auto;
 }
 .chart {
-  width: 1300px;
+  width: 750px;
   height: 600px;
   margin: 30px auto;
-  border-radius:5px;
+  border-radius: 5px;
 }
 </style>

@@ -68,10 +68,12 @@
 		},
 		methods:{
       getAlljobs() {
+				this.jobTypeInfo = [];
 				axios.get('/job/list').then((response) => {
 					let res = response.data;
 					if(res.status == 0) {
 						this.jobList = res.result;
+						this.getJobLocation();
 					} else {
 						this.jobList = [];
 					}
@@ -115,7 +117,6 @@
         }
 				for(var og of jobTypeInfo){
 					for(var oa of og.children){
-						console.log(oa)
 						this.jobList.forEach((op)=>{
 							if(op.jobTypeSecond === oa.name){
 								if(oa.children.length > 0){
@@ -141,6 +142,7 @@
         this.activeName = this.$refs.type.innerText; 
       },
 			getJobLocation(){
+				this.jobLocationInfo = [];
 				let jobLocationInfo = [];
 				this.jobList.forEach((op)=>{
 					if(jobLocationInfo.length > 0){
