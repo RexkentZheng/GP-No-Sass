@@ -25,8 +25,8 @@
 								<div class="categpry-list clearfix">
 									<h3>{{main.mainName}}</h3>
 									<div class="hotWraper">
-										<router-link v-for="hotJob in main.hotJobs" :to="{path:'/common/job/list',query:{keyWords:hotJob,searchWay:'type'}}">{{hotJob}}</router-link>
-										<a v-for="hotJob in main.hotJobs" href="javascript:;" @click="">{{hotJob}}</a>
+										<router-link v-for="hotJob in main.hotJobs" :key="hotJob.id" :to="{path:'/common/job/list',query:{keyWords:hotJob,searchWay:'type'}}">{{hotJob}}</router-link>
+										<a v-for="hotJob in main.hotJobs" :key="hotJob.id" href="javascript:;" @click="">{{hotJob}}</a>
 									</div>
 									<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
 								</div>
