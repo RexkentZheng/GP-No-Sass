@@ -26,7 +26,7 @@ var jobSchema = new Schema({
 		"jobCity": String,
 		"jobArea": String
 	},
-	"createdTime":Number
+	"createdTime": Number
 })
 
 module.exports = mongoose.model('job', jobSchema, 'jobs');

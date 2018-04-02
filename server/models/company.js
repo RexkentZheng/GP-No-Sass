@@ -6,7 +6,7 @@ var companySchema = new Schema({
 	"userId": Number,
 	"userName": String,
 	"userPwd": String,
-	"userType":Number,
+	"userType": Number,
 	"regeditInfo": {
 		"hrName": String,
 		"hrTel": Number,
@@ -19,10 +19,10 @@ var companySchema = new Schema({
 		"companyBaseInfo": {
 			"companyType": String,
 			"companyCount": Number,
-			"companyHref":String,
-			"companyProvince":String,
-			"companyCity":String,
-			"companyArea":String
+			"companyHref": String,
+			"companyProvince": String,
+			"companyCity": String,
+			"companyArea": String
 		},
 		"companyLabel": String,
 
@@ -32,8 +32,8 @@ var companySchema = new Schema({
 		"productionImg": String,
 		"productionTitle": String,
 		"productionIntroduce": String,
-		"productionShow":Boolean,
-		"imgName":String
+		"productionShow": Boolean,
+		"imgName": String
 	}],
 	"received": [{
 		"jobId": Number,
@@ -42,9 +42,9 @@ var companySchema = new Schema({
 		"receivedTime": String
 	}],
 	"interview": [{
-		'jobId':Number,
+		'jobId': Number,
 		"studentId": Number,
-		"interviewDist":String,
+		"interviewDist": String,
 		"interviewDate": String,
 		"interviewHalfday": String,
 		"interviewTime": String
