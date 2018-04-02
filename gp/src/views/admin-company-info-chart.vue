@@ -26,9 +26,11 @@
 						</li>
 					</ul>
 				</div>
-				<div class='chart-list'>
-					<admin-job-type-chart v-if='jobTypeFlag' :jobTypeInfo = 'jobTypeInfo'></admin-job-type-chart>
-					<admin-job-location-chart v-if='jobLocationFlag' :jobLocationInfo = 'jobLocationInfo'></admin-job-location-chart>
+				<div v-if='jobTypeFlag' class='chart-list'>
+					<admin-job-type-chart :jobTypeInfo = 'jobTypeInfo'></admin-job-type-chart>
+				</div>
+				<div v-if='jobLocationFlag' class="chart-list">
+					<admin-job-location-chart :jobLocationInfo = 'jobLocationInfo'></admin-job-location-chart>
 				</div>
 			</div>
 		</div>
@@ -137,7 +139,7 @@
 					}
 				}
 				this.jobTypeInfo = jobTypeInfo;
-				this.jobLoactionFlag = false;
+				this.jobLocationFlag = false;
 				this.jobTypeFlag = true;
         this.activeName = this.$refs.type.innerText; 
       },

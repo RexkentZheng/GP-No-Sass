@@ -125,9 +125,7 @@
 					let res = response.data;
 					if (res.status == 0) {
 						alert('删除成功');
-						this.$router.push({
-							path:'./../../admin'
-						})
+						this.$router.go(-1)
 					}else{
 						alert('删除失败');
 						this.init();

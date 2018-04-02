@@ -3512,7 +3512,37 @@ body {
 .student-setting > ul > li > span:hover{
 	color: #337ab7;
 }
-
+.student-setting > ul > li .password-part{
+	padding: 40px 0;
+}
+.student-setting > ul > li .password-part ul li dl {
+	width: 400px;
+}
+.student-setting > ul > li .password-part ul li dl dt{
+	float: left;
+	width: 100px;
+	text-align: center;
+	font-weight: normal;
+	color: #030303;
+}
+.student-setting > ul > li .password-part ul li dl dd{
+	float: left;
+	width: 300px;
+}
+.student-setting > ul > li .password-part .btn-part{
+	width: 400px;
+	text-align: center;
+}
+.student-setting > ul > li .password-part .btn-part a{
+	margin: 0 20px;
+}
+.student-setting > ul > li .password-part .error-tips{
+	display: block;
+	margin: -15px 0 10px 100px;
+	padding-left: 20px;
+	color: #fd5f39;	
+	background: url(../../../static/img/error-tip-icon.png) 0 center no-repeat;
+}
 
 /*企业设置页面*/
 .company-setting{
@@ -3541,4 +3571,35 @@ body {
 }
 .company-setting .contain-body > ul > li > span:hover{
 	color: #337ab7;
+}
+.company-setting .contain-body > ul > li .password-part{
+	padding: 40px 0;
+}
+.company-setting .contain-body > ul > li .password-part ul li dl {
+	width: 400px;
+}
+.company-setting .contain-body > ul > li .password-part ul li dl dt{
+	float: left;
+	width: 100px;
+	text-align: center;
+	font-weight: normal;
+	color: #030303;
+}
+.company-setting .contain-body > ul > li .password-part ul li dl dd{
+	float: left;
+	width: 300px;
+}
+.company-setting .contain-body > ul > li .password-part .btn-part{
+	width: 400px;
+	text-align: center;
+}
+.company-setting .contain-body > ul > li .password-part .btn-part a{
+	margin: 0 20px;
+}
+.company-setting .contain-body > ul > li .password-part .error-tips{
+	display: block;
+	margin: -15px 0 10px 100px;
+	padding-left: 20px;
+	color: #fd5f39;	
+	background: url(../../../static/img/error-tip-icon.png) 0 center no-repeat;
 }

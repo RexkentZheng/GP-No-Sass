@@ -4,17 +4,12 @@
 			<dt>姓名：</dt>
 			<dd><input v-model="adminName" class="form-control" type="text" name="" value="" /></dd>
 		</dl>
-		<dl class="admin-authority clearfix">
-			<dt>权限：</dt>
-			<dd>
-				<select class="form-control" name="authority" v-model="adminAuthority">
-					<option value='1'>一级权限</option>
-					<option value="2">二级权限</option>
-				</select>
-			</dd>
-		</dl>
 		<dl class="admin-pwd clearfix">
 			<dt>密码：</dt>
+			<dd><input v-model="adminPwd" class="form-control" type="password" name="" value="" /></dd>
+		</dl>
+    <dl class="admin-pwd clearfix">
+			<dt>再次输入密码：</dt>
 			<dd><input v-model="adminPwd" class="form-control" type="password" name="" value="" /></dd>
 		</dl>
 		<div class="btn-line">

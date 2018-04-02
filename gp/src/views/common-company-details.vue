@@ -118,12 +118,12 @@
 							</div>
 						</dd>
 					</dl>
-					<div v-if="userType == 1" class="btn-line">
-						<a  class="btn btn-danger btn-lg" href="javascreipt:;">删除</a>
-						<a @click="cancelDel" class="btn btn-default btn-lg" href="javascreipt:;">取消</a>
+					<div v-if="parseFloat(userType) === 1" class="btn-line">
+						<a  class="btn btn-danger btn-lg" href="javascreipt:;">拉黑</a>
+						<a @click="cancelDel" class="btn btn-default btn-lg" href="javascreipt:;">返回</a>
 					</div>
-					<div v-if="userType !== 1" class="btn-line">
-						<a @click="cancelDel" class="btn btn-default btn-lg" href="javascreipt:;">取消</a>
+					<div v-if="parseFloat(userType) !== 1" class="btn-line">
+						<a @click="cancelDel" class="btn btn-default btn-lg" href="javascreipt:;">返回</a>
 					</div>
 				</div>
 			</div>

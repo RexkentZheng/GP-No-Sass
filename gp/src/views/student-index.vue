@@ -36,7 +36,7 @@
 				<dl class="student-origin clearfix">
 					<dt>籍贯</dt>
 					<span class="line"></span>
-					<dd>{{item.studentOrginPlace}}</dd>
+					<dd>{{item.studentOriginPlace}}</dd>
 				</dl>
 				<dl class="student-paper-info clearfix">
 					<dt>论文标题</dt>
