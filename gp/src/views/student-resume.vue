@@ -297,8 +297,8 @@
 	import './../assets/css/style.css'
 	import axios from 'axios'
 	import myDatepicker from 'vue-datepicker-simple/datepicker-2.vue'
-	import myUpload from 'vue-image-crop-upload'	
-	
+	import myUpload from 'vue-image-crop-upload'
+
 	export default {
 		data() {
 			return {
@@ -424,7 +424,6 @@
 				}else{
 					alert('请完善信息后再提交');
 				}
-				
 			},
 			addArrayInfo(filedName,changeContent){
 				let isFinish = true;
@@ -451,14 +450,13 @@
 				} else{
 					alert('请完善信息后再提交');
 				}
-				
 			},
 			toggleShow() {
-                this.show = !this.show;
-            },
-            cropSuccess(imgDataUrl, field){
-                this.imgDataUrl = imgDataUrl;
-            },
+          this.show = !this.show;
+      },
+      cropSuccess(imgDataUrl, field){
+          this.imgDataUrl = imgDataUrl;
+      },
 			cropUploadSuccess(jsonData, field) {
 				axios.post('/student/changeBaseInfo',{
 					studentId:this.getCookies('userId'),
