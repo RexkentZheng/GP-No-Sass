@@ -20,19 +20,19 @@
 			<div class="contain-body">
 				<div class="clearfix">
 					<div class="sidebar">
-						<div v-for="main in jobTypes" class="menu-box">
+						<div v-for="main in jobTypes" :key="main._id" class="menu-box">
 							<div class="menu-main current">
 								<div class="categpry-list clearfix">
 									<h3>{{main.mainName}}</h3>
 									<div class="hotWraper">
 										<router-link v-for="hotJob in main.hotJobs" :key="hotJob.id" :to="{path:'/common/job/list',query:{keyWords:hotJob,searchWay:'type'}}">{{hotJob}}</router-link>
-										<a v-for="hotJob in main.hotJobs" :key="hotJob.id" href="javascript:;" @click="">{{hotJob}}</a>
+										<a v-for="hotJob in main.hotJobs" :key="hotJob.id" href="javascript:;">{{hotJob}}</a>
 									</div>
 									<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
 								</div>
 							</div>
 							<div class="menu-sub">
-								<dl v-for="second in main.secondClassify">
+								<dl v-for="second in main.secondClassify" :key="second._id">
 									<dt>
 										<span>{{second.secondName}}</span>
 									</dt>
@@ -61,7 +61,7 @@
 				<div class="job-list-wraper">
 					<div class="job-list">
 						<ul class="kill-type">
-							<li v-for="item in jobListLimited">
+							<li v-for="item in jobListLimited" :key="item._id">
 								<div class="main-info clearfix">
 									<h3 @click="toJobDetails(item)" class="job-name">{{item.jobName}}</h3>
 									<p class="release-time">{{item.jobRelaseTime}}</p>
@@ -73,7 +73,7 @@
 									</p>
 								</div>
 								<div class="welfare clearfix">
-									<span v-for="label in item.jobAtempt.split('+',4)">{{label}}</span>
+									<span v-for="label in item.jobAtempt.split('+',4)" :key="label._id">{{label}}</span>
 								</div>
 								<div class="company clearfix">
 									<img class="company-logo" v-bind:src="item.companyInfo.companyLogo" />
@@ -99,9 +99,9 @@
 					<dd class="clearfix">
 						<a href="javascript:;">百度</a>
 						<a href="javascript:;">京东</a>
-						<a href="javascript:;">百度</a>
-						<a href="javascript:;">百度</a>
-						<a href="javascript:;">百度</a>
+						<a href="javascript:;">天涯</a>
+						<a href="javascript:;">猎聘</a>
+						<a href="javascript:;">GitHub</a>
 					</dd>
 				</dl>
 			</div>

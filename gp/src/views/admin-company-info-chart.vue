@@ -47,6 +47,7 @@
 	import './../assets/css/common.css'
 	import './../assets/css/style.css'
 	import axios from 'axios'
+	import _ from 'lodash'
 	
 	export default{
 		data(){
@@ -82,62 +83,41 @@
 				})
 			},
       getJobType(){
-        let jobTypeInfo = [];
-        this.jobList.forEach((op)=>{
-          if(jobTypeInfo.length > 0){
-            let isInside = false;
-            for(var og of jobTypeInfo){
-              if(og.name === op.jobTypeFirst){
-                isInside = true;
-              }
-            }
-            if(!isInside){
-              jobTypeInfo.push({name:op.jobTypeFirst,children:[]});
-            }
-          }else{
-            jobTypeInfo.push({name:op.jobTypeFirst,children:[]});
-          }
-        })
-        for(var og of jobTypeInfo){
-          this.jobList.forEach((op)=>{
-            if(op.jobTypeFirst === og.name){
-              if(og.children.length > 0){
-                let isInside = false;
-                og.children.forEach((oc)=>{
-                  if(oc.name === op.jobTypeSecond){
-                    isInside = true;
-                  }
-                })
-                if(!isInside){
-                  og.children.push({name:op.jobTypeSecond,children:[]})
-                }
-              }else{
-                og.children.push({name:op.jobTypeSecond,children:[]})
-              }              
-            }
-          })
-        }
-				for(var og of jobTypeInfo){
-					for(var oa of og.children){
-						this.jobList.forEach((op)=>{
-							if(op.jobTypeSecond === oa.name){
-								if(oa.children.length > 0){
-									let isInside = false;
-									oa.children.forEach((ob)=>{
-										if(ob.name === op.jobTypeThird){
-											isInside = true;
-										}
-									})
-									if(!isInside){
-										oa.children.push({name:op.jobTypeThird,children:[{name:op.jobName}]})
-									}
-								}else{
-									oa.children.push({name:op.jobTypeThird,children:[{name:op.jobName}]})
-								}
+				let jobTypeInfo = [];
+				_.forEach(this.jobList, (firstLoop) => {
+					if (_.findIndex(jobTypeInfo, {name:firstLoop.jobTypeFirst}) < 0) {
+						jobTypeInfo.push({name:firstLoop.jobTypeFirst,children:[]})
+					}
+				})
+				_.forEach(jobTypeInfo, (firstLoop) => {
+					_.forEach(this.jobList, (secondLoop) => {
+						if (firstLoop.name === secondLoop.jobTypeFirst) {
+							firstLoop.children.push({name:secondLoop.jobTypeSecond, children:[]})
+						}
+					})
+					firstLoop.children = _.uniqBy(firstLoop.children, 'name');
+				})
+				_.forEach(jobTypeInfo, (firstLoop) => {
+					_.forEach(firstLoop.children, (secondLoop) => {
+						_.forEach(this.jobList, (thirdLoop) => {
+							if (secondLoop.name === thirdLoop.jobTypeSecond) {
+								secondLoop.children.push({name:thirdLoop.jobTypeThird, children:[]})
 							}
 						})
-					}
-				}
+						secondLoop.children = _.uniqBy(secondLoop.children, 'name');
+					})
+				})
+				_.forEach(jobTypeInfo, (firstLoop) => {
+					_.forEach(firstLoop.children, (secondLoop) => {
+						_.forEach(secondLoop.children, (thirdLoop) => {
+							_.forEach(this.jobList, (forthLoop) => {
+								if (thirdLoop.name === forthLoop.jobTypeThird) {
+									thirdLoop.children.push({name:forthLoop.jobName})
+								}
+							})
+						})
+					})
+				})
 				this.jobTypeInfo = jobTypeInfo;
 				this.jobLocationFlag = false;
 				this.jobTypeFlag = true;

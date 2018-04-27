@@ -33,6 +33,7 @@ router.get('/list', (req, res, next) => {
   mongo.MongoClient.connect(mongo.DB_CONN_STR, (err, db) => {
     mongo.findMongo(collection, op, db, (jobs) => {
       const changedJobList = jobs;
+      const finalJobList = [];
       collection = 'companies';
       mongo.findMongo(collection, op, db, (companies) => {
         changedJobList.forEach((job) => {
@@ -42,8 +43,11 @@ router.get('/list', (req, res, next) => {
               job.companyInfo.companyBaseInfo.companyName = company.regeditInfo.companyName;
             }
           });
+          if (job.isOnline) {
+            finalJobList.push(job);
+          }
         });
-        getRight(res, changedJobList);
+        getRight(res, finalJobList);
       });
     });
   });
@@ -106,7 +110,6 @@ router.post('/allInfo', (req, res, next) => {
   const allInfo = {};
   allInfo.jobInfo = {};
   allInfo.companyInfo = {};
-
   Job.findOne({
     jobId,
   }, (err, doc) => {
@@ -114,7 +117,6 @@ router.post('/allInfo', (req, res, next) => {
       getWrong(res, err);
     } else {
       allInfo.jobInfo = doc;
-      console.log(doc.companyId);
       Company.findOne({
         userId: doc.companyId,
       }, (err1, doc1) => {
@@ -122,7 +124,6 @@ router.post('/allInfo', (req, res, next) => {
           getWrong(err1);
         } else {
           allInfo.companyInfo = doc1;
-
           res.json({
             status: 0,
             msg: '',
@@ -273,7 +274,6 @@ router.post('/jobType', (req, res, next) => {
 // 关键词查找职位
 router.post('/jobKeyWords', (req, res, next) => {
   const { keyWords } = req.body;
-  console.log(keyWords);
   const reg = new RegExp(keyWords, 'i'); // 这里的i是一个参数，表示不区分大小写
   // 这里用到了$regex和$or,这是mongoose里面的模糊查询
   // 详情请访问：http://blog.csdn.net/salmonellavaccine/article/details/53838284
@@ -322,7 +322,6 @@ router.post('/filter', (req, res, next) => {
   if (jobSalary !== '不限') {
     op.jobSalary = jobSalary;
   }
-  console.log(op);
   mongo.MongoClient.connect(mongo.DB_CONN_STR, (err, db) => {
     mongo.findMongo(collection, op, db, (jobs) => {
       const changedJobList = jobs;

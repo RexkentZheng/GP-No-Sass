@@ -6,6 +6,7 @@ server/dist/
 gp/npm-debug.log*
 gp/yarn-debug.log*
 gp/yarn-error.log*
+package-lock.json
 
 # Editor directories and files
 .idea
