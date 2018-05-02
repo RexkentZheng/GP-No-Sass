@@ -2,7 +2,7 @@ var multer = require('multer');
 
 
 //测试接口
-var storageTest = multer.diskStorage({
+var storageStudentInfo = multer.diskStorage({
 	destination: function(req, file, callback) {
 		callback(null, "./excel");
 	},
@@ -12,9 +12,9 @@ var storageTest = multer.diskStorage({
 });
 
 //定义upload方法
-var uploadTest = multer({
-	storage: storageTest
-}).single("test"); 
+var uploadStudentInfo = multer({
+	storage: storageStudentInfo
+}).single("studentInfo"); 
 
 
 
@@ -121,5 +121,5 @@ exports.uploadCompanyLogo = uploadCompanyLogo;
 exports.uploadAddCompanyProductions = uploadAddCompanyProductions;
 exports.uploadChangeCompanyProductions = uploadChangeCompanyProductions;
 exports.uploadCompanyLicense = uploadCompanyLicense;
-exports.uploadTest = uploadTest;
+exports.uploadStudentInfo = uploadStudentInfo;
 exports.uploadBannerImg = uploadBannerImg;

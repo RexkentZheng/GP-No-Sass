@@ -14,7 +14,7 @@
 									</vue-core-image-upload>
 								</a>
 							</div>
-							<div v-for="bannerImg in bannerImgs" class="banner-one-piece clearfix">
+							<div v-for="bannerImg in bannerImgs" :key="bannerImg" class="banner-one-piece clearfix">
 								<div class="left-part">
 									<vue-core-image-upload class="" inputOfFile="bannerImg" cropRatio="24:10" crop="local" resize="local" :data="{'imgName':bannerImg.imgName}" @imageuploaded="changeBannerImg" :max-file-size="5242880" url="/upload/changeBannerImg">
 										<img style="width: 300px; height: 127px;" :src="'../../static/banner/'+bannerImg.imgName" />
@@ -78,7 +78,7 @@
 					let res = response.data;
 					if(res.status == 0) {
 						this.bannerImgs = res.result.bannerImg;
-					} else {}
+					}
 				})
 			},
 			changeBannerImg(res) {
@@ -109,6 +109,12 @@
 				}).then((response) => {
 					let res = response.data;
 					if(res.status == 0) {
+						this.$message({
+							showClose: true,
+							message: '删除成功',
+							type: 'success'
+						});
+						this.$router.go(0);
 					}
 				})
 			},

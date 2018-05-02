@@ -79,8 +79,6 @@
 					if (res.status == 0) {
 						this.nickName = res.result.userName;
 						this.userType = res.result.userType;
-					}else{
-						
 					}
 				})
 			},

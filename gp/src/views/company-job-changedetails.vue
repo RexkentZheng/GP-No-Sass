@@ -26,7 +26,7 @@
 							<dl class="clearfix">
 								<dd>
 									<select v-model="jobInfo.jobSalary" class="form-control">
-										<option v-for="option in jobConditionOther.jobSalary" v-bind:value="option">{{option}}</option>
+										<option v-for="option in jobConditionOther.jobSalary" :value="option" :key="option">{{option}}</option>
 									</select>
 								</dd>
 							</dl>
@@ -41,7 +41,7 @@
 							<dl class="clearfix">
 								<dd>
 									<select v-model="jobInfo.jobRequirement" class="form-control">
-										<option v-for="option in jobConditionOther.jobRequirement" v-bind:value="option">{{option}}</option>
+										<option v-for="option in jobConditionOther.jobRequirement" :value="option" :key="option">{{option}}</option>
 									</select>
 								</dd>
 							</dl>
@@ -56,7 +56,7 @@
 							<dl class="clearfix">
 								<dd>
 									<select v-model="jobInfo.jobType" class="form-control">
-										<option v-for="option in jobConditionOther.jobType" v-bind:value="option">{{option}}</option>
+										<option v-for="option in jobConditionOther.jobType" :value="option" :key="option">{{option}}</option>
 									</select>
 								</dd>
 							</dl>
@@ -72,7 +72,7 @@
 								<dt>一级</dt>
 								<dd>
 									<select v-model="jobInfo.jobTypeFirst" class="form-control">
-										<option v-for="option in jobConditionType" v-bind:value="option.mainName">{{option.mainName}}</option>
+										<option v-for="option in jobConditionType" :value="option.mainName" :key="option.mainName">{{option.mainName}}</option>
 									</select>
 								</dd>
 							</dl>
@@ -80,7 +80,7 @@
 								<dt>二级</dt>
 								<dd>
 									<select v-model="jobInfo.jobTypeSecond" class="form-control">
-										<option v-for="option in jobConditionSecondType" v-bind:value="option.secondName">{{option.secondName}}</option>
+										<option v-for="option in jobConditionSecondType" :value="option.secondName" :key="option.secondName">{{option.secondName}}</option>
 									</select>
 								</dd>
 							</dl>
@@ -88,7 +88,7 @@
 								<dt>三级</dt>
 								<dd>
 									<select v-model="jobInfo.jobTypeThird" class="form-control">
-										<option v-for="option in jonConditionThirdType" v-bind:value="option">{{option}}</option>
+										<option v-for="option in jonConditionThirdType" :value="option"  :key="option">{{option}}</option>
 									</select>
 								</dd>
 							</dl>

@@ -41,7 +41,7 @@
 						<dl>
 							<dt>职位诱惑</dt>
 							<dd class="clearfix">
-								<p class="attempt-label" v-for="label in jobAttemptLabel">{{label}}</p>
+								<p class="attempt-label" v-for="label in jobAttemptLabel" :key="label">{{label}}</p>
 							</dd>
 						</dl>
 						<dl>

@@ -76,7 +76,7 @@
 						</div>
 						<dd>
 							<div class="normal-unchange">
-								<span v-for="label in labels">{{label}}</span>
+								<span v-for="label in labels" :key="label">{{label}}</span>
 							</div>
 						</dd>
 					</dl>
@@ -88,7 +88,7 @@
 						<dd>
 							<ul class="kill-type">
 								<li>
-									<div v-for="production in productions" class="clearfix">
+									<div v-for="production in productions" :key="production._id" class="clearfix">
 										<div class="company-production-unchange clearfix">
 											<div class="img-part clearfix">
 												<img v-bind:src="production.productionImg" />

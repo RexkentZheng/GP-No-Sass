@@ -3,6 +3,7 @@ gp/node_modules/
 gp/dist/
 server/node_modules/
 server/dist/
+server/excel/
 gp/npm-debug.log*
 gp/yarn-debug.log*
 gp/yarn-error.log*

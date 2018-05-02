@@ -2,7 +2,7 @@
 	<div>
 		<student-header></student-header>
 		<div class="container student-personal-info">
-			<div class="contain-body clearfix" v-for="item in studentInfo">
+			<div class="contain-body clearfix" v-for="item in studentInfo" :key="item._id">
 				<dl class="student-name clearfix">
 					<dt>姓名</dt>
 					<span class="line"></span>

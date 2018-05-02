@@ -89,9 +89,9 @@
 						<span><span class="glyphicon glyphicon-plus icon "></span>添加</span>
 					</div>
 					<dd>
-						<div v-for="onePiece in workInfo" class="work-introduce">
+						<div v-for="onePiece in workInfo" :key="onePiece._id" class="work-introduce">
 							<div v-if="onePiece.isShow" class="one-piece">
-								<div v-if="" @click="onePiece.isShow = !onePiece.isShow" class="change-btn">
+								<div @click="onePiece.isShow = !onePiece.isShow" class="change-btn">
 									<span><span class="glyphicon glyphicon-pencil icon"></span>修改</span>
 								</div>
 								<dl class="work-name clearfix">
@@ -191,7 +191,7 @@
 						<span><span class="glyphicon glyphicon-plus icon"></span>添加</span>
 					</div>
 					<dd>
-						<div v-for="onePiece in intershipInfo" class="experience-introduce">
+						<div v-for="onePiece in intershipInfo" :key="onePiece._id" class="experience-introduce">
 							<div v-if="onePiece.isShow" class="one-piece">
 								<div @click="onePiece.isShow = false" class="change-btn">
 									<span><span class="glyphicon glyphicon-pencil icon"></span>修改</span>

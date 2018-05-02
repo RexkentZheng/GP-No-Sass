@@ -26,7 +26,7 @@
 							<th>手机号码</th>
 							<th>状态</th>
 						</tr>
-						<tr v-for="item in receiveList">
+						<tr v-for="item in receiveList" :key="item.jobName">
 							<td>
 								<router-link :to="{path:'/common/student/resume',query:{studentId:item.studentId,jobId:item.jobId,test:item.test}}">{{item.studentName}}</router-link>
 							</td>
@@ -49,7 +49,7 @@
 							<th>面试日期</th>
 							<th>面试时间</th>
 						</tr>
-						<tr v-for="item in interViewList">
+						<tr v-for="item in interViewList" :key="item.jobName">
 							<td>
 								<a>{{item.studentName}}</a>
 							</td>

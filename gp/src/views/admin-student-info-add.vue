@@ -19,13 +19,13 @@
 				<div class="student-info-content">
 					<div class="wraper">
 						<el-upload
-								ref="upload"
+							ref="upload"
 							action="/upload/excel"
-							name="test"
+							name="studentInfo"
 							:multiple="false"
 							:limit="1"
 							accept=".xls,.xlsx"
-							:on-success="test"
+							:on-success="uploadResponse"
 							:show-file-list="true"
 							:auto-upload="false"
 							:file-list="fileList">
@@ -63,7 +63,7 @@ export default {
     submitUpload() {
       this.$refs.upload.submit();
     },
-    test(response, file, fileList) {
+    uploadResponse(response, file, fileList) {
       let res = response;
       if (res.status == 0) {
 				this.$message({
@@ -72,15 +72,22 @@ export default {
 					type: 'success'
 				});
         this.$router.push({
-          path: "/admin"
+          path: "/admin/studentInfo"
         });
-      } else {
+      } else if (res.status == 2){
+				this.$message({
+					showClose: true,
+					message: `已存在相同学号的学生用户,姓名为${res.result[0].personalInfo.studentName},学号为${res.result[0].personalInfo.studentNum}`,
+					type: 'warning'
+				});
+				this.$refs.upload.clearFiles();
+			} else {
 				this.$message({
 					showClose: true,
 					message: '导入失败',
 					type: 'warning'
 				});
-      }
+			}
     }
   }
 };

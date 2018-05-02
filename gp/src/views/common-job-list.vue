@@ -11,7 +11,7 @@
 					<div class="popular-search">
 						<p><span class="title">热门搜索：</span><span class="details">
 							<a @click="searchType('JavaScript')">JavaScript</a>
-							<a @click="searchType('JavaScript')">JavaScript</a>
+							<a @click="searchType('Java')">Java</a>
 						</span></p>
 					</div>
 				</div>
@@ -19,27 +19,22 @@
 			<div class="details">
 				<div class="multi-chosen clearfix">
 					<span>学历要求：</span>
-					<a :class="{active: jobRequirementAc == condition}" @click="jobFilter('jobRequirement',condition)" v-for="condition in jobInfo.jobRequirement" href="javascript:;">{{condition}}</a>
+					<a :class="{active: jobRequirementAc == condition}" @click="jobFilter('jobRequirement',condition)" v-for="condition in jobInfo.jobRequirement" :key="condition" href="javascript:;">{{condition}}</a>
 				</div>
 				<div class="multi-chosen clearfix">
 					<span>职位形式：</span>
-					<a :class="{active: jobFormAc == condition}" @click="jobFilter('jobType',condition)" v-for="condition in jobInfo.jobType" href="javascript:;">{{condition}}</a>
+					<a :class="{active: jobFormAc == condition}" @click="jobFilter('jobType',condition)" v-for="condition in jobInfo.jobType" :key="condition" href="javascript:;">{{condition}}</a>
 				</div>
-				<!--<div class="multi-chosen clearfix">
-					<span>职位类型：</span>
-					<a class="active" href="javascript:;">不限</a>
-					<a v-for="condition in jobType" href="javascript:;">{{condition.mainName}}</a>
-				</div>-->
 				<div class="multi-chosen clearfix">
 					<span>职位薪资：</span>
-					<a :class="{active: jobSalaryAc == condition}" @click="jobFilter('jobSalary',condition)" v-for="condition in jobInfo.jobSalary" href="javascript:;">{{condition}}</a>
+					<a :class="{active: jobSalaryAc == condition}" @click="jobFilter('jobSalary',condition)" v-for="condition in jobInfo.jobSalary" :key="condition" href="javascript:;">{{condition}}</a>
 				</div>
 			</div>
 			<div v-if="realJobs.length == 0" class="none-list">
 				<span class="empty-tips">没有职位</span>
 			</div>
 			<div v-if="realJobs.length >= 0" class="main-list">
-				<div v-for="job in realJobs" class="job-one clearfix">
+				<div v-for="job in realJobs" :key="job._id" class="job-one clearfix">
 					<div class="top">
 						<div class="left">
 							<div @click="linkDeatils('job',job)" class="jobName clearfix">
@@ -72,13 +67,13 @@
 					<div class="bottom">
 						<div class="left">
 							<div class="labels">
-								<span v-for="label in job.jobAtempt.split('+')">{{label}}</span>
+								<span v-for="label in job.jobAtempt.split('+')" :key="label">{{label}}</span>
 							</div>
 						</div>
 						<div class="right">
 							<div class="labels">
 								<span>“</span>
-								<span v-for="label in job.companyInfo.companyLabel.split('+')">{{label}}</span>
+								<span v-for="label in job.companyInfo.companyLabel.split('+')" :key="label">{{label}}</span>
 								<span>”</span>
 							</div>
 						</div>

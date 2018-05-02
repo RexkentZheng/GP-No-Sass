@@ -24,7 +24,7 @@
 				</div>
 				<div class="job-list">
 					<ul>
-						<li v-for="job in changedJobList">
+						<li v-for="job in changedJobList" :key="job._id">
 							<div class="top-part clearfix">
 								<div class="job-title clearfix">
 									<h3>{{job.jobName}}</h3>

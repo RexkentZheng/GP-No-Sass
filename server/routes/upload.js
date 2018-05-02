@@ -1,5 +1,6 @@
 const express = require('express');
 const md5 = require('md5');
+const _ = require('lodash');
 
 const router = express.Router();
 const multer = require('multer');
@@ -32,7 +33,7 @@ function getRight(res, doc) {
 // Excel注册学生账号接口（这里有个问题，是循环的时候出现了，应该将用户表的成功放在学生表注册成功内，但是放进去
 // 之后userId会有文问题）
 router.post('/excel', (req, res, next) => {
-  upload.uploadTest(req, res, (err) => {
+  upload.uploadStudentInfo(req, res, (err) => {
     if (err) {
       getWrong(res, err);
     } else {
@@ -58,72 +59,90 @@ router.post('/excel', (req, res, next) => {
         for (i = 0; i < 3; i++) {
           userId = i;
         }
-        console.log(userId);
-        Student.findOne({}).sort({
-          userId: -1,
-        }).limit(1).exec((err, doc) => {
-          let userId = 0;
-          let maxDate = 0;
-          const userType = 2;
-          console.log(doc);
-          if (doc) {
-            maxDate = doc.userId;
-          } else {
-            maxDate = 0000;
-          }
-          // maxDate = doc.userId ? 00000 : doc.userId;
-          all.forEach((item) => {
-            console.log(item);
-            userId = hello.createUserId(maxDate, userType);
-            Student.create({
-              userId,
-              userType,
-              'personalInfo.studentName': item.姓名,
-              'personalInfo.studentNum': item.学号,
-              'personalInfo.studentSex': item.性别,
-              'personalInfo.studentMajor': item.专业,
-              'personalInfo.studentCollege': item.学院,
-              'personalInfo.studentUniversity': item.学校,
-              'personalInfo.studentEducation': item.学历,
-              'personalInfo.studentNativePlace': item.籍贯,
-              'personalInfo.studentOrginPlace': item.生源地,
-              'personalInfo.studentPaperInfo':{},
-              'personalInfo.studentPaperInfo.paperTitle': ('论文标题' in item) ? '' : item.论文标题,
-              'personalInfo.studentPaperInfo.paperContent': ('论文内容' in item) ? '' : item.论文内容,
-              'personalInfo.studentTutorInfo':{},
-              'personalInfo.studentTutorInfo.tutorName': ('导师姓名' in item) ? '' : item.导师姓名,
-              'personalInfo.studentTutorInfo.tutorPosition': ('导师职位' in item) ? '' : item.导师职位,
-              'personalInfo.employmentInfo.isEmployment': ('是否就业' in item) ? false : item.是否就业,
-              'personalInfo.employmentInfo.companyName': ('公司名称' in item) ? '' : item.公司名称,
-            }, (err1, doc1) => {
-              if (err1) {
-                getWrong(res, err1);
-              }else{
-                console.log(doc1);
+        console.log(all);
+        _.forEach(all,(item) => {
+          Student.find({
+            'personalInfo.studentNum': parseFloat(item.学号)
+          },(err,doc) => {
+            if (err) {
+              getWrong(res,err);
+            }else{
+              if (!_.isEmpty(doc)) {
+                res.json({
+                  status:2,
+                  msg:'已有相同学号的用户存在',
+                  result:doc
+                })
+                return;
+              } else {
+                Student.findOne({}).sort({
+                  userId: -1,
+                }).limit(1).exec((err, doc) => {
+                  let userId = 0;
+                  let maxDate = 0;
+                  const userType = 2;
+                  if (doc) {
+                    maxDate = doc.userId;
+                  } else {
+                    maxDate = 0000;
+                  }
+                  // maxDate = doc.userId ? 00000 : doc.userId;
+                  all.forEach((item) => {
+                    console.log(item);
+                    userId = hello.createUserId(maxDate, userType);
+                    Student.create({
+                      userId,
+                      userType,
+                      'personalInfo.studentName': item.姓名,
+                      'personalInfo.studentNum': item.学号,
+                      'personalInfo.studentSex': item.性别,
+                      'personalInfo.studentMajor': item.专业,
+                      'personalInfo.studentCollege': item.学院,
+                      'personalInfo.studentUniversity': item.学校,
+                      'personalInfo.studentEducation': item.学历,
+                      'personalInfo.studentNativePlace': item.籍贯,
+                      'personalInfo.studentOrginPlace': item.生源地,
+                      'personalInfo.studentPaperInfo':{},
+                      'personalInfo.studentPaperInfo.paperTitle': ('论文标题' in item) ? '' : item.论文标题,
+                      'personalInfo.studentPaperInfo.paperContent': ('论文内容' in item) ? '' : item.论文内容,
+                      'personalInfo.studentTutorInfo':{},
+                      'personalInfo.studentTutorInfo.tutorName': ('导师姓名' in item) ? '' : item.导师姓名,
+                      'personalInfo.studentTutorInfo.tutorPosition': ('导师职位' in item) ? '' : item.导师职位,
+                      'personalInfo.employmentInfo.isEmployment': ('是否就业' in item) ? false : item.是否就业,
+                      'personalInfo.employmentInfo.companyName': ('公司名称' in item) ? '' : item.公司名称,
+                    }, (err1, doc1) => {
+                      if (err1) {
+                        getWrong(res, err1);
+                      }else{
+                        console.log(doc1);
+                      }
+                    });
+                    User.create({
+                      userName: item.学号,
+                      userPwd: md5(item.学号),
+                      userType,
+                      userId,
+                      isWaitting: false,
+                      isPass: true,
+                    }, (err2, doc2) => {
+                      if (err2) {
+                        getWrong(res, err2);
+                      }
+                    });
+                    maxDate = userId;
+                  });
+                });
+                fs.unlink(path, (err) => {
+                  if (err) {
+                    getWrong(res, err);
+                  } else {
+                    getRight(res, req.file);
+                  }
+                });
               }
-            });
-            User.create({
-              userName: item.学号,
-              userPwd: md5(item.学号),
-              userType,
-              userId,
-              isWaitting: false,
-              isPass: true,
-            }, (err2, doc2) => {
-              if (err2) {
-                getWrong(res, err2);
-              }
-            });
-            maxDate = userId;
-          });
-        });
-        fs.unlink(path, (err) => {
-          if (err) {
-            getWrong(res, err);
-          } else {
-            getRight(res, req.file);
-          }
-        });
+            }
+          })
+        })
       });
     }
   });

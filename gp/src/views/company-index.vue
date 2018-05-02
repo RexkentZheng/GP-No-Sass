@@ -54,7 +54,7 @@
 								<dt>公司类型：</dt>
 								<dd>
 									<select v-model="baseInfo.companyType" class="form-control">
-										<option v-for="companyType in companyAllType" v-bind:value="companyType">{{companyType}}</option>										
+										<option v-for="companyType in companyAllType" v-bind:value="companyType" :key="companyType">{{companyType}}</option>										
 									</select>
 								</dd>
 							</dl>
@@ -92,7 +92,7 @@
 						</div>
 						<dd>
 							<div v-if="!labelFlag" class="normal-unchange">
-								<span v-for="label in labels">{{label}}</span>
+								<span v-for="label in labels" :key="label">{{label}}</span>
 							</div>
 							<div v-if="labelFlag" class="normal-changing">
 								<h3>请输入公司类型：（标签之前请用+连接）</h3>
@@ -117,7 +117,7 @@
 						<dd>
 							<ul class="kill-type">
 								<li>
-									<div v-for="production in productions" class="clearfix">
+									<div v-for="production in productions" :key="production._id" class="clearfix">
 										<div v-if="production.productionShow" class="company-production-unchange clearfix">
 											<div class="img-part clearfix">
 												<img v-bind:src="production.productionImg" />
@@ -203,7 +203,7 @@
 						</div>
 						<dd>
 							<div v-if="!introduceFlag" class="company-introduce-unchange">
-									<p v-for="onePra in introducePra">{{onePra}}</p>
+									<p v-for="onePra in introducePra" :key="onePra">{{onePra}}</p>
 							</div>
 							<div v-if="introduceFlag" class="company-introduce-changing">
 								<textarea v-model="introduce" class="form-control" name="" rows="" cols=""></textarea>

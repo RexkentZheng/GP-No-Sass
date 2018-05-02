@@ -29,7 +29,7 @@
                 <dd>
                   <select v-model="choosen.startYear" class="form-control" name="" id="">
                     <option value="" selected>不做筛选</option>
-                    <option v-for="oneYear in conf.allYears" :value="oneYear">{{oneYear}}</option>
+                    <option v-for="oneYear in conf.allYears" :value="oneYear" :key="oneYear">{{oneYear}}</option>
                   </select>
                 </dd>
               </dl>
@@ -40,7 +40,7 @@
                 <dd>
                   <select v-model="choosen.endYear" class="form-control" name="" id="">
                     <option value="">不做筛选</option>
-                    <option v-for="oneYear in endYears" :value="oneYear">{{oneYear}}</option>
+                    <option v-for="oneYear in endYears" :value="oneYear" :key="oneYear">{{oneYear}}</option>
                   </select>
                 </dd>
               </dl>
@@ -63,7 +63,7 @@
                 <dd>
                   <select v-model="choosen.college" class="form-control" name="" id="">
                     <option value="">不做筛选</option>
-                    <option v-for="oneCollege in conf.allColleges" :value="oneCollege.levelName">{{oneCollege.levelName}}</option>
+                    <option v-for="oneCollege in conf.allColleges" :value="oneCollege.levelName" :key="oneCollege.levelName">{{oneCollege.levelName}}</option>
                   </select>
                 </dd>
               </dl>
@@ -74,7 +74,7 @@
                 <dd>
                   <select v-model="choosen.major" class="form-control" name="" id="">
                     <option value="">不做筛选</option>
-                    <option v-for="oneMajor in choosenMajor" :value="oneMajor">{{oneMajor}}</option>
+                    <option v-for="oneMajor in choosenMajor" :value="oneMajor" :key="oneMajor">{{oneMajor}}</option>
                   </select>
                 </dd>
               </dl>
@@ -85,7 +85,7 @@
                 <dd>
                   <select v-model="choosen.place" class="form-control" name="" id="">
                     <option value="">不做筛选</option>
-                    <option v-for="onePlace in conf.allPlaces" :value="onePlace">{{onePlace}}</option>
+                    <option v-for="onePlace in conf.allPlaces" :value="onePlace" :key="onePlace">{{onePlace}}</option>
                   </select>
                 </dd>
               </dl>
@@ -113,7 +113,7 @@
                 </li>
               </ul>
               <ul class="tab-content">
-                <li v-for="op in studentCurrentInfo" class="clearfix">
+                <li v-for="op in studentCurrentInfo" :key="op.personalInfo.studentNum" class="clearfix">
                   <input @click="studentToggle(op.userId)" type="checkbox" v-model="op.isChecked">
                   <p>
                     {{op.personalInfo.studentName}}

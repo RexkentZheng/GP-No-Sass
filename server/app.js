@@ -16,7 +16,6 @@ var student = require('./routes/student');
 var upload = require('./routes/upload');
 var conf = require('./routes/conf');
 var exporter = require('./routes/export');
-var test = require('./routes/test');
 
 var app = express();
 
@@ -44,7 +43,6 @@ app.use('/student',student);
 app.use('/upload', upload);
 app.use('/conf',conf);
 app.use('/export',exporter);
-app.use('/test',test);
 
 
 // catch 404 and forward to error handler

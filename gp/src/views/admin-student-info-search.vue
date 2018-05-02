@@ -27,7 +27,7 @@
 					</div>
 					<div class="search-list">
 						<ul>
-							<li class="clearfix" v-for="count in countList">
+							<li class="clearfix" v-for="count in countList" :key="count._id">
 								<div class="left-part">
 									<span @click="countDetails(count)" class="count-name"><a>{{count.personalInfo.studentName}}</a></span>
 									<span class="count-id">{{count.personalInfo.studentNum}}</span>

@@ -18,7 +18,7 @@
 				</div>
 				<div class="audit-list">
 					<ul class="clearfix">
-						<li v-for="audit in changedAuditList">
+						<li v-for="audit in changedAuditList" :key="audit._id">
 							<div class="top-part clearfix">
 								<div class="left-part">
 									<h3>{{audit.companyName}}</h3>
