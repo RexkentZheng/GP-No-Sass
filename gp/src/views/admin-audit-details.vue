@@ -77,11 +77,14 @@
 					}).then((response)=>{
 						let res = response.data;
 						if (res.status == 1) {
-							alert('系统错误');
+							this.$message({
+								showClose: true,
+								message: '系统错误',
+								type: 'warning'
+							});
 						}else{
 							let temporary = res.result;
 							this.applyInfo = temporary;
-							console.log(this.applyInfo.isChecked);
 							this.isChecked = this.applyInfo.isChecked;
 						}
 					})
@@ -93,9 +96,17 @@
 				}).then((response)=>{
 					let res = response.data;
 					if (res.status == 0) {
-						alert('审批成功');
+						this.$message({
+							showClose: true,
+							message: '审批成功',
+							type: 'success'
+						});
 					}else{
-						alert('审批失败');
+						this.$message({
+							showClose: true,
+							message: '审批失败',
+							type: 'warning'
+						});
 					}
 				});
 				this.$router.push({
@@ -108,9 +119,17 @@
 				}).then((response)=>{
 					let res = response.data;
 					if (res.status == 0) {
-						alert('审批成功');
+						this.$message({
+							showClose: true,
+							message: '审批成功',
+							type: 'success'
+						});
 					}else{
-						alert('审批失败');
+						this.$message({
+							showClose: true,
+							message: '审批失败',
+							type: 'warning'
+						});
 					}
 				})
 			}

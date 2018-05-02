@@ -205,7 +205,6 @@
 										}
 									}
 									this.changedJobList = result;
-									console.log('剩余职位列表' + this.changedJobList);
 								} else {
 									this.jobList = [];
 								}
@@ -263,8 +262,6 @@
 					if(res.status == 0) {
 						this.jobTypes = res.result.jobType.mainClassify;
 						this.bannerImgs = res.result.bannerImg;
-					} else {
-						console.log('没有获取到职位类型')
 					}
 				})
 			}

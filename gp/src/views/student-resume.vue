@@ -387,10 +387,18 @@
 				}).then((response)=>{
 					let res = response.data;
 					if (res.status == 0) {
-						alert(`修改成功`);
+						this.$message({
+							showClose: true,
+							message: '修改成功',
+							type: 'success'
+						});
 						this.$router.go(0);
 					}else{
-						alert(`修改失败`);
+						this.$message({
+							showClose: true,
+							message: '修改失败',
+							type: 'warning'
+						});
 					}
 				})
 			},
@@ -415,14 +423,26 @@
 					}).then((response)=>{
 						let res = response.data;
 						if (res.status == 0) {
-							alert(`修改成功`);
+							this.$message({
+								showClose: true,
+								message: '修改成功',
+								type: 'success'
+							});
 							this.$router.go(0);
 						}else{
-							alert(`修改失败`);
+							this.$message({
+								showClose: true,
+								message: '修改失败',
+								type: 'warning'
+							});
 						}
 					})
 				}else{
-					alert('请完善信息后再提交');
+					this.$message({
+						showClose: true,
+						message: '请完善信息后再提交',
+						type: 'warning'
+					});
 				}
 			},
 			addArrayInfo(filedName,changeContent){
@@ -430,7 +450,6 @@
 				for (let key in changeContent) {
 					if (changeContent[key] == ''){
 						isFinish = false;
-						console.log(changeContent[key])
 					}
 				}
 				if (isFinish == true) {
@@ -441,14 +460,26 @@
 					}).then((response)=>{
 						let res = response.data;
 						if (res.status == 0) {
-							alert(`添加成功`);
+							this.$message({
+								showClose: true,
+								message: '添加成功',
+								type: 'success'
+							});
 							this.$router.go(0);
 						}else{
-							alert(`添加失败`);
+							this.$message({
+								showClose: true,
+								message: '添加失败',
+								type: 'warning'
+							});
 						}
 					})
 				} else{
-					alert('请完善信息后再提交');
+					this.$message({
+						showClose: true,
+						message: '请完善信息后再提交',
+						type: 'warning'
+					});
 				}
 			},
 			toggleShow() {
@@ -465,9 +496,17 @@
 				}).then((response)=>{
 					let res = response.data;
 					if (res.status == 0) {
-						alert('添加成功！');
+						this.$message({
+							showClose: true,
+							message: '添加成功',
+							type: 'success'
+						});
 					}else{
-						alert('添加失败！');
+						this.$message({
+							showClose: true,
+							message: '添加失败！',
+							type: 'warning'
+						});
 					}
 				})
 			},
@@ -479,11 +518,18 @@
 				}).then((response)=>{
 					let res = response.data;
 					if (res.status == 0) {
-						alert(`删除成功`);
+						this.$message({
+							showClose: true,
+							message: '删除成功',
+							type: 'success'
+						});
 						this.$router.go(0);
 					}else{
-						console.log(res.result);
-						alert(`删除失败`);
+						this.$message({
+							showClose: true,
+							message: '删除失败',
+							type: 'warning'
+						});
 					}
 				})
 			},

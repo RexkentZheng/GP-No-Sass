@@ -1,5 +1,6 @@
 // 获取需要的文件
 const express = require('express');
+const _ = require('lodash');
 
 const router = express.Router();
 const Student = require('../models/student');
@@ -84,10 +85,19 @@ router.post('/studentName', (req, res, next) => {
 
 // 根据学号查找学生信息
 router.post('/studentNum', (req, res, netx) => {
+  // 数字无法模糊匹配，于是用最大数和最小数作为区间来过滤数据
   const { studentNum } = req.body;
+  let maxStudentNum = studentNum.toString();
+  let minStudentNum = studentNum.toString();
+  _.times(12 - studentNum.toString().split('').length).forEach(() => {
+    maxStudentNum += '9';
+    minStudentNum += '0';
+  });
   Student.find({
-    'personalInfo.studentNum': studentNum,
-    // 这里有BUG，学生账号没有进行模糊匹配
+    'personalInfo.studentNum': {
+      $gte: parseFloat(minStudentNum),
+      $lte: parseFloat(maxStudentNum),
+    },
   }, (err, doc) => {
     if (err) {
       getWrong(res, err);

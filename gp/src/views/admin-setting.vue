@@ -83,17 +83,23 @@
 			},
 			changeBannerImg(res) {
 				let result = res.result;
-				console.log(res);
 				if(res.status == 0) {
-					alert('修改成功')
+					this.$message({
+						showClose: true,
+						message: '修改成功',
+						type: 'success'
+					});
 					this.$router.go(0);
 				}
 			},
 			addBannerImg(res) {
 				let result = res.result;
-				console.log(res);
 				if(res.status == 0) {
-					alert('添加成功')
+					this.$message({
+						showClose: true,
+						message: '添加成功',
+						type: 'success'
+					});
 					this.$router.go(0);
 				}
 			},
@@ -103,7 +109,6 @@
 				}).then((response) => {
 					let res = response.data;
 					if(res.status == 0) {
-						console.log(res);
 					}
 				})
 			},

@@ -141,16 +141,17 @@
 						}
 					})
 				} else {
-					alert('请完善数据，所有项都为必填项');
+					this.$message({
+						showClose: true,
+						message: '请完善数据，所有项都为必填项',
+						type: 'warning'
+					});
 				}
-
 			},
 			changeProductionImg(res) {
 				let result = res.result;
-				console.log(res);
 				if(res.status == 0) {
 					this.data.license = result.filename;
-					console.log(this.data.license);
 				}
 			},
 			delImg() {

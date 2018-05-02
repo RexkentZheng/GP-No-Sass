@@ -6,7 +6,7 @@
 			<div class="contain-body">
 				<div class="student-details">
 					<div class="img-part">
-						<img src="../../static/img/portrait.png" />
+						<img :src="studentInfo.resumetInfo.pic" />
 					</div>
 					<div class="base-info">
 						<p class="line-1">
@@ -36,7 +36,7 @@
 							<dt>实习经历</dt>
 							<dd>
 								<div class="experience-introduce">
-									<div v-for="onePiece in studentInfo.resumetInfo.intershipInfo" class="one-piece">
+									<div v-for="onePiece in studentInfo.resumetInfo.intershipInfo" :key="onePiece._id" class="one-piece">
 										<dl class="experience-name clearfix">
 											<dt>实习名称：</dt>
 											<dd>{{onePiece.companyName}}</dd>
@@ -52,12 +52,15 @@
 									</div>
 								</div>
 							</dd>
+							<dd v-if="_.isEmpty(studentInfo.resumetInfo.intershipInfo)">
+								<p>无</p>
+							</dd>
 						</dl>
 						<dl class="student-work">
 							<dt>个人作品：</dt>
 							<dd>
 								<div class="work-introduce">
-									<div v-for="onePiece in studentInfo.resumetInfo.personalWorksInfo" class="one-piece">
+									<div v-for="onePiece in studentInfo.resumetInfo.personalWorksInfo" :key="onePiece._id" class="one-piece">
 										<dl class="work-name clearfix">
 											<dt>作品名称：</dt>
 											<dd>{{onePiece.workName}}</dd>
@@ -72,6 +75,9 @@
 										</dl>
 									</div>
 								</div>
+							</dd>
+							<dd v-if="_.isEmpty(studentInfo.resumetInfo.personalWorksInfo)">
+								<p>无</p>
 							</dd>
 						</dl>
 					</div>
@@ -113,7 +119,7 @@
 								<option value="下午">下午</option>
 							</select>
 							<select v-model="time" name="" class="form-control">
-								<option v-for="onePiece in realTime">{{onePiece}}</option>
+								<option v-for="onePiece in realTime" :key="onePiece">{{onePiece}}</option>
 							</select>
 						</dd>
 					</dl>
@@ -142,7 +148,14 @@
 	export default {
 		data() {
 			return {
-				studentInfo: {},
+				studentInfo: {
+					personalInfo:{
+						studentName:''
+					},
+					resumetInfo:{
+						tel:''
+					}
+				},
 				userType: 0,
 				chooseDateFlag: false,
 				date: '',
@@ -222,13 +235,20 @@
 				}).then((response)=>{
 					let res = response.data;
 					if (res.status == 0) {
-						alert('邀请成功');
-						console.log(typeof this.halfDay);
+						this.$message({
+              showClose: true,
+              message: '邀请成功',
+              type: 'success'
+            });
 						this.$router.push({
 							path:'/company/receive'
 						})
 					}else{
-						alert('邀请失败');
+						this.$message({
+              showClose: true,
+              message: '邀请失败',
+              type: 'warning'
+            });
 					}
 				})
 			},
@@ -241,12 +261,17 @@
 				}).then((response)=>{
 					let res = response.data;
 					if (res.status == 0) {
-						alert('拒绝成功');
-//						this.$router.push({
-//							path:'/company/receive'
-//						})
+						this.$message({
+              showClose: true,
+              message: '拒绝成功',
+              type: 'success'
+            });
 					}else{
-						alert('拒绝失败');
+						this.$message({
+              showClose: true,
+              message: '拒绝失败',
+              type: 'warning'
+            });
 					}
 				})
 			},

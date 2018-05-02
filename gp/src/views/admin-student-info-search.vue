@@ -93,36 +93,11 @@
 							this.countList = res.result;
 						}
 					})
-					// axios.post('/user/userName', {
-					// 	userName: this.countKeyWords
-					// }).then((response) => {
-					// 	let res = response.data;
-					// 	if (res.status == 0) {
-					// 		this.countList = res.result;
-					// 		//判断是否有账号
-					// 		if (this.countList.length > 0) {
-					// 			//输出中文的用户类型
-					// 			this.countList.forEach(function(count) {
-					// 				if (count.userType == 3) {
-					// 					count.userTypeTd = '企业';
-					// 				} else if (count.userType == 2) {
-					// 					count.userTypeTd = '学生';
-					// 				} else {
-					// 					count.userTypeTd = '管理员';
-					// 				}
-					// 			});
-					// 			this.countNotExist = false;
-					// 		} else {
-					// 			this.countNotExist = true;
-					// 		}
-					// 	} else {}
-					// })
 				} else {
 					axios.post('/student/studentNum', {
 						studentNum: this.countKeyWords
 					}).then((response) => {
 						let res = response.data;
-						console.log(res.result.length)
 						if (res.result.length === 0) {
 							this.countNotExist = true;
 						} else {
@@ -130,30 +105,6 @@
 							this.countList = res.result;
 						}
 					})
-					// axios.post('/user/userId', {
-					// 	userId: this.countKeyWords
-					// }).then((response) => {
-					// 	let res = response.data;
-					// 	if (res.status == 0) {
-					// 		this.countList = res.result;
-					// 		//判断是否有账号
-					// 		if (this.countList.length > 0) {
-					// 			//输出中文的用户类型
-					// 			this.countList.forEach(function(count) {
-					// 				if (count.userType == 3) {
-					// 					count.userTypeTd = '企业';
-					// 				} else if (count.userType == 2) {
-					// 					count.userTypeTd = '学生';
-					// 				} else {
-					// 					count.userTypeTd = '管理员';
-					// 				}
-					// 			});
-					// 			this.countNotExist = false;
-					// 		} else {
-					// 			this.countNotExist = true;
-					// 		}
-					// 	} else {}
-					// })
 				}
 			},
 			countDetails(count) {

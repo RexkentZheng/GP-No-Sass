@@ -196,7 +196,6 @@
 					let data = [];
 					this.jobConditionType.forEach((item) => {
 						if(item.mainName == this.jobInfo.jobTypeFirst) {
-							console.log(item.secondClassify);
 							data = item.secondClassify;
 						}
 					})
@@ -242,7 +241,6 @@
 					if(res.status == 0) {
 						this.jobConditionOther = res.result.jobInfo;
 						this.jobConditionType = res.result.jobType.mainClassify;
-						console.log(this.jobConditionType);
 					}
 				})
 			},
@@ -256,7 +254,6 @@
 						let res = response.data;
 						if(res.status == 0) {
 							this.jobInfo = res.result;
-							console.log(this.jobInfo);
 						}
 					})
 					//没有参数就是新建信息
@@ -273,14 +270,12 @@
 					for(let key in this.jobInfo) {
 						if(key != '__v') {
 							if(!this.jobInfo[key]) {
-								console.log(key)
 								isFinish = false;
 							}
 						}
 					}
 					for(let key in this.jobInfo.jobLoaction) {
 						if(!this.jobInfo.jobLoaction[key]) {
-							console.log(key)
 							isFinish = false;
 						}
 					}
@@ -291,16 +286,28 @@
 						}).then((response) => {
 							let res = response.data;
 							if(res.status == 0) {
-								alert('修改成功');
+								this.$message({
+									showClose: true,
+									message: '修改成功',
+									type: 'success'
+								});
 								this.$router.push({
 									path: '/company/job/list'
 								});
 							} else {
-								alert('修改失败');
+								this.$message({
+									showClose: true,
+									message: '修改失败',
+									type: 'warning'
+								});
 							}
 						})
 					} else {
-						alert('请完善所有信息之后再进行保存操作')
+						this.$message({
+							showClose: true,
+							message: '请完善所有信息之后再进行保存操作',
+							type: 'warning'
+						});
 					}
 
 					//如果是新建就调用新建接口	
@@ -318,7 +325,6 @@
 					}
 					for(let key in this.jobInfo.jobLoaction) {
 						if(!this.jobInfo.jobLoaction[key]) {
-							console.log(key)
 							isFinish = false;
 						}
 					}
@@ -333,25 +339,38 @@
 								}).then((response) => {
 									let res = response.data;
 									if(res.status == 0) {
-										alert('新建成功');
+										this.$message({
+											showClose: true,
+											message: '新建成功',
+											type: 'success'
+										});
 										this.$router.push({
 											path: '/company/job/list'
 										});
 									} else if(res.status == 1001) {
-										alert('请完善用户信息之后再发布职位');
+										this.$message({
+											showClose: true,
+											message: '请完善用户信息之后再发布职位',
+											type: 'warning'
+										});
 									} else {
-										alert('新建失败');
+										this.$message({
+											showClose: true,
+											message: '新建失败',
+											type: 'warning'
+										});
 									}
 								})
 							}
 						})
-						console.log(this.jobInfo);
 					} else {
-						alert('请完善所有信息之后再进行保存操作')
+						this.$message({
+							showClose: true,
+							message: '请完善所有信息之后再进行保存操作',
+							type: 'warning'
+						});
 					}
-
 				}
-
 			},
 			changeDistInfo(data) {
 				this.jobInfo.jobLoaction.jobProvince = data.province.value;

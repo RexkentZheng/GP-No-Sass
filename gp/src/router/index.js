@@ -32,7 +32,6 @@ import StudentIndex from '@/views/student-index'
 import StudentResume from '@/views/student-resume'
 import StudentSend from '@/views/student-send'
 import StudentSetting from '@/views/student-setting'
-import TestExcel from '@/views/test-excel'
 
 
 Vue.use(Router)
@@ -203,11 +202,6 @@ export default new Router({
 			path: '/student/setting',
 			name: 'StudentSetting',
 			component: StudentSetting
-		},
-		{
-			path: '/test',
-			name: 'TestExcel',
-			component: TestExcel
 		},
 	]
 })

@@ -1,6 +1,5 @@
 //日期插件
 $(function() {
-	alert('123');
 	$("#choose-date").jeDate({
 		format: "YYYY-MM-DD",
 		skinCell: "jedateblue",

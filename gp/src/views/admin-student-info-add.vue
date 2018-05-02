@@ -66,12 +66,20 @@ export default {
     test(response, file, fileList) {
       let res = response;
       if (res.status == 0) {
-        alert("导入成功");
+				this.$message({
+					showClose: true,
+					message: '导入成功',
+					type: 'success'
+				});
         this.$router.push({
           path: "/admin"
         });
       } else {
-        alert("导入失败");
+				this.$message({
+					showClose: true,
+					message: '导入失败',
+					type: 'warning'
+				});
       }
     }
   }

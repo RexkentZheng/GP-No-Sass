@@ -69,12 +69,12 @@
 					<div class="right-part clearfix">
 						<dl>
 							<dt>
-								<a class="clearfix">
+								<router-link :to="{path:'/common/company/details',query:{userId:allInfo.companyInfo.userId}}" class="clearfix">
 									<img v-bind:src="allInfo.companyInfo.companyInfo.companyLogo " />
 									<div class="company-name">
 										{{allInfo.companyInfo.regeditInfo.companyName}} 
 									</div>
-								</a>
+								</router-link>
 							</dt>
 							<dd>
 								<ul>
@@ -168,7 +168,6 @@
 					let res = response.data;
 					if(res.status == 0) {
 						this.allInfo = res.result;
-						console.log(this.allInfo);
 					}
 				})
 			},
@@ -182,12 +181,20 @@
 				}).then((response) => {
 					let res = response.data;
 					if(res.status == 0) {
-						alert('删除成功');
+						this.$message({
+              showClose: true,
+              message: '删除成功',
+              type: 'success'
+            });
 						this.$router.push({
 							path: '/company/job/list'
 						})
 					} else {
-						alert('删除失败');
+						this.$message({
+              showClose: true,
+              message: '删除失败',
+              type: 'warning'
+            });
 					}
 				})
 			},
@@ -200,16 +207,32 @@
 				}).then((response) => {
 					let res = response.data;
 					if(res.status == 0) {
-						alert('投递成功');
+						this.$message({
+              showClose: true,
+              message: '投递成功',
+              type: 'success'
+            });
 						this.$router.push({
 							path: '/'
 						})
 					} else if(res.status == 2) {
-						alert('您已投过这份简历，请勿重复投递');
+						this.$message({
+              showClose: true,
+              message: '您已投过这份简历，请勿重复投递',
+              type: 'warning'
+            });
 					} else if(res.status ==1001) {
-						alert('当前用户简历信息未完善，请完善简历信息后再投递简历')
+						this.$message({
+              showClose: true,
+              message: '当前用户简历信息未完善，请完善简历信息后再投递简历',
+              type: 'warning'
+            });
 					}else{
-						alert('投递失败');
+						this.$message({
+              showClose: true,
+              message: '投递失败，请稍后再试',
+              type: 'warning'
+            });
 					}
 				})
 			},

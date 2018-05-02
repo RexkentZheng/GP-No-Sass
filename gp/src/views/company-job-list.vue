@@ -126,7 +126,6 @@
 					}
 				});
 				this.changedJobList = changedOnes;
-				console.log(this.changedJobList);
 			},
 			getOfflineJobList() {
 				this.activeName = this.$refs.offline.innerText; 
@@ -149,12 +148,24 @@
 					let res = response.data;
 					if(res.status == 0) {
 						if(onlineStatus) {
-							alert('上线成功');
+							this.$message({
+								showClose: true,
+								message: '上线成功',
+								type: 'success'
+							});
 						} else {
-							alert('下线成功');
+							this.$message({
+								showClose: true,
+								message: '下线成功',
+								type: 'success'
+							});
 						}
 					} else {
-						alert('修改失败');
+						this.$message({
+							showClose: true,
+							message: '修改失败',
+							type: 'warning'
+						});
 					}
 					this.getJobList();
 				})

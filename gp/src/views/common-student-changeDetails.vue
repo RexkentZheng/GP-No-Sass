@@ -132,10 +132,18 @@
 				}).then((response)=>{
 					let res = response.data;
 					if (res,status == 0) {
-						alert('保存成功');
+						this.$message({
+              showClose: true,
+              message: '保存成功',
+              type: 'success'
+            });
 						this.$router.go(-1)
 					}else{
-						alert('保存失败');
+						this.$message({
+              showClose: true,
+              message: '保存失败',
+              type: 'warning'
+            });
 						this.init();
 					}
 				})

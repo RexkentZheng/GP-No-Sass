@@ -89,29 +89,61 @@
 									}).then((response) => {
 										let res = response.data;
 										if(res.status == 0) {
-											alert('修改成功');
+											this.$message({
+												showClose: true,
+												message: '修改成功',
+												type: 'success'
+											});
 											document.getElementById('logOut').click();
 										} else if(res.status == 1001) {
-											alert(res.msg);
+											this.$message({
+												showClose: true,
+												message: res.msg,
+												type: 'warning'
+											});
 										} else {
-											alert('修改失败');
+											this.$message({
+												showClose: true,
+												message: '修改失败',
+												type: 'warning'
+											});
 											this.$router.go(0);
 										}
 									})
 								} else{
-									alert('新旧密码不能相同')
+									this.$message({
+										showClose: true,
+										message: '新旧密码不能相同',
+										type: 'warning'
+									});
 								}
 							} else {
-								alert('请确认新密码')
+								this.$message({
+									showClose: true,
+									message: '请确认新密码',
+									type: 'warning'
+								});
 							}
 						} else {
-							alert('请输入新密码')
+							this.$message({
+								showClose: true,
+								message: '请输入新密码',
+								type: 'warning'
+							});
 						}
 					} else {
-						alert('请输入旧密码')
+						this.$message({
+							showClose: true,
+							message: '请输入旧密码',
+							type: 'warning'
+						});
 					}
 				} else {
-					alert('请输入一致新密码之后再进行提交');
+					this.$message({
+						showClose: true,
+						message: '请输入一致新密码之后再进行提交',
+						type: 'warning'
+					});
 				}
 			},
 			loseBlur() {

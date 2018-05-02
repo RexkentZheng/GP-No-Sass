@@ -281,15 +281,28 @@ export default {
           this.conf.allColleges = res.result.filterExport.majors;
           this.conf.allComparison = res.result.comparison;
         } else {
-          console.log("没有获取到筛选条件");
+          this.$message({
+            showClose: true,
+            message: '没有获取到筛选条件',
+            type: 'warning'
+          });
+          this.$router.go(0);
         }
       });
     },
     getStudentInfo(){
       if (this.choosen.startYear !== '' && this.choosen.endYear !== '' && parseInt(this.choosen.startYear) > parseInt(this.choosen.endYear)) {
-        alert('初始入学年份必须小于等于终止入学年份');
+        this.$message({
+          showClose: true,
+          message: '初始入学年份必须小于等于终止入学年份',
+          type: 'warning'
+        });
       } else if(this.choosen.startYear == '' && this.choosen.endYear !== ''){
-        alert('不可只有终止入学年份');
+        this.$message({
+          showClose: true,
+          message: '不可只有终止入学年份',
+          type: 'warning'
+        });
       }else{
           this.isCheckeAll = false
           axios.post("/student/exportInfo",{
@@ -360,11 +373,19 @@ export default {
               this.download(res.result);
             }, 1000);
           }else{
-            alert('导出失败')
+            this.$message({
+              showClose: true,
+              message: '导出失败',
+              type: 'warning'
+            });
           }
         })       
       }else{
-        alert('输出数据不能为空')
+        this.$message({
+          showClose: true,
+          message: '输出数据不能为空',
+          type: 'warning'
+        });
       }
     },
     download(fileName) {

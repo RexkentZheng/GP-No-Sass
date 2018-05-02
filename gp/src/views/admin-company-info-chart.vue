@@ -47,7 +47,6 @@
 	import './../assets/css/common.css'
 	import './../assets/css/style.css'
 	import axios from 'axios'
-	import _ from 'lodash'
 	
 	export default{
 		data(){

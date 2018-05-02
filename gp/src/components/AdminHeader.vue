@@ -2,7 +2,6 @@
 	<div class="header">
 		<div class="bar-wraper">
 			<div class="bar">
-				<a class="enterpriseVison kill-decoration header-a" href="javascript:;">进入企业版</a>
 				<ul class="login">
 					<li v-if="nickName">
 						<router-link class="kill-decoration header-a" to='/admin'>{{nickName}}</router-link>

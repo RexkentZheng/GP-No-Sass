@@ -11,6 +11,9 @@
 						<li>
 							<router-link class="active" to='/admin/companyInfo/search'>企业查找</router-link>
 						</li>
+						<li>
+							<router-link to='/admin/companyInfo/chart'>信息概况</router-link>
+						</li>
 					</ul>
 				</div>
 				<div class="company-search-content">
@@ -24,7 +27,7 @@
 					</div>
 					<div class="search-list">
 						<ul>
-							<li class="clearfix" v-for="count in countList">
+							<li class="clearfix" v-for="count in countList" >
 								<div class="left-part">
 									<span @click="countDetails(count)" class="count-name"><a>{{count.userName}}</a></span>
 									<span class="count-id">{{count.regeditInfo.hrName}}：{{count.regeditInfo.hrTel}}</span>
@@ -87,7 +90,6 @@
 						} else {
 							this.countNotExist = false;
 							this.countList = res.result;
-							console.log(this.countList);
 						}
 					})
 				} else {
@@ -95,13 +97,11 @@
 						userId: this.countKeyWords
 					}).then((response) => {
 						let res = response.data;
-						console.log(res.result)
 						if (res.result.length === 0) {
 							this.countNotExist = true;
 						} else {
 							this.countNotExist = false;
 							this.countList.push(res.result);
-							// this.countList = res.result;
 						}
 					})
 				}

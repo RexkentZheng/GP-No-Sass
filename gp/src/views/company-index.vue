@@ -222,259 +222,317 @@
 </template>
 
 <script>
-	import CompanyHeader from './../components/CompanyHeader'
-	import CommonFooter from './../components/CommonFooter'
-	import './../assets/css/bootstrap.min.css'
-	import './../assets/css/common.css'
-	import './../assets/css/style.css'
-	import axios from 'axios'
-	import myUpload from 'vue-image-crop-upload'
-	import VueCoreImageUpload from 'vue-core-image-upload'
-	import VDistpicker from 'v-distpicker'
+import CompanyHeader from "./../components/CompanyHeader";
+import CommonFooter from "./../components/CommonFooter";
+import "./../assets/css/bootstrap.min.css";
+import "./../assets/css/common.css";
+import "./../assets/css/style.css";
+import axios from "axios";
+import myUpload from "vue-image-crop-upload";
+import VueCoreImageUpload from "vue-core-image-upload";
+import VDistpicker from "v-distpicker";
 
-	
-
-	export default {
-		data() {
-			return {
-				companyAllInfo: {},
-				labels: [],
-				label: '',
-				productions: [],
-				production: {
-					productionImg: './../static/companyProduction/default.png',
-					productionTitle: '',
-					productionIntroduce: '',
-					productionShow: true,
-					imgName:''
-				},
-				companyLogo: '',
-				baseInfo: {
-					companyType:'',
-					companyCount:'',
-					companyHref:'',
-					companyProvince:'',
-					companyCity:'',
-					companyArea:''
-				},
-				introduce: '',
-				data: {
-					id: '',
-					name: '',
-					del:''
-				},
-				src:'',
-				companyAllType:[],
-				show: true,
-				LogoFlag: false,
-				baseInfoFlag: false,
-				labelFlag: false,
-				productionFlag: false,
-				introduceFlag: false
-			}
-		},
-		computed:{
-			introducePra(){
-				return	this.introduce.split('\n');
-			}
-		},
-		mounted() {
-			this.init();
-			this.getConf();
-		},
-		components: {
-			CompanyHeader,
-			CommonFooter,
-			VDistpicker,
-			'my-upload': myUpload,
-			'vue-core-image-upload': VueCoreImageUpload,
-		},
-		methods: {
-			//查找cookie的方法
-			getCookies(cname) {
-				var name = cname + "=";
-				var ca = document.cookie.split(';');
-				for(var i = 0; i < ca.length; i++) {
-					var c = ca[i];
-					while(c.charAt(0) == ' ') c = c.substring(1);
-					if(c.indexOf(name) != -1) return c.substring(name.length, c.length);
-				}
-				return "";
-			},
-			init() {
-				let userType = parseInt(this.getCookies('userType'));
-				axios.post('/company/companyDetails', {
-					userId: this.getCookies('userId')
-				}).then((response) => {
-					let res = response.data;
-					if(res.status == 0) {
-						this.companyAllInfo = res.result;
-						this.labels = this.companyAllInfo.companyInfo.companyLabel.split('+');
-						this.companyLogo = this.companyAllInfo.companyInfo.companyLogo;
-						this.productions = this.companyAllInfo.companyProduction;
-						this.baseInfo = this.companyAllInfo.companyInfo.companyBaseInfo;
-						this.label = this.companyAllInfo.companyInfo.companyLabel;
-						this.introduce = this.companyAllInfo.companyInfo.companyIntroduce;
-						this.data.id = this.getCookies('userId');
-						this.data.name = 'logo';
-						//初始状态下数据都空，判断初始数据是否为空，为空即为用户第一次登录，填写用户信息
-						if(this.companyLogo == '') {
-							this.companyLogo = './../static/studentProtrait/default.png';
-						}
-					}
-				})
-			},
-			getConf(){
-				axios.get('/conf/jobType').then((response)=>{
-					let res = response.data;
-					if (res.status == 0) {
-						this.companyAllType = res.result.companyType;
-					}
-				})
-			},
-			changeProduction(item) {
-				this.companyAllInfo.companyProduction.forEach((onePiece) => {
-					if(onePiece._id == item._id) {
-						onePiece.productionShow = false;
-						this.data.name = onePiece._id;
-					}
-				});
-			},
-			unchangeProduction(item) {
-				this.companyAllInfo.companyProduction.forEach((onePiece) => {
-					if(onePiece.productionTitle == item.productionTitle) {
-						onePiece.productionShow = true;
-					}
-				});
-			},
-			changeCompanyInfo(filedName, changeContent) {
-				console.log(changeContent);
-				axios.post('/company/changeCompanyInfo', {
-					companyId: this.getCookies('userId'),
-					filedName: filedName,
-					changeContent: changeContent
-				}).then((response) => {
-					let res = response.data;
-					if(res.status == 0) {
-						alert('修改成功');
-						this.$router.go(0);
-					} else {
-						alert('修改失败');
-					}
-				})
-			},
-			changeArrayInfo(changeName, changeId, changeContent) {
-				changeContent.productionShow = true;
-				let isFinish = true;
-				for (let key in changeContent) {
-					if (changeContent[key] == '') {
-						isFinish = false;
-					}
-				}
-				if (isFinish) {
-					axios.post('/company/changeArrayInfo', {
-						companyId: parseInt(this.getCookies('userId')),
-						changeName: changeName,
-						changeId: changeId,
-						changeContent: changeContent
-					}).then((response) => {
-						let res = response.data;
-						if(res.status == 0) {
-							alert(`修改成功`);
-							this.$router.go(0);
-						} else {
-							alert(`修改失败`);
-						}
-					})
-				}else{
-					changeContent.productionShow = false;
-					alert('请完善信息再进行提交操作');
-				}
-				
-			},
-			addArrayInfo(changeContent) {
-				let isFinish = true;
-				for (let key in changeContent) {
-					if (changeContent[key] == '') {
-						isFinish = false;
-					}
-				}
-				if (isFinish) {
-					axios.post('/company/addArrayInfo', {
-						companyId: parseInt(this.getCookies('userId')),
-						changeContent: changeContent
-					}).then((response) => {
-						let res = response.data;
-						if(res.status == 0) {
-							alert(`添加成功`);
-							this.$router.go(0);
-						} else {
-							alert(`添加失败`);
-						}
-					})
-				}else{
-					alert('请完善信息再进行提交操作')
-				}
-				
-			},
-			delArrayInfo(id){
-				axios.post('/company/delArrayInfo', {
-					companyId: parseInt(this.getCookies('userId')),
-					id:id
-				}).then((response) => {
-					let res = response.data;
-					if(res.status == 0) {
-						alert(`删除成功`);
-						this.$router.go(0);
-					} else {
-						alert(`删除失败`);
-						this.$router.go(0);
-					}
-				})
-			},
-			toggleShow() {
-				this.show = !this.show;
-			},
-			cropSuccess(imgDataUrl, field) {
-				this.imgDataUrl = imgDataUrl;
-				this.data.name = 'logo';
-			},
-			cropUploadSuccess(jsonData, field) {
-				let filedName = 'companyLogo';
-				let changeContent = './../static/companylogo/' + this.data.id + '-' + this.data.name + '.png';
-				this.changeCompanyInfo(filedName, changeContent);
-			},
-			addProductionImg(res) {
-				let result = res.result;
-				console.log(result);
-		      	if (res.status == 0) {
-		      		let imgUrl = './../static/companyProduction/' + result.filename;
-		      		this.production.imgName = result.filename;
-					this.production.productionImg = imgUrl;
-		      	}
-		   },
-		   changeProductionImg(res) {
-				let result = res.result;
-				console.log(res);
-		      	if (res.status == 0) {
-		      		let imgUrl = './../static/companyProduction/'  + this.data.id + '-' + this.data.name + '.png';
-		      		console.log(imgUrl);
-		      		this.production.imgName = result.filename;
-					this.production.productionImg = imgUrl;
-		      	}
-		   },
-		   changeInfoPI(production){
-		   		this.data.name = production._id;
-		   		console.log(this.data.name);
-		   		this.data.del = production.imgName;
-		   		production.productionImg = './../static/companyProduction/'+this.data.id+ '-' + this.data.name+'.png'; 
-		   },
-		   //不知为何，只能通过选定事件来绑定数据
-		    changeDistInfo(data) {
-			 	this.baseInfo.companyProvince = data.province.value;
-			 	this.baseInfo.companyCity = data.city.value;
-			 	this.baseInfo.companyArea = data.area.value;
-			},
-		}
-	}
+export default {
+  data() {
+    return {
+      companyAllInfo: {},
+      labels: [],
+      label: "",
+      productions: [],
+      production: {
+        productionImg: "./../static/companyProduction/default.png",
+        productionTitle: "",
+        productionIntroduce: "",
+        productionShow: true,
+        imgName: ""
+      },
+      companyLogo: "",
+      baseInfo: {
+        companyType: "",
+        companyCount: "",
+        companyHref: "",
+        companyProvince: "",
+        companyCity: "",
+        companyArea: ""
+      },
+      introduce: "",
+      data: {
+        id: "",
+        name: "",
+        del: ""
+      },
+      src: "",
+      companyAllType: [],
+      show: true,
+      LogoFlag: false,
+      baseInfoFlag: false,
+      labelFlag: false,
+      productionFlag: false,
+      introduceFlag: false
+    };
+  },
+  computed: {
+    introducePra() {
+      return this.introduce.split("\n");
+    }
+  },
+  mounted() {
+    this.init();
+    this.getConf();
+  },
+  components: {
+    CompanyHeader,
+    CommonFooter,
+    VDistpicker,
+    "my-upload": myUpload,
+    "vue-core-image-upload": VueCoreImageUpload
+  },
+  methods: {
+    //查找cookie的方法
+    getCookies(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(";");
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == " ") c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+      }
+      return "";
+    },
+    init() {
+      let userType = parseInt(this.getCookies("userType"));
+      axios
+        .post("/company/companyDetails", {
+          userId: this.getCookies("userId")
+        })
+        .then(response => {
+          let res = response.data;
+          if (res.status == 0) {
+            this.companyAllInfo = res.result;
+            this.labels = this.companyAllInfo.companyInfo.companyLabel.split(
+              "+"
+            );
+            this.companyLogo = this.companyAllInfo.companyInfo.companyLogo;
+            this.productions = this.companyAllInfo.companyProduction;
+            this.baseInfo = this.companyAllInfo.companyInfo.companyBaseInfo;
+            this.label = this.companyAllInfo.companyInfo.companyLabel;
+            this.introduce = this.companyAllInfo.companyInfo.companyIntroduce;
+            this.data.id = this.getCookies("userId");
+            this.data.name = "logo";
+            //初始状态下数据都空，判断初始数据是否为空，为空即为用户第一次登录，填写用户信息
+            if (this.companyLogo == "") {
+              this.companyLogo = "./../static/studentProtrait/default.png";
+            }
+          }
+        });
+    },
+    getConf() {
+      axios.get("/conf/jobType").then(response => {
+        let res = response.data;
+        if (res.status == 0) {
+          this.companyAllType = res.result.companyType;
+        }
+      });
+    },
+    changeProduction(item) {
+      this.companyAllInfo.companyProduction.forEach(onePiece => {
+        if (onePiece._id == item._id) {
+          onePiece.productionShow = false;
+          this.data.name = onePiece._id;
+        }
+      });
+    },
+    unchangeProduction(item) {
+      this.companyAllInfo.companyProduction.forEach(onePiece => {
+        if (onePiece.productionTitle == item.productionTitle) {
+          onePiece.productionShow = true;
+        }
+      });
+    },
+    changeCompanyInfo(filedName, changeContent) {
+      axios
+        .post("/company/changeCompanyInfo", {
+          companyId: this.getCookies("userId"),
+          filedName: filedName,
+          changeContent: changeContent
+        })
+        .then(response => {
+          let res = response.data;
+          if (res.status == 0) {
+            this.$message({
+              showClose: true,
+              message: "修改成功",
+              type: "success"
+            });
+            this.$router.go(0);
+          } else {
+            this.$message({
+              showClose: true,
+              message: "修改失败",
+              type: "warning"
+            });
+          }
+        });
+    },
+    changeArrayInfo(changeName, changeId, changeContent) {
+      changeContent.productionShow = true;
+      let isFinish = true;
+      for (let key in changeContent) {
+        if (changeContent[key] == "") {
+          isFinish = false;
+        }
+      }
+      if (isFinish) {
+        axios
+          .post("/company/changeArrayInfo", {
+            companyId: parseInt(this.getCookies("userId")),
+            changeName: changeName,
+            changeId: changeId,
+            changeContent: changeContent
+          })
+          .then(response => {
+            let res = response.data;
+            if (res.status == 0) {
+              this.$message({
+                showClose: true,
+                message: "修改成功",
+                type: "success"
+              });
+              this.$router.go(0);
+            } else {
+              this.$message({
+                showClose: true,
+                message: "修改失败",
+                type: "warning"
+              });
+            }
+          });
+      } else {
+        changeContent.productionShow = false;
+        this.$message({
+          showClose: true,
+          message: "请完善信息再进行提交操作",
+          type: "warning"
+        });
+      }
+    },
+    addArrayInfo(changeContent) {
+      let isFinish = true;
+      for (let key in changeContent) {
+        if (changeContent[key] == "") {
+          isFinish = false;
+        }
+      }
+      if (isFinish) {
+        axios
+          .post("/company/addArrayInfo", {
+            companyId: parseInt(this.getCookies("userId")),
+            changeContent: changeContent
+          })
+          .then(response => {
+            let res = response.data;
+            if (res.status == 0) {
+              this.$message({
+                showClose: true,
+                message: "添加成功",
+                type: "success"
+              });
+              this.$router.go(0);
+            } else {
+              this.$message({
+                showClose: true,
+                message: "添加失败",
+                type: "warning"
+              });
+            }
+          });
+      } else {
+        this.$message({
+          showClose: true,
+          message: "请完善信息再进行提交操作",
+          type: "warning"
+        });
+      }
+    },
+    delArrayInfo(id) {
+      axios
+        .post("/company/delArrayInfo", {
+          companyId: parseInt(this.getCookies("userId")),
+          id: id
+        })
+        .then(response => {
+          let res = response.data;
+          if (res.status == 0) {
+            this.$message({
+              showClose: true,
+              message: "删除成功",
+              type: "success"
+            });
+            this.$router.go(0);
+          } else {
+            this.$message({
+              showClose: true,
+              message: "删除失败",
+              type: "warning"
+            });
+            this.$router.go(0);
+          }
+        });
+    },
+    toggleShow() {
+      this.show = !this.show;
+    },
+    cropSuccess(imgDataUrl, field) {
+      this.imgDataUrl = imgDataUrl;
+      this.data.name = "logo";
+    },
+    cropUploadSuccess(jsonData, field) {
+      let filedName = "companyLogo";
+      let changeContent =
+        "./../static/companylogo/" +
+        this.data.id +
+        "-" +
+        this.data.name +
+        ".png";
+      this.changeCompanyInfo(filedName, changeContent);
+    },
+    addProductionImg(res) {
+      let result = res.result;
+      if (res.status == 0) {
+        let imgUrl = "./../static/companyProduction/" + result.filename;
+        this.production.imgName = result.filename;
+        this.production.productionImg = imgUrl;
+      }
+    },
+    changeProductionImg(res) {
+      let result = res.result;
+      if (res.status == 0) {
+        let imgUrl =
+          "./../static/companyProduction/" +
+          this.data.id +
+          "-" +
+          this.data.name +
+          ".png";
+        this.production.imgName = result.filename;
+        this.production.productionImg = imgUrl;
+      }
+    },
+    changeInfoPI(production) {
+      this.data.name = production._id;
+      this.data.del = production.imgName;
+      production.productionImg =
+        "./../static/companyProduction/" +
+        this.data.id +
+        "-" +
+        this.data.name +
+        ".png";
+    },
+    //不知为何，只能通过选定事件来绑定数据
+    changeDistInfo(data) {
+      this.baseInfo.companyProvince = data.province.value;
+      this.baseInfo.companyCity = data.city.value;
+      this.baseInfo.companyArea = data.area.value;
+    }
+  }
+};
 </script>

@@ -42,12 +42,20 @@
 				}).then((response)=>{
 					let res = response.data;
 					if (res.status == 0) {
-						alert('删除成功');
+						this.$message({
+							showClose: true,
+							message: '删除成功',
+							type: 'success'
+						});
 						this.$router.push({
 							path:'/'
 						})
 					}else{
-						alert('删除失败，请重新删除');
+						this.$message({
+							showClose: true,
+							message: '删除失败',
+							type: 'warning'
+						});
 					}
 				})
 			}
