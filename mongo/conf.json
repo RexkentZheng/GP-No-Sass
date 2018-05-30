@@ -567,14 +567,11 @@
     ], 
     "bannerImg" : [
         {
-            "imgName" : "bannerImg_1511948114713_12W58PICanh_1024.jpg"
-        }, 
-        {
-            "imgName" : "bannerImg_1511947774496_reserve.jpg"
+            "imgName" : "bannerImg_1522649640024_timg (3).jpeg"
         }, 
         {
             "_id" : ObjectId("5a1e7f795b2a2006081df69c"), 
-            "imgName" : "bannerImg_1511948174779_927_110420125415-0.jpg"
+            "imgName" : "bannerImg_1522649655169_timg (2).jpeg"
         }
     ], 
     "jobInfo" : {

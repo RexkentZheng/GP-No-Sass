@@ -68,12 +68,12 @@
     ], 
     "companyProduction" : [
         {
-            "_id" : ObjectId("5ab49c49714201096ec75560"), 
-            "imgName" : "companyProduction_1521785920633_20132222221146247705.jpg", 
+            "_id" : ObjectId("5ac1e442f33e2e056c7757c8"), 
+            "imgName" : "companyProduction_1522656312910_LM��.png", 
             "productionShow" : true, 
-            "productionIntroduce" : "测试产品简介", 
+            "productionIntroduce" : "测试产品简介测试产品简介测试产品简介测试产品简介测试产品简介测试产品简介测试产品简介测试产品简介测试产品简介测试产品简介测试产品简介测试产品简介测试产品简介测试产品简介", 
             "productionTitle" : "测试产品", 
-            "productionImg" : "./../static/companyProduction/companyProduction_1521785920633_20132222221146247705.jpg"
+            "productionImg" : "./../static/companyProduction/companyProduction_1522656312910_LM��.png"
         }
     ], 
     "companyInfo" : {

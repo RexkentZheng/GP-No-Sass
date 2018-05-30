@@ -10,3 +10,15 @@
     "__v" : NumberInt(0), 
     "companyLisence" : "./../../static/companyLicense/测试HR-12345678901.png"
 }
+{ 
+    "_id" : ObjectId("5ac1ef5ef33e2e056c7757c9"), 
+    "userName" : "company2", 
+    "userPwd" : "e10adc3949ba59abbe56e057f20f883e", 
+    "hrName" : "测试HR2", 
+    "hrTel" : 12345678911.0, 
+    "hrEmail" : "2333@qq.com", 
+    "companyName" : "测试企业2", 
+    "isChecked" : false, 
+    "__v" : NumberInt(0), 
+    "companyLisence" : "./../../static/companyLicense/测试HR2-12345678911.png"
+}

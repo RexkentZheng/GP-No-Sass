@@ -173,3 +173,28 @@
     }, 
     "__v" : NumberInt(0)
 }
+{ 
+    "_id" : ObjectId("5ae2c48c0b99f308d6c047b0"), 
+    "jobId" : 201804270410000.0, 
+    "jobName" : "Java架构师", 
+    "jobSalary" : "20-30k", 
+    "jobType" : "全职", 
+    "jobTypeFirst" : "技术", 
+    "jobTypeSecond" : "后端开发", 
+    "jobTypeThird" : "Java", 
+    "jobRequirement" : "985/211以上", 
+    "isOnline" : true, 
+    "companyId" : 201803230310003.0, 
+    "jobAtempt" : "发展空间大+团队氛围好+大牛云集+福利超多", 
+    "createdTime" : 1524810892000.0, 
+    "jobLoaction" : {
+        "jobProvince" : "上海市", 
+        "jobCity" : "市辖区", 
+        "jobArea" : "徐汇区"
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : "1. 负责公司的核心业务架构设计以及代码编写工作；\n\n2. 负责公司基础组件的设计、开发，以及难题攻克；\n\n3. 负责设计高可靠、高扩展性的系统，提高生产效率；\n\n4. 负责系统架构的改造和持续优化", 
+        "jobrequirement" : "1. 统招本科及以上学历，5年以上java经验，2年架构经验；\n\n2. 必须精通Java，熟悉C++、Python、Go、Scala其中至少一项；\n\n3. 熟悉Linux系统，掌握shell、awk、sed等；\n\n4. 扎实的技术基础，熟悉性能、可用性、伸缩性、扩展性、安全性、运维监控、集成发布等；\n\n5. 熟悉springMvc、springCloud、dubbo、Redis、Mybatis、Mysql、Kafka\n\n6. 熟悉两种以上流行的框架，且不停留在单纯使用的层次，必须对框架的实现原理、应用场合、使用限制有基本了解；\n\n7. 需要具有较好的业务抽象和沟通能力；\n\n8. 逻辑清晰，快速的学习能力，良好的沟通能力、团队协调能力。\n\n9. 加分项：\n\n    1.） docker+kubernetes的容器化和服务编排经验；\n\n    2.） 熟悉JVM调优、SQL优化\n\n    3.） 熟悉ElasticSearch\n\n    4.）彪悍的代码能力\n\n"
+    }, 
+    "__v" : NumberInt(0)
+}
