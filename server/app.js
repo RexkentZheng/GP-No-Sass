@@ -16,6 +16,7 @@ var student = require('./routes/student');
 var upload = require('./routes/upload');
 var conf = require('./routes/conf');
 var exporter = require('./routes/export');
+var nuxt = require('./routes/nuxt');
 
 var app = express();
 
@@ -33,6 +34,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+app.all('*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With,Content-Type");
+  res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+  next();
+});
+
 app.use('/', index);
 app.use('/admin', admin);
 app.use('/job', job);
@@ -43,6 +51,7 @@ app.use('/student',student);
 app.use('/upload', upload);
 app.use('/conf',conf);
 app.use('/export',exporter);
+app.use('/nuxt',nuxt);
 
 
 // catch 404 and forward to error handler
