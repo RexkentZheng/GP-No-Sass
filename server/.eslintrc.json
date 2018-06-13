@@ -9,8 +9,7 @@
     "extends": "airbnb-base",
     "rules": {
         "linebreak-style": [
-            "error",
-            "windows"
+           "off"
         ],
         "quotes": [
             "error",
