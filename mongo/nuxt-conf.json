@@ -1,0 +1,21 @@
+{ 
+    "_id" : ObjectId("5b2131f560aa305de796a1ad"), 
+    "class" : [
+        {
+            "classFirst" : "技术", 
+            "classSecond" : [
+                "js", 
+                "c#", 
+                "php"
+            ]
+        }, 
+        {
+            "classFirst" : "随笔", 
+            "classSecond" : [
+                "日常", 
+                "唐诗", 
+                "宋词"
+            ]
+        }
+    ]
+}

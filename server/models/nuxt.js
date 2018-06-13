@@ -3,6 +3,8 @@ var Schema = mongoose.Schema;
 
 var applySchema = new Schema({
   "title": String,
+  "classFirst": String,
+  "classSecond": String,
   "content": String
 });
 

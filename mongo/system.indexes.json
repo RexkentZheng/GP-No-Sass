@@ -1,0 +1,72 @@
+{ 
+    "v" : NumberInt(2), 
+    "key" : {
+        "_id" : NumberInt(1)
+    }, 
+    "name" : "_id_", 
+    "ns" : "graduationProject.admins"
+}
+{ 
+    "v" : NumberInt(2), 
+    "key" : {
+        "_id" : NumberInt(1)
+    }, 
+    "name" : "_id_", 
+    "ns" : "graduationProject.applying"
+}
+{ 
+    "v" : NumberInt(2), 
+    "key" : {
+        "_id" : NumberInt(1)
+    }, 
+    "name" : "_id_", 
+    "ns" : "graduationProject.companies"
+}
+{ 
+    "v" : NumberInt(2), 
+    "key" : {
+        "_id" : NumberInt(1)
+    }, 
+    "name" : "_id_", 
+    "ns" : "graduationProject.conf"
+}
+{ 
+    "v" : NumberInt(2), 
+    "key" : {
+        "_id" : NumberInt(1)
+    }, 
+    "name" : "_id_", 
+    "ns" : "graduationProject.jobs"
+}
+{ 
+    "v" : NumberInt(2), 
+    "key" : {
+        "_id" : NumberInt(1)
+    }, 
+    "name" : "_id_", 
+    "ns" : "graduationProject.students"
+}
+{ 
+    "v" : NumberInt(2), 
+    "key" : {
+        "_id" : NumberInt(1)
+    }, 
+    "name" : "_id_", 
+    "ns" : "graduationProject.users"
+}
+{ 
+    "v" : NumberInt(2), 
+    "key" : {
+        "_id" : NumberInt(1)
+    }, 
+    "name" : "_id_", 
+    "ns" : "graduationProject.nuxt"
+}
+{ 
+    "v" : NumberInt(2), 
+    "key" : {
+        "_id" : NumberInt(1)
+    }, 
+    "name" : "_id_", 
+    "ns" : "graduationProject.nuxt-conf"
+}

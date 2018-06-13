@@ -74,6 +74,31 @@
     "__v" : NumberInt(0)
 }
 { 
+    "_id" : ObjectId("5ab4a3c2714201096ec75566"), 
+    "jobId" : 201803230410005.0, 
+    "jobName" : "产品运营 ", 
+    "jobSalary" : "7-10k", 
+    "jobType" : "全职", 
+    "jobTypeFirst" : "运营", 
+    "jobTypeSecond" : "运营", 
+    "jobTypeThird" : "产品运营", 
+    "jobRequirement" : "985/211以上", 
+    "isOnline" : true, 
+    "companyId" : 201803230310003.0, 
+    "jobAtempt" : "六险一金+弹性工作+免费三餐+餐补+租房补贴+带薪休假", 
+    "createdTime" : 1521787842000.0, 
+    "jobLoaction" : {
+        "jobProvince" : "吉林省", 
+        "jobCity" : "辽源市", 
+        "jobArea" : "东辽县"
+    }, 
+    "jobDiscription" : {
+        "jobDuty" : "1、负责公司人力系统的日常运营，包含用户问题处理、需求收集、培训和最佳实践推广； \n2、参与产品设计，为产品提供用户 Insight； \n3、关注运营数据，用创新的方法推进系统最佳实践； \n", 
+        "jobrequirement" : "1、优秀的沟通能力； \n2、责任心强、注重细节； \n3、关注数据，有运营推动的能力，有产品 sense； \n4、本科以上学历； \n5、有人力资源相关背景（HR，eHR 产品经理等）优先。\n"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
     "_id" : ObjectId("5ab4a2d9714201096ec75564"), 
     "jobId" : 201803230410003.0, 
     "jobName" : "产品经理 ", 
@@ -120,31 +145,6 @@
     "jobDiscription" : {
         "jobDuty" : "1、对接今日头条汽车业务日常专题（活动）设计需求； \n2、探讨适合汽车业务的视觉调性和主导大型活动的视觉设计； \n3、在品牌调性的基础上与各部门协作，优化汽车业务对外视觉产出质量。 \n", 
         "jobrequirement" : "1、优秀的设计功底，不错的手绘能力，能驾驭各种设计风格； \n2、丰富的互联网设计经验且有拿得出手的高质量作品； \n3、具有敏锐的设计嗅觉，热爱设计富有责任感； \n4、良好的表达沟通能力和团队协作精神； \n5、结果导向、快速执行、自我驱动。\n"
-    }, 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("5ab4a3c2714201096ec75566"), 
-    "jobId" : 201803230410005.0, 
-    "jobName" : "产品运营 ", 
-    "jobSalary" : "7-10k", 
-    "jobType" : "全职", 
-    "jobTypeFirst" : "运营", 
-    "jobTypeSecond" : "运营", 
-    "jobTypeThird" : "产品运营", 
-    "jobRequirement" : "985/211以上", 
-    "isOnline" : true, 
-    "companyId" : 201803230310003.0, 
-    "jobAtempt" : "六险一金+弹性工作+免费三餐+餐补+租房补贴+带薪休假", 
-    "createdTime" : 1521787842000.0, 
-    "jobLoaction" : {
-        "jobProvince" : "吉林省", 
-        "jobCity" : "辽源市", 
-        "jobArea" : "东辽县"
-    }, 
-    "jobDiscription" : {
-        "jobDuty" : "1、负责公司人力系统的日常运营，包含用户问题处理、需求收集、培训和最佳实践推广； \n2、参与产品设计，为产品提供用户 Insight； \n3、关注运营数据，用创新的方法推进系统最佳实践； \n", 
-        "jobrequirement" : "1、优秀的沟通能力； \n2、责任心强、注重细节； \n3、关注数据，有运营推动的能力，有产品 sense； \n4、本科以上学历； \n5、有人力资源相关背景（HR，eHR 产品经理等）优先。\n"
     }, 
     "__v" : NumberInt(0)
 }

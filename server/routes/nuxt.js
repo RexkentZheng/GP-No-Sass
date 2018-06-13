@@ -31,7 +31,7 @@ router.get('/', (req, res, next) => {
   });
 });
 
-// 申请详情接口
+// 文章详情
 router.post('/Details', (req, res, next) => {
   const { title } = req.body;
   console.log(title);
@@ -44,6 +44,17 @@ router.post('/Details', (req, res, next) => {
     }
   });
 });
+
+//  文章列表
+router.get('/List', (req, res, next) => {
+  Nuxt.find({},'title', (err,doc) => {
+    if (err) {
+      getWrong(res, err);
+    } else {
+      getRight(res, doc);
+    }
+  })
+})
 
 
 // 暴露结果

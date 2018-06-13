@@ -17,6 +17,7 @@ var upload = require('./routes/upload');
 var conf = require('./routes/conf');
 var exporter = require('./routes/export');
 var nuxt = require('./routes/nuxt');
+var nuxtConf = require('./routes/nuxt-conf');
 
 var app = express();
 
@@ -52,6 +53,7 @@ app.use('/upload', upload);
 app.use('/conf',conf);
 app.use('/export',exporter);
 app.use('/nuxt',nuxt);
+app.use('/nuxtConf', nuxtConf);
 
 
 // catch 404 and forward to error handler
